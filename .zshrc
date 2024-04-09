@@ -109,8 +109,8 @@ if type brew &>/dev/null; then
     rm -f ~/.zcompdump; compinit
 fi
 
-alias ll="eza -lh -s name --git --icons"
-alias la="eza -lah -s name --git --icons"
+alias ll="eza -lh -s name --git --icons --group-directories-first"
+alias la="eza -lah -s name --git --icons --group-directories-first"
 
 eval "$(starship init zsh)"
 
