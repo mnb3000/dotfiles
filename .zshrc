@@ -115,6 +115,7 @@ alias la="eza -lah -s name --git --icons --group-directories-first"
 eval "$(starship init zsh)"
 
 export EDITOR=nvim
+export VISUAL=nvim
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
