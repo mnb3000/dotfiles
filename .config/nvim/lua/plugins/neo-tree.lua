@@ -44,7 +44,7 @@ return {
       end,
     },
     window = {
-      width = 32,
+      width = 34,
       mappings = {
         ["/"] = "grep",
         ["<c-/>"] = "fuzzy_finder",

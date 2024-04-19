@@ -70,9 +70,14 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm node npm sudo dotenv docker docker-compose macos brew yarn python zsh-autosuggestions zsh-syntax-highlighting gcloud)
+plugins=(git nvm node npm sudo dotenv docker docker-compose macos brew yarn python zsh-autosuggestions zsh-syntax-highlighting gcloud fzf eza)
 
 zstyle ':omz:plugins:nvm' autoload yes
+
+zstyle ':omz:plugins:eza' 'dirs-first' yes
+zstyle ':omz:plugins:eza' 'git-status' yes
+zstyle ':omz:plugins:eza' 'header' yes
+zstyle ':omz:plugins:eza' 'size-prefix' binary
 
 source $ZSH/oh-my-zsh.sh
 
