@@ -118,6 +118,8 @@ fi
 alias la="eza -labhUm -s name --git --icons --group-directories-first $eza_params"
 # alias la='eza -lbhHigUmuSa'
 alias lyadm="lazygit -ucd ~/.local/share/yadm/lazygit -w ~ -g ~/.local/share/yadm/repo.git"
+alias vim="nvim"
+alias v="vim"
 
 eval "$(starship init zsh)"
 
