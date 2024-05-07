@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm node npm sudo dotenv docker docker-compose macos brew yarn python zsh-autosuggestions zsh-syntax-highlighting gcloud fzf eza)
+plugins=(git nvm node npm sudo dotenv docker docker-compose macos brew yarn python zsh-autosuggestions zsh-syntax-highlighting gcloud fzf zsh-eza)
 
 zstyle ':omz:plugins:nvm' autoload yes
 
@@ -114,8 +114,10 @@ if type brew &>/dev/null; then
     rm -f ~/.zcompdump; compinit
 fi
 
-alias ll="eza -lh -s name --git --icons --group-directories-first"
-alias la="eza -lah -s name --git --icons --group-directories-first"
+# alias ll="eza -lh -s name --git --icons --group-directories-first"
+alias la="eza -labhUm -s name --git --icons --group-directories-first $eza_params"
+# alias la='eza -lbhHigUmuSa'
+alias lyadm="lazygit -ucd ~/.local/share/yadm/lazygit -w ~ -g ~/.local/share/yadm/repo.git"
 
 eval "$(starship init zsh)"
 
