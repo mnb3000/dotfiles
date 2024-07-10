@@ -9,7 +9,6 @@ plugins=(
   python
   docker
   docker-compose
-  zsh-mise
   zsh-vi-mode
   fzf
   colored-man-pages
@@ -52,6 +51,7 @@ if [ "$system_type" = "Darwin" ]; then
   plugins+=(
     macos
     brew
+    zsh-mise
   )
 else
     eval $(dircolors -b $HOME/.dir_colors)
