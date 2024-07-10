@@ -44,13 +44,16 @@ return {
       end,
     },
     window = {
-      width = 34,
+      width = 32,
       mappings = {
         ["/"] = "grep",
         ["<c-/>"] = "fuzzy_finder",
         ["g"] = "setcd",
         ["<space>"] = "none",
       },
+    },
+    filesystem = {
+      hijack_netrw_behavior = "disabled",
     },
   },
 }

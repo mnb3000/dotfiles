@@ -6,7 +6,7 @@ return {
         layout_config = {
           horizontal = {
             preview_cutoff = 0,
-            width_padding = 0.1,
+            width_padding = 0.2,
           },
         },
       },

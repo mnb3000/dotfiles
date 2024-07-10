@@ -8,6 +8,7 @@ return {
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim",
       "haydenmeade/neotest-jest",
+      "marilari88/neotest-vitest",
     },
     keys = {
       {
@@ -39,6 +40,14 @@ return {
           env = { CI = true },
           cwd = function()
             return vim.fn.getcwd()
+          end,
+        })
+      )
+      table.insert(
+        opts.adapters,
+        require("neotest-vitest")({
+          filter_dir = function(name, rel_path, root)
+            return name ~= "node_modules"
           end,
         })
       )
