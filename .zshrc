@@ -1,132 +1,150 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm node npm sudo dotenv docker docker-compose macos brew yarn python zsh-autosuggestions zsh-syntax-highlighting gcloud fzf zsh-eza)
-
-zstyle ':omz:plugins:nvm' autoload yes
+plugins=(
+  git
+  sudo
+  dotenv
+  python
+  docker
+  docker-compose
+  zsh-mise
+  zsh-vi-mode
+  fzf
+  colored-man-pages
+  alias-tips
+  zsh-eza
+  fzf-tab
+  fast-syntax-highlighting
+  zsh-autosuggestions
+  zsh-history-substring-search
+)
 
 zstyle ':omz:plugins:eza' 'dirs-first' yes
 zstyle ':omz:plugins:eza' 'git-status' yes
 zstyle ':omz:plugins:eza' 'header' yes
 zstyle ':omz:plugins:eza' 'size-prefix' binary
 
-source $ZSH/oh-my-zsh.sh
+# Settings for Plugin fzf-tab
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
+zstyle ':completion:*' menu no
+# switch group using `<` and `>`
+zstyle ':fzf-tab:*' switch-group '<' '>'
 
-# User configuration
+zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
+export LESSOPEN='|~/.lessfilter %s'
 
-# export MANPATH="/usr/local/man:$MANPATH"
+# preview directory's content with eza when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --tree --level=2 --color=always --icons --git-repos --group-directories-first $realpath'
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+system_type=$(uname -s)
+if [ "$system_type" = "Darwin" ]; then
+  zstyle ':fzf-tab:complete:brew-(install|uninstall|search|info):*-argument-rest' fzf-preview 'brew info $word'
+  fpath+="$(brew --prefix)/share/zsh/site-functions"
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+  plugins+=(
+    macos
+    brew
+  )
+else
+    eval $(dircolors -b $HOME/.dir_colors)
+fi
+# zstyle ':fzf-tab:complete:-command-:*' fzf-preview \
+#   '(out=$(tldr --color always "$word") 2>/dev/null && echo $out) || (out=$(MANWIDTH=$FZF_PREVIEW_COLUMNS man "$word") 2>/dev/null && echo $out) || (out=$(which "$word") && echo $out) || echo "${(P)word}"'
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+zstyle ':fzf-tab:complete:git-(add|diff|restore):*' fzf-preview \
+	'git diff $word | delta'
+zstyle ':fzf-tab:complete:git-log:*' fzf-preview \
+	'git log --color=always $word'
+zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview \
+	'case "$group" in
+	"modified file") git diff $word | delta ;;
+	"recent commit object name") git show --color=always $word | delta ;;
+	*) git log --color=always $word ;;
+	esac'
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# zstyle ':fzf-tab:complete:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' \
+# 	fzf-preview 'echo ${(P)word}'
 
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-
-  autoload -Uz compinit
-    rm -f ~/.zcompdump; compinit
+# Startup time profiling
+if [[ -n "$ZSH_DEBUGRC" ]]; then
+  zmodload zsh/zprof
 fi
 
-# alias ll="eza -lh -s name --git --icons --group-directories-first"
+# TokyoNight FZF
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  --highlight-line \
+  --info=inline-right \
+  --ansi \
+  --layout=reverse \
+  --border
+  --height=100% \
+  --color=bg+:#2e3c64 \
+  --color=bg:#1f2335 \
+  --color=border:#29a4bd \
+  --color=fg:#c0caf5 \
+  --color=gutter:#1f2335 \
+  --color=header:#ff9e64 \
+  --color=hl+:#2ac3de \
+  --color=hl:#2ac3de \
+  --color=info:#545c7e \
+  --color=marker:#ff007c \
+  --color=pointer:#ff007c \
+  --color=prompt:#2ac3de \
+  --color=query:#c0caf5:regular \
+  --color=scrollbar:#29a4bd \
+  --color=separator:#ff9e64 \
+  --color=spinner:#ff007c \
+"
+
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+fpath+="~/.zsh/completions/"
+
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+source $ZSH/oh-my-zsh.sh
+
+eval "$(zoxide init zsh --cmd cd)"
+
+
+# Startup time profiling
+if [[ -n "$ZSH_DEBUGRC" ]]; then
+  zprof
+fi
+alias zsh-prof="time ZSH_DEBUGRC=1 zsh -i -c exit"
+
+alias l="eza -lhb --no-user --no-time --no-permissions --git --git-repos --color=always --icons --group-directories-first"
+alias ll="eza -lah -s name --git --icons --group-directories-first"
 alias la="eza -labhUm -s name --git --icons --group-directories-first $eza_params"
-# alias la='eza -lbhHigUmuSa'
 alias lyadm="lazygit -ucd ~/.local/share/yadm/lazygit -w ~ -g ~/.local/share/yadm/repo.git"
+
 alias vim="nvim"
 alias v="vim"
 
-eval "$(starship init zsh)"
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
-export EDITOR=nvim
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
+
 export VISUAL=nvim
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+eval "$(starship init zsh)"
+
