@@ -40,8 +40,11 @@ typeset -gU path fpath cdpath mailpath
 # Set the list of directories that zsh searches for commands.
 path=(
   $HOME/{,s}bin(N)
+  $HOME/.local/bin
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
   $path
 )
 
+# Created by `pipx` on 2024-07-11 12:56:07
+export PATH="$PATH:/Users/Misha/.local/bin"

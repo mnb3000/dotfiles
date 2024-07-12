@@ -11,7 +11,7 @@ function is-macos {
 # zstyle config
 [[ -f $HOME/.zstyles ]] && source $HOME/.zstyles
 
-fpath+="~/.zsh/completions/"
+fpath+="$HOME/.zsh/completions/"
 
 if is-macos; then
   fpath+="$HOMEBREW_PREFIX/share/zsh/site-functions"
@@ -27,14 +27,14 @@ else
   export ANTIDOTE_HOME=${XDG_DATA_HOME:-~/.local/share}/antidote
   if [[ ! -e $ANTIDOTE_HOME/share/antidote/antidote.zsh ]]; then
     echo "Cloning antidote..."
-    git clone --quiet --depth 1 https://github.com/mattmc3/antidote $ANTIDOTE_HOME/mattmc3/antidote
+    git clone --quiet --depth 1 https://github.com/mattmc3/antidote $ANTIDOTE_HOME/share/antidote
     touch $zplugins
   fi
 fi
 
 source $ANTIDOTE_HOME/share/antidote/antidote.zsh
 
-# # Cache static antidote plugin file.
+# Cache static antidote plugin file.
 if [[ ! ${zplugins}.zsh -nt $zplugins ]] || [[ ! -d $ANTIDOTE_HOME ]]; then
   (antidote bundle < $zplugins >| ${zplugins}.zsh)
 fi
