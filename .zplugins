@@ -6,6 +6,7 @@ ohmyzsh/ohmyzsh path:plugins/python
 ohmyzsh/ohmyzsh path:plugins/docker
 ohmyzsh/ohmyzsh path:plugins/docker-compose
 ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+ohmyzsh/ohmyzsh path:plugins/vi-mode
 ohmyzsh/ohmyzsh path:plugins/fzf
 ohmyzsh/ohmyzsh path:plugins/zoxide
 
@@ -13,9 +14,7 @@ ohmyzsh/ohmyzsh path:plugins/brew conditional:is-macos
 ohmyzsh/ohmyzsh path:plugins/macos conditional:is-macos
 wintermi/zsh-mise conditional:is-macos
 
-jeffreytse/zsh-vi-mode
 djui/alias-tips
-z-shell/zsh-eza
 Aloxaf/fzf-tab
 
 zsh-users/zsh-completions path:src kind:fpath

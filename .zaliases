@@ -1,9 +1,13 @@
 alias zsh-prof="time ZSH_DEBUGRC=1 zsh -i -c exit"
 
-alias l="eza -lhb --no-user --no-time --no-permissions --git --git-repos --color=always --icons --group-directories-first"
-alias ll="eza -lah -s name --git --icons --group-directories-first"
-alias la="eza -labhUm -s name --git --icons --group-directories-first $eza_params"
+eza_params=('--git' '--icons' '--color=always' '--group-directories-first')
+
+alias l="eza -lhb --no-user --no-time --no-permissions --git-repos"
+alias ll="eza -labhmU -s name --git-repos $eza_params"
+alias la="eza -labhm -s name $eza_params"
 alias lyadm="lazygit -ucd ~/.local/share/yadm/lazygit -w ~ -g ~/.local/share/yadm/repo.git"
+
+alias arc="open -a Arc"
 
 alias v="nvim"
 
@@ -15,3 +19,4 @@ function yy() {
 	fi
 	rm -f -- "$tmp"
 }
+
