@@ -3,8 +3,8 @@
 -- Add any additional keymaps here
 --
 
-vim.keymap.set("n", "<C-d>", "<C-d>zvzz")
-vim.keymap.set("n", "<C-u>", "<C-u>zvzz")
+-- vim.keymap.set("n", "<C-d>", "<C-d>zvzz")
+-- vim.keymap.set("n", "<C-u>", "<C-u>zvzz")
 
 vim.keymap.set("n", "n", "nzvzz")
 vim.keymap.set("n", "N", "Nzvzz")

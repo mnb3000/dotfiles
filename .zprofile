@@ -45,6 +45,3 @@ path=(
   /usr/local/{,s}bin(N)
   $path
 )
-
-# Created by `pipx` on 2024-07-11 12:56:07
-export PATH="$PATH:/Users/Misha/.local/bin"
