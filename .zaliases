@@ -2,7 +2,7 @@ alias zsh-prof="time ZSH_DEBUGRC=1 zsh -i -c exit"
 
 eza_params=('--git' '--icons' '--color=always' '--group-directories-first')
 
-alias l="eza -lhb --no-user --no-time --no-permissions --git-repos"
+alias l="eza -lhb --no-user --no-permissions" $eza_params 
 alias ll="eza -labhmU -s name --git-repos $eza_params"
 alias la="eza -labhm -s name $eza_params"
 alias lyadm="lazygit -ucd ~/.local/share/yadm/lazygit -w ~ -g ~/.local/share/yadm/repo.git"
@@ -12,11 +12,11 @@ alias arc="open -a Arc"
 alias v="nvim"
 
 function yy() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-  yazi "$@" --cwd-file="$tmp"
-  if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-    cd "$cwd"
-  fi
-  rm -f -- "$tmp"
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd "$cwd"
+	fi
+	rm -f -- "$tmp"
 }
 
