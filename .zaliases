@@ -20,3 +20,6 @@ function yy() {
 	rm -f -- "$tmp"
 }
 
+# Unbind Ctrl+H
+bindkey -r "^H"
+

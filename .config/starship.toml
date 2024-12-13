@@ -62,8 +62,8 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol$branch]($style)\]'
 
 [hostname]
-format = '[$ssh_symbol$hostname]($style)'
-style = 'cyan dimmed bold'
+format = '[$ssh_symbol$hostname ]($style)'
+style = '99 bold'
 
 [java]
 format = '\[[$symbol($version)]($style)\]'
