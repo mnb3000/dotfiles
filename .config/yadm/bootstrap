@@ -8,6 +8,7 @@ echo "Init submodules"
 yadm submodule update --recursive --init
 
 system_type=$(uname -s)
+tmp_dir=$(mktemp -d)
 
 if [ "$system_type" = "Darwin" ]; then
 
@@ -26,5 +27,10 @@ if [ "$system_type" = "Darwin" ]; then
     echo "Setting iTerm preference folder"
     defaults write com.googlecode.iterm2 PrefsCustomFolder "$HOME/.iterm2"
   fi
+
+  # Update ncurses for tmux-256color
+  curl --output-dir "$tmp_dir" -LO https://invisible-island.net/datafiles/current/terminfo.src.gz
+  gunzip "$tmp_dir"/terminfo.src.gz
+  /usr/bin/tic -xe tmux-256color terminfo.src
 
 fi
