@@ -39,7 +39,6 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --ansi \
   --layout=reverse \
   --border
-  --height=100% \
   --color=bg+:#2e3c64 \
   --color=bg:#1f2335 \
   --color=border:#29a4bd \
