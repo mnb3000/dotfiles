@@ -2,9 +2,10 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 --
-
--- vim.keymap.set("n", "<C-d>", "<C-d>zvzz")
--- vim.keymap.set("n", "<C-u>", "<C-u>zvzz")
+if vim.fn.has("linux") == 1 then
+  vim.keymap.set("n", "<C-d>", "<C-d>zvzz")
+  vim.keymap.set("n", "<C-u>", "<C-u>zvzz")
+end
 
 vim.keymap.set("n", "n", "nzvzz")
 vim.keymap.set("n", "N", "Nzvzz")
