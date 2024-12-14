@@ -22,24 +22,9 @@ path = "~"
 startup_command = "nvim .zshrc .zprofile .zshenv .zplugins .zaliases .zstyles "
 
 [[session]]
-name = "📟 tmux config"
-path = "~/.config/tmux"
-startup_command = "nvim tmux.conf"
-
-[[session]]
-name = "💾 neovim config"
-path = "~/.config/nvim"
-startup_command = "nvim -c ':Telescope find_files'"
-
-[[session]]
 name = "📁 config dir"
 path = "~/.config"
 startup_command = "nvim -c ':Neotree' -c ':Telescope oldfiles only_cwd=true'"
-
-[[session]]
-name = "🎛️  yadm lazygit"
-path = "~/.local/share/yadm/"
-startup_command = "lyadm"
 
 [[session]]
 name = "💽 Debian (non-root)"
