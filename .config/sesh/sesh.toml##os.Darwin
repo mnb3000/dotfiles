@@ -2,46 +2,46 @@
 startup_command = "la"
 
 [[session]]
-name = "🏡 Home"
+name = "\U0001F3E1 Home"
 path = "~"
 startup_command = "la"
 
 [[session]]
-name = "📥 Downloads"
+name = "\U0001F4E5 Downloads"
 path = "~/Downloads"
 startup_command = "y"
 
 [[session]]
-name = "📋 Documents"
+name = "\U0001F4CB Documents"
 path = "~/Documents/"
 startup_command = "y"
 
 [[session]]
-name = "⚙️  zsh config"
+name = "\U00002699 zsh config"
 path = "~"
 startup_command = "nvim .zshrc .zprofile .zshenv .zplugins .zaliases .zstyles "
 
 [[session]]
-name = "📟 tmux config"
+name = "\U0001F4DF tmux config"
 path = "~/.config/tmux"
 startup_command = "nvim tmux.conf"
 
 [[session]]
-name = "💾 neovim config"
+name = "\U0001F4BE neovim config"
 path = "~/.config/nvim"
 startup_command = "nvim -c ':Telescope find_files'"
 
 [[session]]
-name = "📁 config dir"
+name = "\U0001F4C1 config dir"
 path = "~/.config"
 startup_command = "nvim -c ':Neotree' -c ':Telescope oldfiles only_cwd=true'"
 
 [[session]]
-name = "🎛️  yadm lazygit"
+name = "\U0001F39B yadm lazygit"
 path = "~/.local/share/yadm/"
 startup_command = "lyadm"
 
 [[session]]
-name = "📱 Termux SSH"
+name = "\U0001F4F1 Termux SSH"
 path = "~"
 startup_command = "ssh -p 8022 google-pixel-6"

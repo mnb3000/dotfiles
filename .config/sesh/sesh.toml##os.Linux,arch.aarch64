@@ -1,42 +1,39 @@
-[default_session]
+[[session]]
+name = "\U0001F3E1 Home"
+path = "~/"
 startup_command = "la"
 
 [[session]]
-name = "🏡 Home"
-path = "~"
-startup_command = "la"
-
-[[session]]
-name = "📥 Downloads"
+name = "\U0001F4E5 Downloads"
 path = "~/Downloads"
 startup_command = "y"
 
 [[session]]
-name = "📋 Documents"
+name = "\U0001F4CB Documents"
 path = "~/Documents/"
 startup_command = "y"
 
 [[session]]
-name = "⚙️  zsh config"
-path = "~"
-startup_command = "nvim .zshrc .zprofile .zshenv .zplugins .zaliases .zstyles "
+name = "\U0001F4C1 zsh config"
+path = "~/"
+startup_command = "nvim .zshrc .zprofile .zshenv .zplugins .zaliases .zstyles"
 
 [[session]]
-name = "📁 config dir"
+name = "\U0001F4C1 config dir"
 path = "~/.config"
 startup_command = "nvim -c ':Neotree' -c ':Telescope oldfiles only_cwd=true'"
 
 [[session]]
-name = "💽 Debian (non-root)"
-path = "~"
-startup_command = "debian"
+name = "\U0001F4BD Debian (non-root)"
+path = "~/"
+startup_command = "whoami"
 
 [[session]]
-name = "❗ Debian (ROOT)"
-path = "~"
+name = "\U00002757 Debian (ROOT)"
+path = "~/"
 startup_command = "debian --root"
 
 [[session]]
-name = "💻 Macbook SSH"
-path = "~"
+name = "\U0001F4BB Macbook SSH"
+path = "~/"
 startup_command = "ssha Misha@myk-personal.taile3ea9.ts.net"
