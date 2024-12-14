@@ -43,5 +43,5 @@ startup_command = "lyadm"
 
 [[session]]
 name = "📱 Termux SSH"
-path = ""
+path = "~"
 startup_command = "ssh -p 8022 google-pixel-6"
