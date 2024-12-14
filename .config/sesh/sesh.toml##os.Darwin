@@ -10,13 +10,13 @@ startup_command = "y"
 
 [[session]]
 name = "\U0001F4CB Documents"
-path = "~/Documents/"
+path = "~/Documents"
 startup_command = "y"
 
 [[session]]
-name = "\U00002699 zsh config"
+name = "\U00002699\U0000FE0F zsh config"
 path = "~"
-startup_command = "nvim .zshrc .zprofile .zshenv .zplugins .zaliases .zstyles "
+startup_command = "nvim .zshrc .zprofile .zshenv .zplugins .zaliases .zstyles"
 
 [[session]]
 name = "\U0001F4DF tmux config"
@@ -35,7 +35,7 @@ startup_command = "nvim -c ':Neotree' -c ':Telescope oldfiles only_cwd=true'"
 
 [[session]]
 name = "\U0001F39B yadm lazygit"
-path = "~/.local/share/yadm/"
+path = "~/.local/share/yadm"
 startup_command = "lyadm"
 
 [[session]]

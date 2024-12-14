@@ -1,6 +1,6 @@
 [[session]]
 name = "\U0001F3E1 Home"
-path = "~/"
+path = "~"
 startup_command = "la"
 
 [[session]]
@@ -10,12 +10,12 @@ startup_command = "y"
 
 [[session]]
 name = "\U0001F4CB Documents"
-path = "~/Documents/"
+path = "~/Documents"
 startup_command = "y"
 
 [[session]]
-name = "\U0001F4C1 zsh config"
-path = "~/"
+name = "\U00002699\U0000FE0F  zsh config"
+path = "~"
 startup_command = "nvim .zshrc .zprofile .zshenv .zplugins .zaliases .zstyles"
 
 [[session]]
@@ -25,15 +25,15 @@ startup_command = "nvim -c ':Neotree' -c ':Telescope oldfiles only_cwd=true'"
 
 [[session]]
 name = "\U0001F4BD Debian (non-root)"
-path = "~/"
-startup_command = "whoami"
+path = "~"
+startup_command = "debian"
 
 [[session]]
 name = "\U00002757 Debian (ROOT)"
-path = "~/"
+path = "~"
 startup_command = "debian --root"
 
 [[session]]
 name = "\U0001F4BB Macbook SSH"
-path = "~/"
+path = "~"
 startup_command = "ssha Misha@myk-personal.taile3ea9.ts.net"
