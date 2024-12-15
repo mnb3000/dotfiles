@@ -826,7 +826,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "shift + h = ctrl + shift + tab (prev tab)",
+                                "description": "shift + h = option + left (word ahead)",
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
@@ -841,10 +841,9 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "tab",
+                                        "key_code": "left_arrow",
                                         "modifiers": [
-                                            "left_control",
-                                            "left_shift"
+                                            "left_option"
                                         ]
                                     }
                                 ],
@@ -1482,7 +1481,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "shift + l = command + tab (next tab)",
+                                "description": "shift + l = option + right (word ahead)",
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
@@ -1497,9 +1496,9 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "tab",
+                                        "key_code": "right_arrow",
                                         "modifiers": [
-                                            "left_control"
+                                            "left_option"
                                         ]
                                     }
                                 ],
