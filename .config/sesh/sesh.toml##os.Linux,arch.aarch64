@@ -24,14 +24,14 @@ path = "~/.config"
 startup_command = "nvim -c ':Neotree' -c ':Telescope oldfiles only_cwd=true'"
 
 [[session]]
-name = "\U0001F4BD Debian (non-root)"
+name = "\U0001F4BD Ubuntu (non-root)"
 path = "~"
-startup_command = "debian"
+startup_command = "ubuntu"
 
 [[session]]
-name = "\U00002757 Debian (ROOT)"
+name = "\U00002757 Ubuntu (ROOT)"
 path = "~"
-startup_command = "debian --root"
+startup_command = "ubuntu --root"
 
 [[session]]
 name = "\U0001F4BB Macbook SSH"
