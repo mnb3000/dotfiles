@@ -1,11 +1,11 @@
+{% include ".base.zplugins" %}
+
 {% if yadm.os == "Darwin" %}
 {% include ".darwin.zplugins" %}
 {% endif %}
 {% if yadm.os == "Linux" %}
 {% include ".linux.zplugins" %}
 {% endif %}
-
-{% include ".base.zplugins" %}
 
 zsh-users/zsh-completions path:src kind:fpath
 
