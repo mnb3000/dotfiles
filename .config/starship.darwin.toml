@@ -1,0 +1,3 @@
+[hostname]
+format = '[$ssh_symbol$hostname ]($style)'
+style = '99 bold'

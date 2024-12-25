@@ -61,12 +61,6 @@ format = '\[[$symbol($version)]($style)\]'
 [hg_branch]
 format = '\[[$symbol$branch]($style)\]'
 
-[hostname]
-ssh_only = false
-format = '[$ssh_symbol$hostname ]($style)'
-style = '99 bold'
-aliases = { "localhost" = "termux" }
-
 [java]
 format = '\[[$symbol($version)]($style)\]'
 

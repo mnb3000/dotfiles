@@ -1,0 +1,5 @@
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol$hostname ]($style)'
+style = '99 bold'
+aliases = { "localhost" = "termux" }

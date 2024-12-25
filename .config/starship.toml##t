@@ -1,0 +1,8 @@
+{% include "starship.base.toml" %}
+
+{% if yadm.os == "Darwin" %}
+{% include "starship.darwin.toml" %}
+{% endif %}
+{% if yadm.os == "Linux" %}
+{% include "starship.linux.{{ yadm.arch }}.toml" %}
+{% endif %}
