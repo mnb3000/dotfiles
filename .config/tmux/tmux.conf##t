@@ -1,0 +1,10 @@
+{% include "tmux.plugin.conf" %}
+
+{% if yadm.os == "Darwin" %}
+{% include "tmux.darwin.conf" %}
+{% endif %}
+{% if yadm.os == "Linux" %}
+{% include "tmux.linux.conf" %}
+{% endif %}
+
+{% include "tmux.base.conf" %}
