@@ -34,7 +34,7 @@ path = "~/.config"
 startup_command = "nvim -c ':Neotree' -c ':Telescope oldfiles only_cwd=true'"
 
 [[session]]
-name = "\U0001F39B yadm lazygit"
+name = "\U0001F39B lyadm lazygit"
 path = "~/.local/share/yadm"
 startup_command = "lyadm"
 
