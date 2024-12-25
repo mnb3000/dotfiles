@@ -11,15 +11,5 @@ ohmyzsh/ohmyzsh path:plugins/fzf
 ohmyzsh/ohmyzsh path:plugins/zoxide
 ohmyzsh/ohmyzsh path:plugins/tmux
 
-ohmyzsh/ohmyzsh path:plugins/brew conditional:is-macos
-ohmyzsh/ohmyzsh path:plugins/macos conditional:is-macos
-wintermi/zsh-mise conditional:is-macos
-
 djui/alias-tips
 Aloxaf/fzf-tab
-
-zsh-users/zsh-completions path:src kind:fpath
-
-zdharma-continuum/fast-syntax-highlighting kind:defer
-zsh-users/zsh-autosuggestions kind:defer
-zsh-users/zsh-history-substring-search kind:defer
