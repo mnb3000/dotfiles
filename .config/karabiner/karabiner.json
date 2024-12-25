@@ -2434,7 +2434,7 @@
                                     {
                                         "software_function": {
                                             "set_mouse_cursor_position": {
-                                                "screen": 0,
+                                                "screen": 2,
                                                 "x": "50%",
                                                 "y": "50%"
                                             }
