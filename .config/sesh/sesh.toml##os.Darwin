@@ -41,4 +41,9 @@ startup_command = "lyadm"
 [[session]]
 name = "\U0001F4F1 Termux SSH"
 path = "~"
-startup_command = "ssh -p 8022 google-pixel-6"
+startup_command = "ssh termux"
+
+[[session]]
+name = "\U0001F3AE Steam Deck SSH"
+path = "~"
+startup_command = "ssh steamdeck"

@@ -36,4 +36,14 @@ startup_command = "debian --root"
 [[session]]
 name = "\U0001F4BB Macbook SSH"
 path = "~"
-startup_command = "ssha Misha@myk-personal.taile3ea9.ts.net"
+startup_command = "ssha myk-laptop"
+
+[[session]]
+name = "\U0001F3AE Steam Deck SSH"
+path = "~"
+startup_command = "ssha steamdeck"
+
+# [[session]]
+# name = "\U0001F4F1 Termux SSH"
+# path = "~"
+# startup_command = "ssh termux"
