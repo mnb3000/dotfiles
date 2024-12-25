@@ -5,9 +5,9 @@
 if vim.fn.has("linux") == 1 then
   vim.keymap.set("n", "<C-d>", "<C-d>zvzz")
   vim.keymap.set("n", "<C-u>", "<C-u>zvzz")
+  vim.keymap.set("n", "n", "nzvzz")
+  vim.keymap.set("n", "N", "Nzvzz")
 end
 
-vim.keymap.set("n", "n", "nzvzz")
-vim.keymap.set("n", "N", "Nzvzz")
 vim.keymap.del("n", "<leader>-")
 vim.keymap.set("n", "<leader>\\", "<C-W>s", { desc = "Split Window Below", remap = true })
