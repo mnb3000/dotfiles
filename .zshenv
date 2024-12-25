@@ -63,3 +63,5 @@ export VI_MODE_SET_CURSOR=true
 export TERMINFO_DIRS=$TERMINFO_DIRS:$HOME/.local/share/terminfo
 
 export GOPATH=$HOME/go
+
+path+=(/opt/local/{,s}bin)

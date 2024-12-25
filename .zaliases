@@ -20,6 +20,29 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# Find all matching processes
+function p(){
+  ps -ef | grep -i $1 | grep -v grep | grep --color -i $1 # cursed but restores color highlighting
+}
+
+# Kill all matching processes
+function ka(){
+  cnt=$(p $1 | wc -l)  # total count of processes found
+  klevel=${2:-15}       # kill level, defaults to 15 if argument 2 is empty
+
+  echo -e "\nSearching for '$1' -- Found" $cnt "Running Processes .. "
+  p $1
+
+  echo -e '\nTerminating' $cnt 'processes .. '
+
+  ps aux | grep -i $1 | grep -v grep | awk '{print $2}' | xargs kill -$klevel
+  echo -e "Done!\n"
+
+  echo "Running search again:"
+  p "$1"
+  echo -e "\n"
+}
+
 # Unbind Ctrl+H
 bindkey -r "^H"
 

@@ -37,6 +37,7 @@ bindkey -M emacs '\es' sesh-sessions
 bindkey -M vicmd '\es' sesh-sessions
 bindkey -M viins '\es' sesh-sessions
 
+# Antidote plugin loading
 local zplugins=$HOME/.zplugins
 
 if [[ -e /opt/homebrew/bin/brew && -e $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh ]]; then
