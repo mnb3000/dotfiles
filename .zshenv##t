@@ -1,8 +1,0 @@
-{% include ".base.zshenv" %}
-
-{% if yadm.os == "Darwin" %}
-{% include ".darwin.zshenv" %}
-{% endif %}
-{% if yadm.os == "Linux" %}
-{% include ".linux.{{ yadm.arch }}.zshenv" %}
-{% endif %}

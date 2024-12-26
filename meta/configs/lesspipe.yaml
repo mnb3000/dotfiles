@@ -1,0 +1,9 @@
+- link:
+    $HOME/.lessfilter:
+      path: lesspipe/lessfilter
+
+# linux
+- link:
+    $HOME/lesspipe.sh:
+      if: '[ "$(uname -s)" = "Linux" ] && [ "$(uname -m)" = "aarch64" ]'
+      path: lesspipe/script/lesspipe.sh

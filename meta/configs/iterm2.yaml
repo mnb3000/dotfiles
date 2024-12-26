@@ -1,0 +1,16 @@
+# mac
+- link:
+    $HOME/.iterm2/:
+      if: '[ "$(uname -s)" = "Darwin" ]'
+      path: iterm2/*
+      glob: true
+
+- shell:
+    - description: Set iTerm2 preferences folder
+      command: |
+        if [ "$(uname -s)" = "Darwin" ] && [ -d "$HOME/.iterm2" ]; then
+          echo "Setting iTerm preference folder"
+          defaults write com.googlecode.iterm2 PrefsCustomFolder "$HOME/.iterm2"
+        fi
+      stdout: true
+      stdin: true

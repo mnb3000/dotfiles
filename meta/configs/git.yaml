@@ -1,0 +1,3 @@
+- link:
+    $HOME/.gitconfig: git/gitconfig
+    $HOME/.gitignore_global: git/gitignore

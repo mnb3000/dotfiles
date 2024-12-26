@@ -1,0 +1,13 @@
+# mac
+- link:
+    $HOME/.config/yazi/:
+      if: '[ "$(uname -s)" = "Darwin" ]'
+      path: yazi/*
+      glob: true
+
+# linux (termux only)
+- link:
+    $HOME/.config/yazi/:
+      if: '[ "$(uname -s)" = "Linux" ] && [ "$(uname -m)" = "aarch64" ]'
+      path: yazi/*
+      glob: true
