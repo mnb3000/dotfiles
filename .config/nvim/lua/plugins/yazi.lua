@@ -23,6 +23,9 @@ return {
     -- if you want to open yazi instead of netrw, see below for more info
     open_for_directories = true,
     enable_mouse_support = true,
+    yazi_floating_window_border = "rounded",
+    yazi_floating_window_winblend = 5,
+    floating_window_scaling_factor = 0.85,
     hooks = {
       yazi_closed_successfully = function(chosen_file, config, state)
         if chosen_file == nil and state.last_directory.filename then
