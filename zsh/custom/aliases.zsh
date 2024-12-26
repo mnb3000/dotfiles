@@ -1,13 +1,17 @@
 alias zsh-prof="time ZSH_DEBUGRC=1 zsh -i -c exit"
 
-eza_params=('--git' '--icons' '--color=always' '--group-directories-first')
+eza_params_no_git=('--icons' '--color=always' '--group-directories-first')
+eza_params=('--git' $eza_params_no_git)
 
 alias l="eza -lhb --no-user --no-permissions" $eza_params 
 alias ll="eza -labhmU -s name --git-repos $eza_params"
 alias la="eza -labhm -s name $eza_params"
+alias lag="eza -labhm -s name $eza_params_no_git"
+
 alias lyadm="lazygit -ucd ~/.local/share/yadm/lazygit -w ~ -g ~/.local/share/yadm/repo.git"
 
 alias v="nvim"
+alias ssh='TERM=xterm-256color ssh'
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd

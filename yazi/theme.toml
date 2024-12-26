@@ -1,2 +1,11 @@
 [flavor]
 use = "tokyo-night"
+dark = "tokyo-night"
+# use = "catppuccin-mocha"
+# dark = "catppuccin-mocha"
+# use = "catppuccin-macchiato"
+# dark = "catppuccin-macchiato"
+# use = "nightfly"
+# dark = "nightfly"
+# use = "onedark"
+# dark = "onedark"
