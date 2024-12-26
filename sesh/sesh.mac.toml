@@ -1,49 +1,49 @@
 [[session]]
-name = "\U0001F3E1 Home"
+name = "home \U0001F3E1"
 path = "~"
 startup_command = "la"
 
 [[session]]
-name = "\U0001F4E5 Downloads"
+name = "downloads \U0001F4E5"
 path = "~/Downloads"
 startup_command = "y"
 
 [[session]]
-name = "\U0001F4CB Documents"
+name = "documents \U0001F4CB"
 path = "~/Documents"
 startup_command = "y"
 
 [[session]]
-name = "\U00002699\U0000FE0F zsh config"
+name = "zsh config \U00002699\U0000FE0F"
 path = "~"
 startup_command = "nvim .zshrc .zprofile .zshenv .zplugins .zaliases .zstyles"
 
 [[session]]
-name = "\U0001F4DF tmux config"
+name = "tmux config \U0001F4DF"
 path = "~/.config/tmux"
 startup_command = "nvim tmux.conf"
 
 [[session]]
-name = "\U0001F4BE neovim config"
+name = "neovim config \U0001F4BE"
 path = "~/.config/nvim"
 startup_command = "nvim -c ':Telescope find_files'"
 
 [[session]]
-name = "\U0001F4C1 config dir"
+name = "config dir \U0001F4C1"
 path = "~/.config"
 startup_command = "nvim -c ':Neotree' -c ':Telescope oldfiles only_cwd=true'"
 
 [[session]]
-name = "\U0001F39B yadm lazygit"
+name = "yadm lazygit \U0001F39B"
 path = "~/.local/share/yadm"
 startup_command = "lyadm"
 
 [[session]]
-name = "\U0001F4F1 Termux SSH"
+name = "termux SSH \U0001F4F1"
 path = "~"
 startup_command = "ssh termux"
 
 [[session]]
-name = "\U0001F3AE Steam Deck SSH"
+name = "steam deck SSH \U0001F3AE"
 path = "~"
 startup_command = "ssh steamdeck"

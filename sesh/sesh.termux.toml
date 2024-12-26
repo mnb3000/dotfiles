@@ -1,45 +1,45 @@
 [[session]]
-name = "\U0001F3E1 Home"
+name = "home \U0001F3E1"
 path = "~"
 startup_command = "la"
 
 [[session]]
-name = "\U0001F4E5 Downloads"
+name = "downloads \U0001F4E5"
 path = "~/Downloads"
 startup_command = "y"
 
 [[session]]
-name = "\U0001F4CB Documents"
+name = "documents \U0001F4CB"
 path = "~/Documents"
 startup_command = "y"
 
 [[session]]
-name = "\U00002699\U0000FE0F  zsh config"
+name = "zsh config \U00002699\U0000FE0F"
 path = "~"
 startup_command = "nvim .zshrc .zprofile .zshenv .zplugins .zaliases .zstyles"
 
 [[session]]
-name = "\U0001F4C1 config dir"
+name = "config dir \U0001F4C1"
 path = "~/.config"
 startup_command = "nvim -c ':Neotree' -c ':Telescope oldfiles only_cwd=true'"
 
 [[session]]
-name = "\U0001F4BD Ubuntu (non-root)"
+name = "ubuntu (non-root) \U0001F4BD"
 path = "~"
 startup_command = "ubuntu"
 
 [[session]]
-name = "\U00002757 Ubuntu (ROOT)"
+name = "ubuntu (ROOT) \U00002757"
 path = "~"
 startup_command = "ubuntu --root"
 
 [[session]]
-name = "\U0001F4BB Macbook SSH"
+name = "macbook SSH \U0001F4BB"
 path = "~"
 startup_command = "ssha myk-laptop"
 
 [[session]]
-name = "\U0001F3AE Steam Deck SSH"
+name = "steam deck SSH \U0001F3AE"
 path = "~"
 startup_command = "ssha steamdeck"
 
