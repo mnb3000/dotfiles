@@ -1,10 +1,35 @@
+[alias]
+  update-submodules = submodule update --init --recursive
+  upgrade-submodules = submodule update --init --remote
+
 [user]
-	name = mnb3000
-	email = misha.mykolyshyn@gmail.com
+  name = mnb3000
+  email = misha.mykolyshyn@gmail.com
+
 [color]
-	ui = auto
+  ui = auto
+
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+
+[pull]
+  ff = only
+
+[push]
+  default = upstream
+
+[grep]
+  lineNumber = true
+
+[core]
+  excludesfile = ~/.gitignore_global
+
+[url "https://github.com/"]
+  insteadOf = git://github.com/
+
+# Allow local customizations in the .gitconfig_local file
+[include]
+  path = ~/.gitconfig_local
