@@ -9,7 +9,7 @@ alias la="eza -labhm -s name $eza_params"
 alias lag="eza -labhm -s name $eza_params_no_git"
 alias lt="eza -laThb --level 3 --no-user --no-permissions --git-ignore $eza_params"
 
-alias lyadm="lazygit -ucd ~/.local/share/yadm/lazygit -w ~ -g ~/.local/share/yadm/repo.git"
+alias lg="lazygit"
 
 alias v="nvim"
 alias ssh='TERM=xterm-256color ssh'

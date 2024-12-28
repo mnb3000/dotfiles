@@ -1,8 +1,7 @@
 - link:
     $HOME/.config/tmux/tmux.conf: tmux/tmux.conf
-    $HOME/.config/tmux/custom/:
-      path: tmux/custom/*
-      glob: true
+    $HOME/.config/tmux/custom:
+      path: tmux/custom
 
 - shell:
     - description: Update ncurses for tmux-256color
@@ -14,7 +13,7 @@
           gunzip "$tmp_dir"/terminfo.src.gz
 
           echo "Updating terminfo"
-          /usr/bin/tic -xe tmux-256color terminfo.src
+          /usr/bin/tic -xe tmux-256color "$tmp_dir/terminfo.src"
         fi
       stdout: true
       stdin: true

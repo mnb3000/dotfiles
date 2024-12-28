@@ -77,7 +77,10 @@ format = '\[[$symbol$branch]($style)\]'
 ssh_only = false
 format = '[$ssh_symbol$hostname ]($style)'
 style = '99 bold'
-aliases = { "localhost" = "termux" }
+
+[hostname.aliases]
+localhost = "📱termux"
+myk-personal = "💻mbp"
 
 [java]
 format = '\[[$symbol($version)]($style)\]'

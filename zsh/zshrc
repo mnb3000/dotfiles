@@ -5,16 +5,16 @@ fi
 
 fpath+="$ZDOTDIR/completions/"
 
-if is-macos; then
-  fpath+="$HOMEBREW_PREFIX/share/zsh/site-functions"
-  eval "$(mise activate zsh --shims)"
-fi
-
 # Zsh Options
 [ -f $ZDOTDIR/custom/options.zsh ] && source $ZDOTDIR/custom/options.zsh
 
 # Zsh Functions
 [ -f $ZDOTDIR/custom/functions.zsh ] && source $ZDOTDIR/custom/functions.zsh
+
+if is-macos; then
+  fpath+="$HOMEBREW_PREFIX/share/zsh/site-functions"
+  eval "$(mise activate zsh --shims)"
+fi
 
 # Zsh Bindings
 [ -f $ZDOTDIR/custom/bindings.zsh ] && source $ZDOTDIR/custom/bindings.zsh

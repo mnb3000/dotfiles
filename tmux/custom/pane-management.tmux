@@ -11,10 +11,10 @@ window_move_bindings() {
 
 window_navigation_bindings() {
   # Shift Alt vim keys to switch windows
-  bind -n M-H previous-window
-  bind -n M-L next-window
+  tmux bind-key -n M-H previous-window
+  tmux bind-key -n M-L next-window
 
-  bind-key x kill-pane # skip "kill-pane 1? (y/n)" prompt
+  tmux bind-key x kill-pane # skip "kill-pane 1? (y/n)" prompt
 }
 
 pane_split_bindings() {

@@ -6,10 +6,8 @@
 
     $HOME/.zshenv: zsh/shim.zshenv
 
-    $HOME/.zsh/custom/:
-      path: zsh/custom/*
-      glob: true
+    $HOME/.zsh/custom:
+      path: zsh/custom
 
-    $HOME/.zsh/completions/:
-      path: zsh/completions/*
-      glob: true
+    $HOME/.zsh/completions:
+      path: zsh/completions
