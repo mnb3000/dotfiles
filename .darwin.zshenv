@@ -1,5 +1,5 @@
 # TokyoNight FZF
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+export FZF_DEFAULT_OPTS=" \
   --highlight-line \
   --info=inline-right \
   --ansi \

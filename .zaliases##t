@@ -1,5 +1,4 @@
 {% include ".base.zaliases" %}
-
 {% if yadm.os == "Darwin" %}
 {% include ".darwin.zaliases" %}
 {% endif %}
