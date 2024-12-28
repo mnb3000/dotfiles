@@ -1,0 +1,49 @@
+[[session]]
+name = "home \U0001F3E1"
+path = "~"
+startup_command = "la"
+
+[[session]]
+name = "downloads \U0001F4E5"
+path = "~/Downloads"
+startup_command = "y"
+
+[[session]]
+name = "documents \U0001F4CB"
+path = "~/Documents"
+startup_command = "y"
+
+[[session]]
+name = "zsh config \U00002699\U0000FE0F"
+path = "~"
+startup_command = "nvim .zshrc .zprofile .zshenv .zplugins .zaliases .zstyles"
+
+[[session]]
+name = "config dir \U0001F4C1"
+path = "~/.config"
+startup_command = "nvim -c ':Neotree' -c ':Telescope oldfiles only_cwd=true'"
+
+[[session]]
+name = "ubuntu (non-root) \U0001F4BD"
+path = "~"
+startup_command = "ubuntu"
+
+[[session]]
+name = "ubuntu (ROOT) \U00002757"
+path = "~"
+startup_command = "ubuntu --root"
+
+[[session]]
+name = "macbook SSH \U0001F4BB"
+path = "~"
+startup_command = "ssha myk-laptop"
+
+[[session]]
+name = "steam deck SSH \U0001F3AE"
+path = "~"
+startup_command = "ssha steamdeck"
+
+# [[session]]
+# name = "\U0001F4F1 Termux SSH"
+# path = "~"
+# startup_command = "ssh termux"

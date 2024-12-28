@@ -1,0 +1,12 @@
+# linux (and now mac)
+- link:
+    $HOME/.config/lazygit/config.yml:
+      # if: '[ "$(uname -s)" = "Linux" ]'
+      path: lazygit/config.yml
+# This one is no longer needed
+# # mac
+# - link:
+#     $HOME/Library/Application Support/lazygit/config.yml:
+#       if: '[ "$(uname -s)" = "Darwin" ]'
+#       path: lazygit/config.yml
+

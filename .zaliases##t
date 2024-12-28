@@ -1,7 +1,0 @@
-{% include ".base.zaliases" %}
-{% if yadm.os == "Darwin" %}
-{% include ".darwin.zaliases" %}
-{% endif %}
-{% if yadm.os == "Linux" %}
-{% include ".linux.{{ yadm.arch }}.zaliases" %}
-{% endif %}

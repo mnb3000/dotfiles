@@ -1,0 +1,40 @@
+# Startup time profiling
+if [[ -n "$ZSH_DEBUGRC" ]]; then
+  zmodload zsh/zprof
+fi
+
+fpath+="$ZDOTDIR/completions/"
+
+# Zsh Options
+[ -f $ZDOTDIR/custom/options.zsh ] && source $ZDOTDIR/custom/options.zsh
+
+# Zsh Functions
+[ -f $ZDOTDIR/custom/functions.zsh ] && source $ZDOTDIR/custom/functions.zsh
+
+if is-macos; then
+  fpath+="$HOMEBREW_PREFIX/share/zsh/site-functions"
+  eval "$(mise activate zsh --shims)"
+fi
+
+# Zsh Bindings
+[ -f $ZDOTDIR/custom/bindings.zsh ] && source $ZDOTDIR/custom/bindings.zsh
+
+# Zsh Completions
+[ -f $ZDOTDIR/custom/completions.zsh ] && source $ZDOTDIR/custom/completions.zsh
+
+# Zsh Plugins
+[ -f $ZDOTDIR/custom/plugins.zsh ] && source $ZDOTDIR/custom/plugins.zsh
+
+# Zsh Aliases
+[ -f $ZDOTDIR/custom/aliases.zsh ] && source $ZDOTDIR/custom/aliases.zsh
+
+eval "$(starship init zsh)"
+
+# Startup time profiling
+if [[ -n "$ZSH_DEBUGRC" ]]; then
+  zprof
+fi
+
+unset ZSH_DEBUGRC
+true
+
