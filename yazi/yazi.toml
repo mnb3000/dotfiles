@@ -2,7 +2,7 @@
 [manager]
 show_hidden = true
 
-ratio = [1, 2, 3]
+ratio = [1, 2, 2]
 
 show_symlink = true
 linemode = "size"

@@ -3,5 +3,13 @@
     $HOME/.zsh/.zprofile: zsh/zprofile
     $HOME/.zsh/.zshenv: zsh/zshenv
     $HOME/.zsh/.zplugins: zsh/zplugins
-    $HOME/.zsh/custom: zsh/custom
+
     $HOME/.zshenv: zsh/shim.zshenv
+
+    $HOME/.zsh/custom/:
+      path: zsh/custom/*
+      glob: true
+
+    $HOME/.zsh/completions/:
+      path: zsh/completions/*
+      glob: true
