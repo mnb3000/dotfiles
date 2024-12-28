@@ -49,14 +49,9 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --ansi \
   --border=rounded \
   --preview-window=border-rounded \
-  --height ~100% \
-  --padding=2 \
+  --height 40% \
+  --padding=1 \
   --margin=1 \
-  --prompt=\"> \" \
-  --marker=\">\" \
-  --pointer=\"◆\" \
-  --separator=\"─\" \
-  --scrollbar=\"│\" \
   --layout=reverse \
   --color=bg+:#2e3c64 \
   --color=bg:#1f2335 \

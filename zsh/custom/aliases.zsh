@@ -47,9 +47,9 @@ function ka(){
 }
 
 if is-macos; then
-  alias arc="open -a Arc"
+  [ -f $ZDOTDIR/custom/aliases.deck.zsh ] && source $ZDOTDIR/custom/aliases.mac.zsh
 fi
 
 if is-deck; then
-  [ -f $HOME/.zsh/custom/aliases.deck.zsh ] && source $HOME/.zsh/custom/aliases.deck.zsh
+  [ -f $ZDOTDIR/custom/aliases.deck.zsh ] && source $ZDOTDIR/custom/aliases.deck.zsh
 fi

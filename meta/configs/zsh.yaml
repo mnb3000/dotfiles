@@ -1,6 +1,0 @@
-- link:
-    $HOME/.zshrc: zsh/zshrc
-    $HOME/.zprofile: zsh/zprofile
-    $HOME/.zshenv: zsh/zshenv
-    $HOME/.zplugins: zsh/zplugins
-    $HOME/.zsh/custom: zsh/custom
