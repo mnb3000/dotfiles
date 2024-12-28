@@ -1,5 +1,5 @@
+[flavor]
+deps = [{ use = "BennyOe/tokyo-night", rev = "024fb09" }]
+
 [plugin]
 deps = [{ use = "dedukun/relative-motions", rev = "df97039" }]
-
-[flavor]
-deps = [{ use = "yazi-rs/flavors:catppuccin-mocha", rev = "fc8eeaa" }, { use = "BennyOe/tokyo-night", rev = "024fb09" }, { use = "yazi-rs/flavors:catppuccin-macchiato", rev = "fc8eeaa" }, { use = "tkapias/nightfly", rev = "599b8ad" }, { use = "BennyOe/onedark", rev = "fa1da70" }]
