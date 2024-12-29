@@ -44,7 +44,7 @@ export GOPATH=$HOME/go
 path+=(/opt/local/{,s}bin)
 
 # TokyoNight FZF
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+export FZF_DEFAULT_OPTS=" \
   --info=inline-right \
   --ansi \
   --border=rounded \
