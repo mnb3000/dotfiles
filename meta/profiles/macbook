@@ -2,6 +2,9 @@ git
 lazygit
 lesspipe
 bat
+eza
+fzf
+zoxide
 nvim
 sesh
 ssh

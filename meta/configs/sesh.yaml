@@ -1,3 +1,7 @@
+- link:
+    $HOME/.zsh/custom/sesh.zsh:
+      path: sesh/config.zsh
+
 # mac
 - link:
     $HOME/.config/sesh/sesh.toml:

@@ -1,0 +1,3 @@
+- link:
+    $HOME/.zsh/custom/eza.zsh:
+      path: eza/config.zsh

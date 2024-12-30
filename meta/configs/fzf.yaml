@@ -1,0 +1,3 @@
+- link:
+    $HOME/.zsh/custom/fzf.zsh:
+      path: fzf/config.zsh
