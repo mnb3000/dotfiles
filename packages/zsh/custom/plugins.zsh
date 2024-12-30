@@ -14,8 +14,13 @@ fi
 
 source $ANTIDOTE_HOME/share/antidote/antidote.zsh
 
-# Cache static antidote plugin file.
-if [[ ! ${zplugins}.zsh -nt $zplugins ]] || [[ ! -d $ANTIDOTE_HOME ]]; then
-  (antidote bundle < $zplugins >| ${zplugins}.zsh)
+# iPad iSH edge-case, no process substitution available
+if [[ "$(uname -v | grep 'SUPER AWESOME')" ]]; then
+   antidote load $zplugins
+else
+  # Cache static antidote plugin file.
+  if [[ ! ${zplugins}.zsh -nt $zplugins ]] || [[ ! -d $ANTIDOTE_HOME ]]; then
+    (antidote bundle < $zplugins >| ${zplugins}.zsh)
+  fi
+  source ${zplugins}.zsh
 fi
-source ${zplugins}.zsh

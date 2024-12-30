@@ -1,3 +1,5 @@
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
 # Settings for Plugin fzf-tab
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false

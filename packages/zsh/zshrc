@@ -78,6 +78,9 @@ src-if-installed $ZDOTDIR/custom/yazi.zsh yazi
 # lazygit alias
 src-if-installed $ZDOTDIR/custom/lazygit.zsh lazygit
 
+# go path
+src-if-installed $ZDOTDIR/custom/go.zsh go
+
 # startup time profiling
 if [[ -n "$ZSH_DEBUGRC" ]]; then
   zprof
