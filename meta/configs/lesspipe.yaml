@@ -5,5 +5,5 @@
 # linux
 - link:
     $HOME/lesspipe.sh:
-      if: '[ "$(uname -s)" = "Linux" ] && [ "$(uname -m)" = "aarch64" ]'
+      if: '[ "$(uname -s)" = "Linux" ] && [ ! "$(uname -m)" = "amd64" ]'
       path: packages/lesspipe/script/lesspipe.sh
