@@ -13,7 +13,6 @@ set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'alexwforsythe/tmux-which-key'
 
 set -g @plugin 'laktak/extrakto'
-set -g @plugin 'Morantron/tmux-fingers'
 
 set -g @plugin 'janoamaral/tokyo-night-tmux'
 
