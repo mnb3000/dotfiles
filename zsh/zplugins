@@ -7,7 +7,6 @@ ohmyzsh/ohmyzsh path:plugins/docker
 ohmyzsh/ohmyzsh path:plugins/docker-compose
 ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 ohmyzsh/ohmyzsh path:plugins/vi-mode
-ohmyzsh/ohmyzsh path:plugins/fzf
 ohmyzsh/ohmyzsh path:plugins/zoxide
 ohmyzsh/ohmyzsh path:plugins/tmux
 
@@ -15,8 +14,9 @@ ohmyzsh/ohmyzsh path:plugins/brew conditional:is-macos
 ohmyzsh/ohmyzsh path:plugins/macos conditional:is-macos
 wintermi/zsh-mise conditional:is-macos
 
-djui/alias-tips
-Aloxaf/fzf-tab
+ohmyzsh/ohmyzsh path:plugins/fzf kind:defer
+Aloxaf/fzf-tab kind:defer
+djui/alias-tips kind:defer
 
 zsh-users/zsh-completions path:src kind:fpath
 

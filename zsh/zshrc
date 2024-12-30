@@ -1,38 +1,95 @@
-# Startup time profiling
+#####################################
+## --------------------------------
+##               __
+##   ____  _____/ /_
+##  /_  / / ___/ __ \/ ___/ ___/
+##   / /_(__  ) / / / /  / /__
+##  /___/____/_/ /_/_/   \___/
+##                  -by mnb3000
+## --------------------------------
+## vim:ft=zsh
+#####################################
+
+## startup calculation
+[[ "$(uname)" == "Darwin" ]] && _date="gdate" || _date="date"
+_SHELL_STARTUP_THRESHOLD=400 # ms
+_SHELL_STARTUP_START=$($_date +%s%N)
+_SHELL_DEBUG=true
+
+# startup time profiling
 if [[ -n "$ZSH_DEBUGRC" ]]; then
   zmodload zsh/zprof
 fi
 
-fpath+="$ZDOTDIR/completions/"
-
-# Zsh Options
-[ -f $ZDOTDIR/custom/options.zsh ] && source $ZDOTDIR/custom/options.zsh
-
-# Zsh Functions
-[ -f $ZDOTDIR/custom/functions.zsh ] && source $ZDOTDIR/custom/functions.zsh
-
-if is-macos; then
-  fpath+="$HOMEBREW_PREFIX/share/zsh/site-functions"
-  eval "$(mise activate zsh --shims)"
+# starship is put here so that command execution time is
+# more accurate
+if [[ "$(command -v starship)" ]]; then
+  eval "$(starship init zsh)"
 fi
 
-# Zsh Bindings
-[ -f $ZDOTDIR/custom/bindings.zsh ] && source $ZDOTDIR/custom/bindings.zsh
+## source helper, prevent error when file not found
+src() {
+  [[ -n $_SHELL_DEBUG ]] && timestart=$($_date +%s%N)
+  if [[ -f "$1" ]]; then
+    source "$1"
+  else
+    if [[ -n $_SHELL_DEBUG ]]; then
+      echo "Error src(): $1"
+    fi
+  fi
+  [[ -n $_SHELL_DEBUG ]] && timeend=$($_date +%s%N)
+  [[ -n $_SHELL_DEBUG ]] && echo -e "[$(( ($timeend - $timestart) / 1000000 ))ms] src ${1}"
+}
 
-# Zsh Completions
-[ -f $ZDOTDIR/custom/completions.zsh ] && source $ZDOTDIR/custom/completions.zsh
 
-# Zsh Plugins
-[ -f $ZDOTDIR/custom/plugins.zsh ] && source $ZDOTDIR/custom/plugins.zsh
+# zsh Options
+src $ZDOTDIR/custom/options.zsh
 
-# Zsh Aliases
-[ -f $ZDOTDIR/custom/aliases.zsh ] && source $ZDOTDIR/custom/aliases.zsh
+# zsh Functions
+src $ZDOTDIR/custom/functions.zsh
 
-eval "$(starship init zsh)"
+# zsh Keybinds
+src $ZDOTDIR/custom/bindings.zsh
 
-# Startup time profiling
+# zsh Completions
+src $ZDOTDIR/custom/completions.zsh
+
+# zsh Aliases
+src $ZDOTDIR/custom/aliases.zsh
+
+# zsh Plugins
+src $ZDOTDIR/custom/plugins.zsh
+
+# sesh Keybinding
+src-if-installed $ZDOTDIR/custom/sesh.zsh sesh
+
+# fzf settings
+src-if-installed $ZDOTDIR/custom/fzf.zsh fzf
+
+# eza settings and aliases
+src-if-installed $ZDOTDIR/custom/eza.zsh eza
+
+# zoxide settings
+src-if-installed $ZDOTDIR/custom/zoxide.zsh zoxide
+
+# yazi settings
+src-if-installed $ZDOTDIR/custom/yazi.zsh yazi
+
+# startup time profiling
 if [[ -n "$ZSH_DEBUGRC" ]]; then
   zprof
+fi
+
+## startup calculation
+export _SHELL_STARTUP_TIME=$((($($_date +%s%N) - $_SHELL_STARTUP_START) / 1000000))
+[[ -n $_SHELL_DEBUG ]] && echo -e "[${_SHELL_STARTUP_TIME}ms] zsh startup"
+if [[ $_SHELL_STARTUP_TIME -gt $_SHELL_STARTUP_THRESHOLD ]]; then
+  echo -e "---"
+  echo -e "WARNING: Slow shell (${_SHELL_STARTUP_TIME}ms)"
+  echo -e "---"
+  zprof | head -n 12
+  echo -e "---"
+  echo "fix your shell plz #slow"
 fi
 
 unset ZSH_DEBUGRC
