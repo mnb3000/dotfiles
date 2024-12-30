@@ -22,7 +22,6 @@ unset repo{s,}
 plugins=(
   git
   vi-mode
-  zoxide
   fzf
 
   fzf-tab
