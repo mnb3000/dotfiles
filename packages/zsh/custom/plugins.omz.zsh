@@ -13,8 +13,8 @@ repos=(
   zsh-users/zsh-history-substring-search
 )
 for repo in $repos; do
-  if [[ ! -d $ZSH_CUSTOM/${repo:t} ]]; then
-    git clone https://github.com/${repo} $ZSH_CUSTOM/plugins/${repo:t}
+  if [[ ! -d $ZDOTDIR/ohmyzsh/plugins/${repo:t} ]]; then
+    git clone https://github.com/${repo} $ZDOTDIR/ohmyzsh/plugins/${repo:t}
   fi
 done
 unset repo{s,}
