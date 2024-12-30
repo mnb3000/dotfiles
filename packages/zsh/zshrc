@@ -41,7 +41,6 @@ src() {
   [[ -n $_SHELL_DEBUG ]] && echo -e "[$(( ($timeend - $timestart) / 1000000 ))ms] src ${1}"
 }
 
-
 # zsh Options
 src $ZDOTDIR/custom/options.zsh
 
