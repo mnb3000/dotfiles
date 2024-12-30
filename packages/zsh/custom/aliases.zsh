@@ -1,7 +1,5 @@
 alias zsh-prof="time ZSH_DEBUGRC=1 zsh -i -c exit"
 
-alias lg="lazygit"
-
 alias v="nvim"
 alias ssh='TERM=xterm-256color ssh'
 

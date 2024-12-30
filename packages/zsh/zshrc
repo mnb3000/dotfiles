@@ -14,7 +14,7 @@
 [[ "$(uname)" == "Darwin" ]] && _date="gdate" || _date="date"
 _SHELL_STARTUP_THRESHOLD=400 # ms
 _SHELL_STARTUP_START=$($_date +%s%N)
-_SHELL_DEBUG=
+_SHELL_DEBUG=true
 
 # startup time profiling
 if [[ -n "$ZSH_DEBUGRC" ]]; then
@@ -74,6 +74,9 @@ src-if-installed $ZDOTDIR/custom/zoxide.zsh zoxide
 
 # yazi settings
 src-if-installed $ZDOTDIR/custom/yazi.zsh yazi
+
+# lazygit alias
+src-if-installed $ZDOTDIR/custom/lazygit.zsh lazygit
 
 # startup time profiling
 if [[ -n "$ZSH_DEBUGRC" ]]; then

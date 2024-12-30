@@ -3,6 +3,8 @@
     $HOME/.config/lazygit/config.yml:
       # if: '[ "$(uname -s)" = "Linux" ]'
       path: packages/lazygit/config.yml
+    $HOME/.zsh/custom/lazygit.zsh:
+      path: packages/lazygit/config.zsh
 # This one is no longer needed
 # # mac
 # - link:
