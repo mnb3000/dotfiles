@@ -10,6 +10,10 @@ function is-deck {
   [ "$( uname -s )" = "Linux" ] && [ "$( uname -m )" = "aarch64" ]  || return 1
 }
 
+function is-ish {
+  [[ "$(uname -v | grep 'SUPER AWESOME')" ]] || return 1
+}
+
 function src {
   [[ -n $_SHELL_DEBUG ]] && timestart=$($_date +%s%N)
   if [[ -f "$1" ]]; then
