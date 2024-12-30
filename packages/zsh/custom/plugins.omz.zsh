@@ -21,11 +21,6 @@ unset repo{s,}
 
 plugins=(
   git
-  sudo
-  python
-  docker
-  docker-compose
-  colored-man-pages
   vi-mode
   zoxide
   fzf
