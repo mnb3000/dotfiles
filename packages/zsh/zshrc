@@ -14,7 +14,7 @@
 [[ "$(uname)" == "Darwin" ]] && _date="gdate" || _date="date"
 _SHELL_STARTUP_THRESHOLD=400 # ms
 _SHELL_STARTUP_START=$($_date +%s%N)
-_SHELL_DEBUG=true
+_SHELL_DEBUG=
 
 # startup time profiling
 if [[ -n "$ZSH_DEBUGRC" ]]; then
