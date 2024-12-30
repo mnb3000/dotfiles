@@ -23,6 +23,7 @@ plugins=(
   git
   vi-mode
   fzf
+  tmux
 
   fzf-tab
   alias-tips
