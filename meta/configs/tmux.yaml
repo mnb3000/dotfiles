@@ -1,7 +1,7 @@
 - link:
-    $HOME/.config/tmux/tmux.conf: tmux/tmux.conf
+    $HOME/.config/tmux/tmux.conf: packages/tmux/tmux.conf
     $HOME/.config/tmux/custom:
-      path: tmux/custom
+      path: packages/tmux/custom
 
 - shell:
     - description: Update ncurses for tmux-256color

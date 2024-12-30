@@ -1,3 +1,3 @@
 - link:
     $HOME/.zsh/custom/zoxide.zsh:
-      path: zoxide/config.zsh
+      path: packages/zoxide/config.zsh

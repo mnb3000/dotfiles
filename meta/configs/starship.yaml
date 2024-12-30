@@ -1,2 +1,2 @@
 - link:
-    $HOME/.config/starship.toml: starship/starship.toml
+    $HOME/.config/starship.toml: packages/starship/starship.toml

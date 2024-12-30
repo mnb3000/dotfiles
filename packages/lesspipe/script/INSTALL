@@ -1,0 +1,102 @@
+INSTALL
+=======
+Execute the following commands (for a more detailed description see below):
+
+  ./configure
+  # required
+  cp lesspipe.sh /usr/local/bin
+
+  # optional for colorizing and old openoffice writer formats
+  cp code2color archive_color vimcolor sxw2txt lesscomplete /usr/local/bin
+
+  # optional for zsh and bash completion (archive contents)
+  cp lesscomplete /usr/local/bin           # (zsh and bash)
+  cp _less /usr/share/zsh/site-functions   #(zsh)
+  cp less_completion /etc/bashcompletion.d #(bash)
+
+or if you prefer make:
+
+  make
+  make test
+  make install
+
+Then do set the environment variable LESSOPEN:
+
+  LESSOPEN="|/usr/local/bin/lesspipe.sh %s"; export LESSOPEN  #(sh like shells)
+  setenv LESSOPEN "|/usr/local/bin/lesspipe.sh %s"            #(csh, tcsh)
+
+  DO NOT OMIT THE VERTICAL BAR AS FIRST CHARACTER, IT IS ESSENTIAL !!!
+
+Detailed description
+====================
+
+Prerequisites:
+--------------
+For a detailed discussion consult the file README starting with the section
+'Required programs'. For best results up to date versions of 'file'
+tar, gzip, bzip2 and some helper programs are highly recommended.
+
+Step 1: create Makefile and lesspipe.sh using a different shell (optional)
+--------------------------------------------------------------------------
+
+ ./configure [--help] [--nomake] [--prefix=<path>] [--shell=<file>]
+
+Options:
+  --help                  print this message
+  --shell=<filename>      specify full path to an alternative shell to use
+  --nomake                do not generate a Makefile
+Directory and file names:
+  --prefix=PREFIX         install lesspipe.sh in PREFIX/bin (/usr/local)
+
+configure generates by default a Makefile and if an alternate shell is
+given, then also a changed lesspipe.sh.
+
+Step 2: verify that lesspipe.sh is working correctly (optional)
+---------------------------------------------------------------
+A test suite has been added that does cover most use cases of less.
+If the test suite reports "NOT ok" lines then lesspipe.sh
+is probably not fully functional in your environment. If the message is
+"ignored" it is usually an indication that some helper programs are
+not installed. To execute the test suite the command
+
+  make test
+or
+  ./test.pl [-e] [-n] [-v] [testnumber[s]] [file_name]
+
+can be used. The options -e and -v are for debugging.
+
+To get support for newer file types an additional magic file (e.g. ~/.magic,
+for use in the file command) might have to be created. In that case the
+environment variable MAGIC has to be set and has to contain both the system
+magic file and your personal one. Example:
+
+  MAGIC='/usr/share/file/magic:/Users/myaccount/.magic'
+  export MAGIC
+
+Step 3: install lesspipe.sh and helper programs
+-----------------------------------------------------------------------
+You can copy lesspipe.sh to any appropriate place.
+Suggested location: /usr/local/bin/lesspipe.sh
+The helper programs can be copied to the same directory as lesspipe.sh or any
+directory listed in the PATH environment variable.
+The archive_color script allows to colorize tar and other archive listings.
+
+  cp lesspipe.sh code2color vimcolor sxw2txt archive_color /usr/local/bin
+
+This can be achieved also with make:
+
+  make install [PREFIX=<path>]  # that copies the scripts to <path>/bin
+
+For zsh and bash a tab completion for archive contents is provided.
+To activate it the script lesscomplete has to be copied into a directory
+listed in $PATH, the _less function for zsh into a directory listed in $fpath
+and less_completion into a directory used by its completion mechanism.
+
+Step 4: activate lesspipe.sh
+----------------------------
+To make use of the installed lesspipe.sh set the environment variable LESSOPEN:
+The use of the fully qualified path is recommended to avoid problems with other
+scripts of the same name or with a changed search PATH:
+
+  LESSOPEN="|/usr/local/bin/lesspipe.sh %s"; export LESSOPEN  #(sh like shells)
+  setenv LESSOPEN "|/usr/local/bin/lesspipe.sh %s"	      #(csh, tcsh)

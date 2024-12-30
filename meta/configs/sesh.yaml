@@ -1,21 +1,21 @@
 - link:
     $HOME/.zsh/custom/sesh.zsh:
-      path: sesh/config.zsh
+      path: packages/sesh/config.zsh
 
 # mac
 - link:
     $HOME/.config/sesh/sesh.toml:
       if: '[ "$(uname -s)" = "Darwin" ]'
-      path: sesh/sesh.mac.toml
+      path: packages/sesh/sesh.mac.toml
 
 # linux (android)
 - link:
     $HOME/.config/sesh/sesh.toml:
       if: '[ "$(uname -s)" = "Linux" ] && [ "$(uname -m)" = "aarch64" ]'
-      path: sesh/sesh.termux.toml
+      path: packages/sesh/sesh.termux.toml
 
 # linux (steamos)
 - link:
     $HOME/.config/sesh/sesh.toml:
       if: '[ "$(uname -s)" = "Linux" ] && [ "$(uname -m)" = "x86_64" ]'
-      path: sesh/sesh.deck.toml
+      path: packages/sesh/sesh.deck.toml

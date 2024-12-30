@@ -1,2 +1,2 @@
 - link:
-    $HOME/.ssh/authorized_keys: ssh/authorized_keys
+    $HOME/.ssh/authorized_keys: packages/ssh/authorized_keys
