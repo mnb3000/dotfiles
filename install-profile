@@ -106,12 +106,9 @@ unset exitIfProfileNotFound
 #   run dotbot configs using ./install-standalone
 for profile in ${@}; do
   # extract dotbot configs to run
-  while IFS= read -r config; do
-    CONFIGS+=" ${config}"
-
-    # read lines that DON'T start with #
-    # obtained from https://stackoverflow.com/a/8197412/3053548
-  done < <(grep -v '^#' "${META_DIR}/${PROFILES_DIR}/$profile")
+  # replaces new lines with spaces without process
+  # substitution, cross-platform (macos, linux)
+  CONFIGS="$(sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g' "${META_DIR}/${PROFILES_DIR}/$profile")"
 
   # print line banner multiple times
   # https://serverfault.com/a/273241
