@@ -1,6 +1,6 @@
 # TokyoNight FZF
-export FZF_DEFAULT_OPTS=" \
-  --info=inline-right \
+
+FZF_DEFAULT_OPTS=" \
   --ansi \
   --border=rounded \
   --preview-window=border-rounded \
@@ -25,3 +25,9 @@ export FZF_DEFAULT_OPTS=" \
   --color=separator:#ff9e64 \
   --color=spinner:#ff007c \
 "
+if is-ish
+then
+  FZF_DEFAULT_OPTS+="--info=inline"
+else
+  FZF_DEFAULT_OPTS+="--info=inline-right"
+fi
