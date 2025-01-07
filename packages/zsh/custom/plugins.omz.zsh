@@ -3,14 +3,10 @@ export ZSH="$ZDOTDIR/ohmyzsh"
 ZSH_THEME="robbyrussell"
 
 repos=(
-  aloxaf/fzf-tab
-  djui/alias-tips
-  zsh-users/zsh-syntax-highlighting
-  zsh-users/zsh-autosuggestions
+  # aloxaf/fzf-tab
   zsh-users/zsh-completions
   zdharma-continuum/fast-syntax-highlighting
   zsh-users/zsh-autosuggestions
-  zsh-users/zsh-history-substring-search
 )
 for repo in $repos; do
   if [[ ! -d $ZDOTDIR/ohmyzsh/plugins/${repo:t} ]]; then
@@ -22,15 +18,12 @@ unset repo{s,}
 plugins=(
   git
   vi-mode
-  fzf
-  tmux
+  # fzf
 
-  fzf-tab
-  alias-tips
+  # fzf-tab
   zsh-completions
   fast-syntax-highlighting
   zsh-autosuggestions
-  zsh-history-substring-search
 )
 
 source $ZSH/oh-my-zsh.sh

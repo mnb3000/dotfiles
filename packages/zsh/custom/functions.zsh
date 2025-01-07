@@ -11,7 +11,7 @@ function is-deck {
 }
 
 function is-ish {
-  [[ "$(uname -v | grep 'SUPER AWESOME')" ]] || return 1
+  [[ "$(cat /etc/hostname | grep 'myk-ipad-ish')" ]] || return 1
 }
 
 function src {
