@@ -7,7 +7,7 @@ function is-termux {
 }
 
 function is-deck {
-  [ "$( uname -s )" = "Linux" ] && [ "$( uname -m )" = "aarch64" ]  || return 1
+  [ "$( uname -s )" = "Linux" ] && [ "$( uname -m )" = "amd64" ]  || return 1
 }
 
 function is-ish {
