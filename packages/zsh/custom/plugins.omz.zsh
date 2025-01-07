@@ -3,7 +3,7 @@ export ZSH="$ZDOTDIR/ohmyzsh"
 ZSH_THEME="robbyrussell"
 
 repos=(
-  # aloxaf/fzf-tab
+  aloxaf/fzf-tab
   zsh-users/zsh-completions
   zdharma-continuum/fast-syntax-highlighting
   zsh-users/zsh-autosuggestions
@@ -18,9 +18,9 @@ unset repo{s,}
 plugins=(
   git
   vi-mode
-  # fzf
+  fzf
 
-  # fzf-tab
+  fzf-tab
   zsh-completions
   fast-syntax-highlighting
   zsh-autosuggestions
