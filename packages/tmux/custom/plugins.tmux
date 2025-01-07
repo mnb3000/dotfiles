@@ -3,7 +3,6 @@ set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-yank'        # Cross-platform support for clipboard.
 set -g @plugin 'tmux-plugins/tmux-resurrect'   # Save/Restore sessions
-set -g @plugin 'tmux-plugins/tmux-continuum'   # Auto Save/Restore
 set -g @plugin 'tmux-plugins/tmux-battery'     # Battery level data
 
 set -g @plugin 'sainnhe/tmux-fzf'
