@@ -14,29 +14,24 @@ path = "~/Documents"
 startup_command = "y"
 
 [[session]]
+name = "_dotfiles \U0001F4C1"
+path = "~/.dotfiles"
+startup_command = "nvim -c ':Neotree' -c ':FzfLua oldfiles'"
+
+[[session]]
 name = "zsh config \U00002699\U0000FE0F"
-path = "~"
-startup_command = "nvim .zshrc .zprofile .zshenv .zplugins .zaliases .zstyles"
+path = "~/.dotfiles/packages/zsh"
+startup_command = "nvim zshrc zprofile zshenv zplugins"
 
 [[session]]
 name = "tmux config \U0001F4DF"
-path = "~/.config/tmux"
+path = "~/.dotfiles/packages/tmux"
 startup_command = "nvim tmux.conf"
 
 [[session]]
-name = "neovim config \U0001F4BE"
-path = "~/.config/nvim"
-startup_command = "nvim -c ':Telescope find_files'"
-
-[[session]]
-name = "config dir \U0001F4C1"
-path = "~/.config"
-startup_command = "nvim -c ':Neotree' -c ':Telescope oldfiles only_cwd=true'"
-
-[[session]]
-name = "yadm lazygit \U0001F39B"
-path = "~/.local/share/yadm"
-startup_command = "lyadm"
+name = "nvim config \U0001F4BE"
+path = "~/.dotfiles/packages"
+startup_command = "nvim -c ':FzfLua oldfiles cwd=nvim'"
 
 [[session]]
 name = "termux SSH \U0001F4F1"
@@ -44,6 +39,6 @@ path = "~"
 startup_command = "ssh termux"
 
 [[session]]
-name = "steam deck SSH \U0001F3AE"
+name = "deck SSH \U0001F3AE"
 path = "~"
 startup_command = "ssh steamdeck"

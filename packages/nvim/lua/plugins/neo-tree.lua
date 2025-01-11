@@ -54,6 +54,7 @@ return {
     },
     filesystem = {
       hijack_netrw_behavior = "disabled",
+      bind_to_cwd = true,
     },
   },
 }

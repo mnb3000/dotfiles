@@ -14,14 +14,24 @@ path = "~/Documents"
 startup_command = "y"
 
 [[session]]
-name = "zsh config \U00002699\U0000FE0F"
-path = "~"
-startup_command = "nvim .zshrc .zprofile .zshenv .zplugins .zaliases .zstyles"
+name = "_dotfiles \U0001F4C1"
+path = "~/.dotfiles"
+startup_command = "nvim -c ':Neotree' -c ':FzfLua oldfiles'"
 
 [[session]]
-name = "config dir \U0001F4C1"
-path = "~/.config"
-startup_command = "nvim -c ':Neotree' -c ':Telescope oldfiles only_cwd=true'"
+name = "zsh config \U00002699\U0000FE0F"
+path = "~/.dotfiles/packages/zsh"
+startup_command = "nvim zshrc zprofile zshenv zplugins"
+
+[[session]]
+name = "tmux config \U0001F4DF"
+path = "~/.dotfiles/packages/tmux"
+startup_command = "nvim tmux.conf"
+
+[[session]]
+name = "nvim config \U0001F4BE"
+path = "~/.dotfiles/packages"
+startup_command = "nvim -c ':FzfLua oldfiles cwd=nvim'"
 
 [[session]]
 name = "ubuntu (non-root) \U0001F4BD"
@@ -39,7 +49,7 @@ path = "~"
 startup_command = "ssha myk-laptop"
 
 [[session]]
-name = "steam deck SSH \U0001F3AE"
+name = "deck SSH \U0001F3AE"
 path = "~"
 startup_command = "ssha steamdeck"
 
