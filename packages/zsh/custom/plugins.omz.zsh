@@ -1,4 +1,5 @@
 export ZSH="$ZDOTDIR/ohmyzsh"
+export HOST=$(cat /etc/hostname)
 
 theme_repos=(
   romkatv/powerlevel10k
