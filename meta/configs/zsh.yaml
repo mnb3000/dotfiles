@@ -1,22 +1,4 @@
-- link:
-    $HOME/.zsh/.zshrc: packages/zsh/zshrc
-    $HOME/.zsh/.zprofile: packages/zsh/zprofile
-    $HOME/.zsh/.zshenv: packages/zsh/zshenv
-    $HOME/.zsh/.zplugins: packages/zsh/zplugins
-
-    $HOME/.zshenv: packages/zsh/shim.zshenv
-
-    $HOME/.zsh/custom:
-      path: packages/zsh/custom/*
-      glob: true
-
-    $HOME/.zsh/completions:
-      path: packages/zsh/completions
-
 - shell:
-    - description: Making zsh the default shell
-      command: chsh -s $(which zsh)
-
     - description: Install ohmyzsh if running on ish
       command: |
         if [[ ! -d $ZDOTDIR/ohmyzsh ]] && [[ "$(cat /etc/hostname | grep 'myk-ipad-ish')" ]]; then
@@ -39,3 +21,19 @@
           done
           unset repo{s,}
         fi
+
+- link:
+    $HOME/.zsh/.zshrc: packages/zsh/zshrc
+    $HOME/.zsh/.zprofile: packages/zsh/zprofile
+    $HOME/.zsh/.zshenv: packages/zsh/zshenv
+    $HOME/.zsh/.zplugins: packages/zsh/zplugins
+
+    $HOME/.zshenv: packages/zsh/shim.zshenv
+
+    $HOME/.zsh/custom:
+      path: packages/zsh/custom/*
+      glob: true
+
+    $HOME/.zsh/completions:
+      path: packages/zsh/completions
+

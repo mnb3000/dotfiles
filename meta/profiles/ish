@@ -4,6 +4,7 @@ tmux
 gitui
 fzf
 eza
+p10k
 zoxide
 ssh
 zsh

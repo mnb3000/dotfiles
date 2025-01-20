@@ -35,9 +35,6 @@ fi
 # Paths
 #
 
-# Ensure path arrays do not contain duplicates.
-typeset -gU path fpath cdpath mailpath
-
 # Set the list of directories that zsh searches for commands.
 path=(
   $HOME/{,s}bin(N)
@@ -46,3 +43,6 @@ path=(
   /usr/local/{,s}bin(N)
   $path
 )
+
+# Ensure path arrays do not contain duplicates.
+typeset -gU path fpath cdpath mailpath
