@@ -74,6 +74,9 @@ src-if-installed $ZDOTDIR/custom/zoxide.zsh zoxide
 # yazi settings
 src-if-installed $ZDOTDIR/custom/yazi.zsh yazi
 
+# gitui alias
+src-if-installed $ZDOTDIR/custom/gitui.zsh gitui
+
 # lazygit alias
 src-if-installed $ZDOTDIR/custom/lazygit.zsh lazygit
 
@@ -99,4 +102,3 @@ fi
 
 unset ZSH_DEBUGRC
 true
-

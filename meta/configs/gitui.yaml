@@ -1,0 +1,3 @@
+- link:
+    $HOME/.config/gitui/key_bindings.ron: packages/gitui/key_bindings.ron
+    $HOME/.zsh/custom/gitui.zsh: packages/gitui/config.zsh

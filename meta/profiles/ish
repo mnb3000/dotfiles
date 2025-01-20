@@ -1,7 +1,9 @@
 git
 lesspipe
-bat
+tmux
+gitui
 fzf
+eza
 zoxide
 ssh
 zsh
