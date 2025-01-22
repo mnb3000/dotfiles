@@ -152,8 +152,8 @@ on getDisplayDropDown(osVersion, airPlayDevice, window_)
 				end repeat
 			end tell
 		end tell
+    delay 1
     key code 53
-    delay 0.1
 	end tell
 	return
 end getDisplayDropDown
