@@ -1,0 +1,144 @@
+# Tokyo Night theme
+[general]
+import = ["./themes/tokyonight_custom.toml"]
+live_config_reload = true
+
+[colors]
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors = true
+
+[colors.cursor]
+# cursor = "#FFFFFF"
+# text = "#000000"
+
+[env]
+# TERM variable
+#
+# This value is used to set the `$TERM` environment variable for
+# each instance of Alacritty. If it is not present, alacritty will
+# check the local terminfo database and use `alacritty` if it is
+# available, otherwise `xterm-256color` is used.
+# You can check the TERM variable with echo $TERM outside of tmux
+
+# https://copyprogramming.com/howto/why-would-i-set-term-to-xterm-256color-when-using-alacritty
+
+# When using "alacritty" in alacritty and "tmux-256color" in tmux, I was having paste 
+# issues when I pasted over text highlighted in visual mode, spaces were removed 
+# at the end of the text. This happened in NEOVIM specifically
+# "checkhealth" command in neovim shows no color warnings
+# TERM = "alacritty"
+
+# "xterm-256color" in alacritty and "screen-256color" in tmux doesnt have paste issues in neovim
+# "checkhealth" command in neovim shows no color warnings
+TERM = "xterm-256color"
+
+# TERM = "screen-256color"
+
+# Font configuration (changes require restart)
+[font]
+# Point size of the font
+size = 16
+
+# Normal (roman) font face
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+# Bold font face
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+# Italic font face
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+# Offset is the extra space around each character. `offset.y` can be thought of
+# as modifying the line spacing, and `offset.x` as modifying the letter spacing.
+[font.offset]
+x = 0
+y = 0
+
+# Glyph offset determines the locations of the glyphs within their cells with
+# the default being at the bottom. Increasing `x` moves the glyph to the right,
+# increasing `y` moves the glyph upwards.
+[font.glyph_offset]
+x = 0
+y = 0
+
+[scrolling]
+# Maximum number of lines in the scrollback buffer.
+# Specifying '0' will disable scrolling.
+history = 10000
+# Scrolling distance multiplier.
+multiplier = 3
+
+# Shell
+#
+# You can set `shell.program` to the path of your favorite shell, e.g.
+# `/bin/fish`. Entries in `shell.args` are passed unmodified as arguments to the
+# shell.
+#
+# Default:
+#   - (Linux/BSD/macOS) `$SHELL` or the user's login shell, if `$SHELL` is unset
+#   - (Windows) powershell
+#shell:
+#  program: /bin/bash
+#  args:
+#    - --login
+[terminal.shell]
+program = "/bin/zsh"
+# The 2 commands after login are needed to automatically attach to an existing tmux session
+# If no session exists, a new one is created
+args = [
+  "--login",
+  "-c",
+  "/opt/homebrew/bin/tmux attach || //opt/homebrew/bin/tmux",
+]
+
+[window]
+
+# Remove the title bar on the top, it's nice, but sometimes I use multiple
+# instances of alacritty with cmd+n and I cmd+` between them, without the top
+# bar, that's not possible
+# Square corners
+decorations = "none"
+# Round corners
+# decorations = "buttonless"
+
+# Make `Option` key behave as `Alt` (macOS only):
+#   - OnlyLeft
+#   - OnlyRight
+#   - Both
+#   - None (default)
+# I left this option commented out, it worked when I tried to use the
+# option key as the Meta key in tmux to switch layouts (ctrl+b option+1)
+# But it messed up my hyper key, so if I enable it, I cant do hyper+b
+# which is what I use for tmux commands instead of ctrl+b
+option_as_alt = "OnlyLeft"
+
+# Window padding (changes require restart)
+# Blank space added around the window in pixels. This padding is scaled
+# by DPI and the specified value is always added at both opposing sides.
+[window.padding]
+
+[window.dimensions]
+columns = 185
+lines = 40
+
+# [window.position]
+# x = 0
+# y = 430
+
+# I don't need to enable this, as I normally select in visual mode and yank
+# But apparently it allows you to copy to clipboard by just selecting the text
+# When set to `true`, selected text will be copied to the primary clipboard.
+[selection]
+# save_to_clipboard = true
+#
+
+[keyboard]
+bindings = [
+  { key = "Return", mods = "Command", action = "ToggleSimpleFullscreen" },
+]
