@@ -1,0 +1,20 @@
+- pacman:
+  - base-devel
+  - xdg-user-dirs
+  - git
+  - zsh
+  - tmux
+  - starship
+  - zoxide
+  - fzf
+  - eza
+  - bat
+  - neovim
+  - python
+  - lazygit
+
+- shell:
+  - command: xdg-user-dirs-update
+
+- pacaur:
+  - mise

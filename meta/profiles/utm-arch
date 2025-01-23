@@ -1,0 +1,12 @@
+arch/base
+git
+lesspipe
+tmux
+lazygit
+fzf
+bat
+eza
+starship
+zoxide
+ssh
+zsh
