@@ -1,5 +1,5 @@
 - yay:
   - xorg-server
-  - xorg-init
+  - xorg-xinit
   - xorg-xauth
   - ly
