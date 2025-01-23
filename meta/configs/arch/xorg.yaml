@@ -5,5 +5,8 @@
     - polkit
     - ly
 
+- link:
+    $HOME/.xinitrc: packages/arch/.xinitrc
+
 - shell:
-    - command: systemctl enable --now ly
+    - command: sudo systemctl enable --now ly
