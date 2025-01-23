@@ -15,5 +15,5 @@ zsh
 mise
 alacritty
 go
-iterm2
-karabiner
+macos/iterm2
+macos/karabiner
