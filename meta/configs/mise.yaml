@@ -1,5 +1,5 @@
 - link:
-    $HOME/.config/mise/config.toml: 
+    $HOME/.config/mise/config.toml:
       path: packages/mise/config.toml
     $HOME/.zsh/custom/mise.zsh:
       path: packages/mise/config.zsh

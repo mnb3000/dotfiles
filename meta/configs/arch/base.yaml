@@ -1,18 +1,18 @@
 - yay:
-  - base-devel
-  - xdg-user-dirs
-  - git
-  - zsh
-  - tmux
-  - python
-  - go
-  - starship
-  - zoxide
-  - fzf
-  - eza
-  - bat
-  - neovim
-  - lazygit
+    - base-devel
+    - xdg-user-dirs
+    - git
+    - zsh
+    - tmux
+    - python
+    - go
+    - starship
+    - zoxide
+    - fzf
+    - eza
+    - bat
+    - neovim
+    - lazygit
 
 - shell:
-  - command: xdg-user-dirs-update
+    - command: xdg-user-dirs-update

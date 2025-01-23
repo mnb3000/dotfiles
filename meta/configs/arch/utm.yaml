@@ -1,18 +1,16 @@
 - yay:
-  - qemu-guest-agent
-  - spice-vdagent
-  - vulkan-virtio
-  - qemu-hw-display-virtio-gpu-pci
-  - qemu-hw-display-virtio-gpu-pci-gl
-  - networkmanager
-  - pipewire
-  - pipewire-alsa
-  - pipewire-pulse
-  - pipewire-jack
-  - wireplumber
+    - qemu-guest-agent
+    - spice-vdagent
+    - vulkan-virtio
+    - qemu-hw-display-virtio-gpu-pci
+    - qemu-hw-display-virtio-gpu-pci-gl
+    - networkmanager
+    - pipewire
+    - pipewire-alsa
+    - pipewire-pulse
+    - pipewire-jack
+    - wireplumber
 
 - shell:
-  - command:
-    systemctl enable --now ly
-  - command:
-    systemctl enable --now NetworkManager
+    - command: systemctl enable --now ly
+    - command: systemctl enable --now NetworkManager
