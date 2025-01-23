@@ -11,7 +11,6 @@ ohmyzsh/ohmyzsh path:plugins/tmux
 
 ohmyzsh/ohmyzsh path:plugins/brew conditional:is-macos
 ohmyzsh/ohmyzsh path:plugins/macos conditional:is-macos
-wintermi/zsh-mise conditional:is-macos
 
 ohmyzsh/ohmyzsh path:plugins/fzf kind:defer
 Aloxaf/fzf-tab kind:defer
