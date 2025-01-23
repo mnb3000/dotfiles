@@ -1,0 +1,27 @@
+{
+  "name": "TokyoNight Custom",
+  "version": 1,
+  "shared": {
+    "backgroundColor": "#1A1E2F",
+    "colorPaletteOverrides": [
+      "#1D202F",
+      "#F7768D",
+      "#9ECE6A",
+      "#E0AF67",
+      "#7AA2F7",
+      "#BB99F7",
+      "#86E1FC",
+      "#A8B1D6",
+      "#404869",
+      "#F7768D",
+      "#9ECE6A",
+      "#E0AF67",
+      "#7AA2F7",
+      "#BB99F7",
+      "#4FD6BE",
+      "#C0CBF4"
+    ],
+    "cursorColor": "#C0CBF4",
+    "foregroundColor": "#C0CBF4"
+  }
+}

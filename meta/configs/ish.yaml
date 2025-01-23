@@ -1,0 +1,15 @@
+- shell:
+  - description: mount ish themes
+    command: |
+      mount -t /tmp/ish_themes "$(cat /proc/ish/documents)/themes"
+
+- link:
+    /tmp/ish_themes:
+      glob: true
+      path: packages/ish/themes/**
+
+- shell:
+  - description: unmount ish themes
+    command: |
+      unmount /tmp/ish_themes
+
