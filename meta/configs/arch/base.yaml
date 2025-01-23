@@ -1,4 +1,4 @@
-- pacman:
+- yay:
   - base-devel
   - xdg-user-dirs
   - git
@@ -12,9 +12,7 @@
   - neovim
   - python
   - lazygit
+  - mise
 
 - shell:
   - command: xdg-user-dirs-update
-
-- pacaur:
-  - mise

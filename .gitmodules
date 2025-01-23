@@ -8,6 +8,6 @@
 [submodule "packages/lesspipe/script"]
 	path = packages/lesspipe/script
 	url = https://github.com/wofr06/lesspipe
-[submodule "meta/plugins/dotbot-pacaur"]
-	path = meta/plugins/dotbot-pacaur
-	url = https://github.com/ajlende/dotbot-pacaur
+[submodule "meta/plugins/dotbot-yay"]
+	path = meta/plugins/dotbot-yay
+	url = https://github.com/oxson/dotbot-yay
