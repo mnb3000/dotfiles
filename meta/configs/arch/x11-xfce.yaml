@@ -1,0 +1,7 @@
+- yay:
+  - xorg-server
+  - xorg-init
+  - xorg-xauth
+  - ly
+  - xfce4
+  - xfce4-goodies

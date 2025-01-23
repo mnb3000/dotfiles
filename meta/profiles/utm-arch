@@ -1,4 +1,6 @@
 arch/base
+arch/x11-xfce
+arch/utm
 git
 lesspipe
 tmux
@@ -8,5 +10,6 @@ bat
 eza
 starship
 zoxide
+nvim
 ssh
 zsh
