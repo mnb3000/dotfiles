@@ -1,0 +1,4 @@
+[tools]
+node = "22"
+yarn = "1.22.22"
+python = "3.13"
