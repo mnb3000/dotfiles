@@ -12,5 +12,4 @@
     - wireplumber
 
 - shell:
-    - command: systemctl enable --now ly
     - command: systemctl enable --now NetworkManager

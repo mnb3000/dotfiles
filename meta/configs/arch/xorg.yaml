@@ -2,4 +2,8 @@
     - xorg-server
     - xorg-xinit
     - xorg-xauth
+    - polkit
     - ly
+
+- shell:
+    - command: systemctl enable --now ly
