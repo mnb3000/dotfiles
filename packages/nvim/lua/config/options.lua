@@ -3,7 +3,10 @@
 -- Add any additional options here
 --
 -- -- Prepend mise shims to PATH
-vim.env.PATH = vim.env.HOME .. "/.local/share/mise/shims" .. vim.env.PATH
+
+if vim.fn.executable("mise") == 1 then
+  vim.env.PATH = vim.env.PATH .. vim.env.HOME .. "/.local/share/mise/shims"
+end
 
 vim.filetype.add({
   extension = {
