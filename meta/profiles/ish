@@ -4,6 +4,7 @@ ish
 tmux
 gitui
 fzf
+bat
 eza
 p10k
 zoxide
