@@ -4,16 +4,15 @@
   - git
   - zsh
   - tmux
+  - python
+  - go
   - starship
   - zoxide
   - fzf
   - eza
   - bat
   - neovim
-  - python
-  - go
   - lazygit
-  - mise
 
 - shell:
   - command: xdg-user-dirs-update
