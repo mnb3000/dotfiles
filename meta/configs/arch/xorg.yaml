@@ -8,4 +8,4 @@
 
 - shell:
     - command: sudo systemctl enable --now greetd
-    - command: sudo -n install -D -m644 packages/arch/greetd-config.toml /etc/greeterd/config.toml
+    - command: sudo -n install -D -m644 packages/arch/greetd-config.toml /etc/greetd/config.toml

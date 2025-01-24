@@ -1,5 +1,6 @@
 - yay:
     - base-devel
+    - ncurses
     - xdg-user-dirs
     - git
     - zsh
