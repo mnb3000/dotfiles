@@ -7,12 +7,14 @@ alacritty
 git
 lesspipe
 tmux
+sesh
 lazygit
 fzf
 bat
 eza
 starship
 zoxide
+yazi
 nvim
 ssh
 zsh
