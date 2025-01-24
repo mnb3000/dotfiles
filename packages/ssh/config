@@ -1,0 +1,15 @@
+Host *
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
+
+Host myk-laptop
+  HostName 100.79.229.51
+  User Misha
+
+Host termux
+  HostName 100.97.37.83
+  Port 8022
+
+Host steamdeck
+  HostName 100.99.146.126
+  User deck

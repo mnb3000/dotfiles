@@ -24,7 +24,9 @@
 - link:
     $HOME/.zsh/custom/locale.zsh:
       path: packages/arch/locale.zsh
+    $HOME/.zsh/custom/ssh-agent.zsh:
+      path: packages/arch/ssh-agent.zsh
 
 - shell:
     - command: xdg-user-dirs-update
-    - command: sudo -n install -D -m644 packages/arch/arch/locale.conf /etc/locale.conf
+    - command: sudo -n install -D -m644 packages/arch/locale.conf /etc/locale.conf

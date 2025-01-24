@@ -64,6 +64,9 @@ src $ZDOTDIR/custom/aliases.zsh
 # zsh Plugins
 src $ZDOTDIR/custom/plugins.zsh
 
+# arch ssh-agent
+src $ZDOTDIR/custom/ssh.zsh
+
 # sesh Keybinding
 src-if-installed $ZDOTDIR/custom/sesh.zsh sesh
 
