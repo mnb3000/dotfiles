@@ -13,3 +13,7 @@ Host termux
 Host steamdeck
   HostName 100.99.146.126
   User deck
+
+Host ipad-arch
+  HostName 100.108.215.99
+  User mnb3000
