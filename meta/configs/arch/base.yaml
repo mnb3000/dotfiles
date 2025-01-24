@@ -11,6 +11,8 @@
     - python
     - starship
     - zoxide
+    - fd
+    - ripgrep
     - fzf
     - eza
     - bat
@@ -19,5 +21,10 @@
     - lazygit
     - github-cli
 
+- link:
+    $HOME/.zsh/custom/locale.zsh:
+      path: packages/arch/locale.zsh
+
 - shell:
     - command: xdg-user-dirs-update
+    - command: sudo -n install -D -m644 packages/arch/arch/locale.conf /etc/locale.conf

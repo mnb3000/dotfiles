@@ -14,6 +14,10 @@ function is-ish {
   [[ -e "/etc/hostname" ]] && [[ "$(cat /etc/hostname | grep 'myk-ipad-ish')" ]] || return 1
 }
 
+function is-arch {
+  [[ "$(cat /etc/hostname)" =~ "arch" ]] || return 1
+}
+
 function src {
   [[ -n $_SHELL_DEBUG ]] && timestart=$($_date +%s%N)
   if [[ -f "$1" ]]; then

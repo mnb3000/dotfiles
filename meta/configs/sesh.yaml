@@ -14,8 +14,13 @@
       if: '[ "$(uname -s)" = "Linux" ] && [ "$(uname -m)" = "aarch64" ]'
       path: packages/sesh/sesh.termux.toml
 
+    $HOME/.config/sesh/sesh.toml:
+      if: '[ "$(uname -s)" = "Linux" ] && [ "$(uname -m)" = "aarch64" ] && [ "$(cat /etc/hostname)" = "myk-ipad-utm" ]'
+      path: packages/sesh/sesh.arch.toml
+
 # linux (steamos)
 - link:
     $HOME/.config/sesh/sesh.toml:
       if: '[ "$(uname -s)" = "Linux" ] && [ "$(uname -m)" = "x86_64" ]'
       path: packages/sesh/sesh.deck.toml
+
