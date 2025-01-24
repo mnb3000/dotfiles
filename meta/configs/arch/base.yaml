@@ -17,6 +17,7 @@
     - yazi
     - neovim
     - lazygit
+    - github-cli
 
 - shell:
     - command: xdg-user-dirs-update
