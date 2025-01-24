@@ -1,6 +1,6 @@
 - apk:
     - git curl wget openssh gzip unzip grep
-    - bash zsh
-    - fd@community ripgrep@community
-    - alpine-sdk libc-dev make libstdc++
-    - python3
+    - bash # zsh
+    # - fd@community ripgrep@community
+    - build-base libstdc++ coreutils automake autoconf pkgconf libtool # alpine-sdk
+    - python3 uv@community
