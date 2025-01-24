@@ -3,6 +3,7 @@ arch/xorg
 arch/awesome
 arch/base-graphical
 arch/utm
+alacritty
 git
 lesspipe
 tmux
