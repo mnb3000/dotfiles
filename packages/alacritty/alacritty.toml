@@ -70,7 +70,7 @@ y = 0
 [scrolling]
 # Maximum number of lines in the scrollback buffer.
 # Specifying '0' will disable scrolling.
-history = 10000
+history = 2000
 # Scrolling distance multiplier.
 multiplier = 3
 
@@ -91,11 +91,7 @@ multiplier = 3
 program = "/bin/zsh"
 # The 2 commands after login are needed to automatically attach to an existing tmux session
 # If no session exists, a new one is created
-args = [
-  "--login",
-  "-c",
-  "/opt/homebrew/bin/tmux attach || //opt/homebrew/bin/tmux",
-]
+args = ["--login", "-c", "tmux attach || tmux"]
 
 [window]
 
@@ -123,9 +119,9 @@ option_as_alt = "OnlyLeft"
 # by DPI and the specified value is always added at both opposing sides.
 [window.padding]
 
-[window.dimensions]
-columns = 185
-lines = 40
+# [window.dimensions]
+# columns = 185
+# lines = 40
 
 # [window.position]
 # x = 0

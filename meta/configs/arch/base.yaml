@@ -1,6 +1,8 @@
 - yay:
     - base-devel
     - ncurses
+    - zip
+    - unzip
     - xdg-user-dirs
     - git
     - zsh
