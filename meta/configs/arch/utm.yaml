@@ -13,3 +13,4 @@
 
 - shell:
     - command: sudo systemctl enable --now NetworkManager
+    - command: sudo systemctl enable --now spice-vdagentd

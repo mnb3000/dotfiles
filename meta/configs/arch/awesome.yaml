@@ -1,5 +1,7 @@
 - yay:
     - awesome
+    - dex
 
 - link:
     $HOME/.xinitrc: packages/arch/.xinitrc
+    $HOME/.config/awesome: packages/arch/awesome
