@@ -3,10 +3,10 @@
     - xorg-xinit
     - xorg-xauth
     - polkit
-    - ly
+    - greetd
 
 - link:
     $HOME/.xinitrc: packages/arch/.xinitrc
 
 - shell:
-    - command: sudo systemctl enable --now ly
+    - command: sudo systemctl enable --now greetd
