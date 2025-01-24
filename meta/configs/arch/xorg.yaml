@@ -4,6 +4,8 @@
     - xorg-xauth
     - polkit
     - greetd
+    - greetd-tuigreet
 
 - shell:
     - command: sudo systemctl enable --now greetd
+    - command: sudo -n install -D -m644 packages/arch/greetd-config.toml /etc/greeterd/config.toml
