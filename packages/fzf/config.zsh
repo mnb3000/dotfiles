@@ -4,7 +4,7 @@ FZF_DEFAULT_OPTS=" \
   --ansi \
   --border=rounded \
   --preview-window=border-rounded \
-  --height 40% \
+  --height 80% \
   --padding=1 \
   --margin=1 \
   --layout=reverse \
