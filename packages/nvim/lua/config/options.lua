@@ -4,6 +4,8 @@
 --
 -- -- Prepend mise shims to PATH
 
+vim.g.snacks_animate = false
+
 if vim.fn.executable("mise") == 1 then
   vim.env.PATH = vim.env.PATH .. vim.env.HOME .. "/.local/share/mise/shims"
 end
