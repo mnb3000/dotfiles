@@ -7,9 +7,9 @@
     - unzip
     - bash
     - zsh
-    - fd
     - grep
-    - ripgrep
+    - fd@community
+    - ripgrep@community
     - alpine-sdk
     - libc-dev
     - make
