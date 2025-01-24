@@ -55,7 +55,7 @@ family = "JetBrainsMonoNL Nerd Font"
 style = "Italic"
 
 [font.bold_italic]
-family = "JetBrainsMono Nerd Font"
+family = "JetBrainsMonoNL Nerd Font"
 style = "Bold Italic"
 
 # Offset is the extra space around each character. `offset.y` can be thought of
