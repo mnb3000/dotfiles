@@ -41,18 +41,22 @@ size = 16
 
 # Normal (roman) font face
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "JetBrainsMonoNL Nerd Font"
 style = "Regular"
 
 # Bold font face
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+family = "JetBrainsMonoNL Nerd Font"
 style = "Bold"
 
 # Italic font face
 [font.italic]
-family = "JetBrainsMono Nerd Font"
+family = "JetBrainsMonoNL Nerd Font"
 style = "Italic"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
 
 # Offset is the extra space around each character. `offset.y` can be thought of
 # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
