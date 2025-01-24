@@ -1,2 +1,5 @@
 - yay:
     - awesome
+
+- link:
+    $HOME/.xinitrc: packages/arch/.xinitrc

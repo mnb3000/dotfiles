@@ -43,3 +43,5 @@ if [ -d $xinitdir/xinitrc.d ]; then
   done
   unset f
 fi
+
+exec awesome

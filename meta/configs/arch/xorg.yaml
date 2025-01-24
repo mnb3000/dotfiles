@@ -5,8 +5,5 @@
     - polkit
     - greetd
 
-- link:
-    $HOME/.xinitrc: packages/arch/.xinitrc
-
 - shell:
     - command: sudo systemctl enable --now greetd
