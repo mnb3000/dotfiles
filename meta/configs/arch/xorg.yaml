@@ -11,5 +11,5 @@
     $HOME/.Xresources: packages/arch/.Xresources
 
 - shell:
-    - command: sudo systemctl enable --now greetd
+    - command: sudo -n systemctl enable --now greetd
     - command: sudo -n install -D -m644 packages/arch/greetd-config.toml /etc/greetd/config.toml
