@@ -16,4 +16,5 @@ Host steamdeck
 
 Host ipad-arch
   HostName 100.108.215.99
+  Port 8022
   User mnb3000
