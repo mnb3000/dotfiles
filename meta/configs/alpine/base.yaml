@@ -2,5 +2,5 @@
     - git curl wget openssh gzip unzip grep
     - bash # zsh
     # - fd@community ripgrep@community
-    - build-base libstdc++ coreutils automake autoconf pkgconf libtool # alpine-sdk
-    - python3 uv@community
+    - build-base libstdc++ coreutils musl-dev openssl-dev linux-headers automake autoconf pkgconf libtool # alpine-sdk
+    - python3-dev=~3.12 uv@community
