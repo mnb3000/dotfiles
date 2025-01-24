@@ -1,6 +1,7 @@
 arch/base
 arch/xorg
 arch/awesome
+arch/base-graphical
 arch/utm
 git
 lesspipe
