@@ -11,3 +11,6 @@
 [submodule "meta/plugins/dotbot-yay"]
 	path = meta/plugins/dotbot-yay
 	url = https://github.com/oxson/dotbot-yay
+[submodule "meta/plugins/dotbot-apk"]
+	path = meta/plugins/dotbot-apk
+	url = https://github.com/mnb3000/dotbot-apk

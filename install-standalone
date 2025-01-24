@@ -95,7 +95,7 @@ for config in ${@}; do
   suffix="-sudo"
   echo -e "$(<"${BASE_DIR}/${META_DIR}/${BASE_CONFIG}${CONFIG_SUFFIX}")\n$(<"${BASE_DIR}/${META_DIR}/${CONFIG_DIR}/${config%"$suffix"}${CONFIG_SUFFIX}")" >"$configFile"
 
-  cmd=("${BASE_DIR}/${META_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -v -d "${BASE_DIR}" -c "$configFile" -p "$BASE_DIR/${META_DIR}/plugins/dotbot-yay/yay.py")
+  cmd=("${BASE_DIR}/${META_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -v -d "${BASE_DIR}" -c "$configFile" -p "$BASE_DIR/${META_DIR}/plugins/dotbot-yay/yay.py" -p "$BASE_DIR/${META_DIR}/plugins/dotbot-apk/apk.py")
 
   # print a line depending on the terminal width
   # get terminal width: https://unix.stackexchange.com/a/425158
