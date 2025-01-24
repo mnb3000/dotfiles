@@ -11,6 +11,9 @@
     - pipewire-jack
     - wireplumber
 
+- link:
+    $HOME/.config/fontconfig: packages/arch/fontconfig
+
 - shell:
     - command: sudo -n systemctl enable --now NetworkManager
     - command: sudo -n install -D -m644 packages/arch/utm-resolution-fix/resize.sh /usr/local/bin/resize
