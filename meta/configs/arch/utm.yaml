@@ -11,6 +11,10 @@
     - pipewire-jack
     - wireplumber
 
+- link:
+    - /usr/local/bin/resize: packages/arch/utm-resolution-fix/resize.sh
+    - /etc/udev/rules.d/10-resize.rules: packages/arch/utm-resolution-fix/resize.rules
+
 - shell:
     - command: sudo systemctl enable --now NetworkManager
     - command: sudo systemctl enable --now spice-vdagentd

@@ -3,12 +3,12 @@
     - ncurses
     - zip
     - unzip
+    - ncdu
     - xdg-user-dirs
     - git
     - zsh
     - tmux
     - python
-    - go
     - starship
     - zoxide
     - fzf
