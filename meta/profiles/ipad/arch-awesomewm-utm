@@ -1,4 +1,7 @@
 arch/base
+arch/base-graphical
+arch/xorg
+arch/awesome
 arch/utm
 alacritty
 git
