@@ -1,5 +1,5 @@
 - apk:
-    - git curl wget openssh gzip unzip grep
+    - git curl wget openssh gzip unzip grep ncdu
     - bash # zsh
     # - fd@community ripgrep@community
     - build-base libstdc++ coreutils musl-dev openssl-dev linux-headers automake autoconf pkgconf libtool # alpine-sdk
