@@ -1,0 +1,5 @@
+- yay:
+    - sway
+
+- link:
+  $HOME/.zsh/custom/sway.zsh: packages/arch/sway/config.zsh
