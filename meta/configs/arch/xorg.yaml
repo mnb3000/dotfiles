@@ -3,9 +3,7 @@
     - xorg-xinit
     - xorg-xauth
     - xsel
-    - polkit
-    - greetd
-    - greetd-tuigreet
+    - xterm
 
 - link:
     $HOME/.Xresources: packages/arch/.Xresources

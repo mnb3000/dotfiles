@@ -1,8 +1,10 @@
 - yay:
-    - xterm
     - alacritty
     - ttf-jetbrains-mono-nerd
     - ttf-jetbrains-mono-nerd
     - noto-fonts
     - noto-fonts-emoji
     - firefox
+    - polkit
+    - greetd
+    - greetd-tuigreet
