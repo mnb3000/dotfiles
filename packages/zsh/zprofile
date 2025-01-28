@@ -39,6 +39,7 @@ fi
 path=(
   $HOME/{,s}bin(N)
   $HOME/.local/bin
+  $HOME/.cargo/bin
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
   $path

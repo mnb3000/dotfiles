@@ -1,0 +1,3 @@
+- shell:
+    - description: Run bootstrap script from external repo
+      command: bash packages/arch/hyprland/Arch-Hyprland/install.sh

@@ -14,3 +14,6 @@
 [submodule "meta/plugins/dotbot-apk"]
 	path = meta/plugins/dotbot-apk
 	url = https://github.com/mnb3000/dotbot-apk
+[submodule "packages/arch/hyprland/Arch-Hyprland"]
+	path = packages/arch/hyprland/Arch-Hyprland
+	url = https://github.com/JaKooLit/Arch-Hyprland.git
