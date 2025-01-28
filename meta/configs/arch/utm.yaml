@@ -3,11 +3,5 @@
     - qemu-guest-agent qemu-hw-display-virtio-gpu-pci qemu-hw-display-virtio-gpu-pci-gl
     - networkmanager
     - pipewire pipewire-alsa pipewire-pulse wireplumber
-
-- link:
-    $HOME/.config/fontconfig: packages/arch/fontconfig
-
-- shell:
-    - command: sudo -n systemctl enable --now NetworkManager
-    - command: sudo -n install -D -m644 packages/arch/utm-resolution-fix/resize.sh /usr/local/bin/resize
-    - command: sudo -n install -D -m644 packages/arch/utm-resolution-fix/resize.rules /etc/udev/rules.d/10-resize.rules
+# - link:
+#     $HOME/.config/fontconfig: packages/arch/fontconfig
