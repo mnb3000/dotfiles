@@ -2,7 +2,7 @@
     - spice-vdagent vulkan-virtio
     - qemu-guest-agent qemu-hw-display-virtio-gpu-pci qemu-hw-display-virtio-gpu-pci-gl
     - networkmanager
-    - pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
+    - pipewire pipewire-alsa pipewire-pulse wireplumber
 
 - link:
     $HOME/.config/fontconfig: packages/arch/fontconfig
