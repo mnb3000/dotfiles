@@ -1,9 +1,7 @@
 - yay:
     - xorg
-    - xorg-xinit
-    - xorg-xauth
-    - xsel
-    - xterm
+    - xorg-xinit xorg-xauth
+    - xsel xterm
 
 - link:
     $HOME/.Xresources: packages/arch/.Xresources

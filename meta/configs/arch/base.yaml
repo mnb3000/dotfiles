@@ -1,25 +1,10 @@
 - yay:
-    - base-devel
-    - ncurses
-    - zip
-    - unzip
-    - ncdu
-    - xdg-user-dirs
-    - git
-    - zsh
-    - tmux
-    - python
-    - starship
-    - zoxide
-    - fd
-    - ripgrep
-    - fzf
-    - eza
-    - bat
-    - yazi
-    - neovim
-    - lazygit
-    - github-cli
+    - base-devel git python ncurses
+    - zip unzip ncdu xdg-user-dirs
+    - zsh tmux starship
+    - fd ripgrep
+    - zoxide fzf eza bat yazi
+    - neovim lazygit github-cli
 
 - link:
     $HOME/.zsh/custom/locale.zsh:
