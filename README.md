@@ -5,7 +5,7 @@ Dotfile management using [Dotbot](https://github.com/anishathalye/dotbot).
 ## Installation
 
 ```bash
-~$ git clone --recursive git@github.com:mnb3000/dotfiles.git ~/.dotfiles
+~$ git clone --recursive https://github.com/mnb3000/dotfiles.git ~/.dotfiles
 ~$ cd ~/.dotfiles
 ```
 
