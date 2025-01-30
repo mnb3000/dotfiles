@@ -13,11 +13,18 @@
     - ripgrep
     - zoxide
     - fzf
+    - ffmpeg
+    - 7zip
+    - jq
+    - poppler-utils
+    - imagemagick
     - eza
     - bat
     - neovim
 
 - shell:
+    - command: xdg-user-dirs-update
+
     - description: Install starship shell (yes curl|sh bc y not)
       command: curl -sS https://starship.rs/install.sh | sh -s -- -y
 
@@ -29,7 +36,15 @@
         sudo install lazygit -D -t /usr/local/bin/
         rm -rf lazygit*
 
-    - command: xdg-user-dirs-update
+    - description: Install yazi
+      command: |
+        curl -L https://github.com/sxyazi/yazi/releases/latest/download/yazi-aarch64-unknown-linux-musl.zip -o yazi.zip
+        unzip yazi.zip
+        sudo install yazi-aarch64-unknown-linux-musl/yazi -d -t /usr/local/bin/
+        sudo install yazi-aarch64-unknown-linux-musl/ya -d -t /usr/local/bin/
+        cp yazi/completions/_yazi ~/.zsh/completions
+        cp yazi/completions/_ya ~/.zsh/completions
+        rm -rf yazi*
 
     # - description: Change shell to zsh
     #   command: chsh -s $(which zsh)
