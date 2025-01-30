@@ -1,6 +1,4 @@
 ubuntu/base-sudo
-ubuntu/base-graphical
-ubuntu/awesome
 git
 lesspipe
 tmux

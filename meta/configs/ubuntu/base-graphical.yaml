@@ -1,0 +1,7 @@
+- apt:
+    - fonts-noto
+    - fonts-noto-color-emoji
+    - fonts-jetbrains-mono
+    - alacritty
+- shell:
+    - echo 'To install Nerd Font: \n bash -c  "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/nerd-fonts-installer/main/install.sh)"'
