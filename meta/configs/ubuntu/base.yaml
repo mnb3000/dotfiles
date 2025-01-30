@@ -39,12 +39,14 @@
 
     - description: Install yazi
       command: |
-        curl -L https://github.com/sxyazi/yazi/releases/latest/download/yazi-aarch64-unknown-linux-musl.zip -o yazi.zip
+        export YAZI_DIR=yazi-aarch64-unknown-linux-musl
+        curl -L https://github.com/sxyazi/yazi/releases/latest/download/$YAZI_DIR.zip -o yazi.zip
         unzip yazi.zip
-        install yazi-aarch64-unknown-linux-musl/yazi -d -t /usr/local/bin/
-        install yazi-aarch64-unknown-linux-musl/ya -d -t /usr/local/bin/
-        cp yazi/completions/_yazi ~/.zsh/completions
-        cp yazi/completions/_ya ~/.zsh/completions
+        install $YAZI_DIR/yazi -d -t /usr/local/bin/
+        install $YAZI_DIR/ya -d -t /usr/local/bin/
+        cp $YAZI_DIR/completions/_yazi ~/.zsh/completions
+        cp $YAZI_DIR/completions/_ya ~/.zsh/completions
+        unset YAZI_DIR
         rm -rf yazi*
 
     # - description: Change shell to zsh
