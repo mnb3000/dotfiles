@@ -12,10 +12,10 @@
 - shell:
     - description: Install yazi
       command: |
-        curl -Lo https://github.com/sxyazi/yazi/releases/latest/download/yazi-aarch64-unknown-linux-musl.zip yazi.zip
-        unzip -d yazi yazi.zip
-        sudo install yazi/yazi -d -t /usr/local/bin/
-        sudo install yazi/ya -d -t /usr/local/bin/
+        curl -L https://github.com/sxyazi/yazi/releases/latest/download/yazi-aarch64-unknown-linux-musl.zip -o yazi.zip
+        unzip yazi.zip
+        sudo install yazi-aarch64-unknown-linux-musl/yazi -d -t /usr/local/bin/
+        sudo install yazi-aarch64-unknown-linux-musl/ya -d -t /usr/local/bin/
         cp yazi/completions/_yazi ~/.zsh/completions
         cp yazi/completions/_ya ~/.zsh/completions
         rm -rf yazi*
