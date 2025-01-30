@@ -1,7 +1,7 @@
 - apt:
     - build-essential
     - git
-    - python
+    - python3
     - libncurses-dev
     - zip
     - unzip
@@ -19,7 +19,7 @@
 
 - shell:
     - description: Install starship shell (yes curl|sh bc y not)
-      command: curl -sS https://starship.rs/install.sh | sh
+      command: curl -sS https://starship.rs/install.sh | sh < echo "-y"
 
     - description: Install lazygit
       command: |
