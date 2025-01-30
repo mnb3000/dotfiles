@@ -18,3 +18,8 @@ Host ipad-arch
   HostName 100.108.215.99
   Port 8022
   User mnb3000
+
+Host ipad-arch-utm
+  HostName 100.108.215.99
+  Port 2222
+  User mnb3000
