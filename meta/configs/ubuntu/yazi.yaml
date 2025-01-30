@@ -1,0 +1,20 @@
+- apt:
+    - ffmpeg
+    - 7zip
+    - jq
+    - poppler-utils
+    - fd-find
+    - ripgrep
+    - fzf
+    - zoxide
+    - imagemagick
+
+- shell:
+    - description: Install yazi
+      command: |
+        curl -Lo yazi.zip \
+        unzip -d yazi yazi.zip \
+        sudo install yazi/yazi -d -t /usr/local/bin/ \
+        sudo install yazi/ya -d -t /usr/local/bin/ \
+        cp yazi/completions/_yazi ~/.zsh/completions \
+        cp yazi/completions/_ya ~/.zsh/completions

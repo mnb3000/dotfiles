@@ -2,22 +2,30 @@
     - build-essential
     - git
     - python
-    - ncurses
+    - libncurses-dev
     - zip
     - unzip
     - ncdu
     - xdg-user-dirs
     - zsh
     - tmux
-    - starship
-    - fd ripgrep
+    - fd-find
+    - ripgrep
     - zoxide
     - fzf
     - eza
     - bat
-    - yazi
     - neovim
-    - lazygit
 
 - shell:
+    - description: Install starship shell (yes curl|sh bc y not)
+      command: curl -sS https://starship.rs/install.sh | sh
+
+    - description: Install lazygit
+      command: |
+        LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*') \
+        curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz" \
+        tar xf lazygit.tar.gz lazygit \
+        sudo install lazygit -D -t /usr/local/bin/
+
     - command: xdg-user-dirs-update
