@@ -1,8 +1,8 @@
 arch/base-sudo
 arch/base-graphical
+arch/utm
 arch/xorg-sudo
 arch/awesome
-arch/utm
 arch/extra-dev
 alacritty
 git

@@ -8,6 +8,6 @@
 
 - shell:
     - command: systemctl enable --now greetd
-    - command: install -D -m644 packages/arch/greetd-config.toml /etc/greetd/config.toml
+    - command: install -D -m644 packages/greetd/greetd-config.toml /etc/greetd/config.toml
     - command: install -D -m644 packages/arch/utm-resolution-fix/resize.sh /usr/local/bin/resize
     - command: install -D -m644 packages/arch/utm-resolution-fix/resize.rules /etc/udev/rules.d/10-resize.rules

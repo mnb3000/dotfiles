@@ -4,7 +4,7 @@ alias v="nvim"
 alias ssh='TERM=xterm-256color ssh'
 
 if is-macos; then
-  [ -f $ZDOTDIR/custom/aliases.deck.zsh ] && source $ZDOTDIR/custom/aliases.mac.zsh
+  [ -f $ZDOTDIR/custom/aliases.mac.zsh ] && source $ZDOTDIR/custom/aliases.mac.zsh
 fi
 
 if is-deck; then

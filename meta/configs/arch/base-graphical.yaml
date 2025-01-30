@@ -1,7 +1,5 @@
 - yay:
     - polkit
-    - alacritty
-    - ttf-jetbrains-mono-nerd
-    - noto-fonts noto-fonts-emoji
-    - firefox
+    - ttf-jetbrains-mono-nerd noto-fonts noto-fonts-emoji
+    - firefox alacritty
     - greetd greetd-tuigreet
