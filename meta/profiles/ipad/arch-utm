@@ -1,5 +1,6 @@
 arch/base-sudo
 arch/utm
+arch/extra-dev
 alacritty
 git
 lesspipe
