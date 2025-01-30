@@ -3,6 +3,7 @@ arch/base-graphical
 arch/xorg-sudo
 arch/awesome
 arch/utm
+arch/extra-dev
 alacritty
 git
 lesspipe
