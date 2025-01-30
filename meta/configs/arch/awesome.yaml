@@ -4,4 +4,4 @@
 
 - link:
     $HOME/.xinitrc: packages/arch/.xinitrc
-    $HOME/.config/awesome: packages/arch/awesome
+    $HOME/.config/awesome: packages/awesome

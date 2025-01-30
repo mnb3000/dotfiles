@@ -1,3 +1,6 @@
 - apt:
     - awesome
     - awesome-extra
+
+- link:
+    $HOME/.config/awesome: packages/awesome
