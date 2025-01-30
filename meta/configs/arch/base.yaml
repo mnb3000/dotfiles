@@ -1,6 +1,6 @@
 - yay:
     - base-devel git python uv ncurses
-    - zip unzip ncdu xdg-user-dirs
+    - zip unzip ncdu xdg-user-dirs curl wget
     - zsh tmux starship
     - fd ripgrep
     - zoxide fzf eza bat yazi htop
