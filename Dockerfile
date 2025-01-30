@@ -12,11 +12,12 @@ WORKDIR /home/${USERNAME}
 RUN sudo pacman --noconfirm -Syyu
 RUN sudo pacman --noconfirm -S git python3
 
-RUN git clone https://github.com/mnb3000/dotfiles.git ./.dotfiles
+RUN git clone --recursive https://github.com/mnb3000/dotfiles.git ./.dotfiles
 # COPY . ./.dotfiles
 
 WORKDIR /home/${USERNAME}/.dotfiles
 
 RUN bash ./scripts/install.sh
 
-CMD zk[ "/usr/bin/bash" ]
+RUN xdg-user-dirs-update
+CMD [ "/usr/bin/bash"]
