@@ -22,6 +22,7 @@
     - eza
     - bat
     - htop
+    - vim
     - neovim
 
 - shell:
