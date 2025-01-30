@@ -18,3 +18,4 @@
         sudo install yazi/ya -d -t /usr/local/bin/
         cp yazi/completions/_yazi ~/.zsh/completions
         cp yazi/completions/_ya ~/.zsh/completions
+        rm -rf yazi*
