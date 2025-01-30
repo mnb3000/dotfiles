@@ -31,5 +31,5 @@
 
     - command: xdg-user-dirs-update
 
-    - description: Change shell to zsh
-      command: sudo chsh -u $(whoami) -s $(which zsh)
+    # - description: Change shell to zsh
+    #   command: chsh -s $(which zsh)
