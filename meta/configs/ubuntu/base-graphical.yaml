@@ -3,6 +3,7 @@
     - fonts-noto-color-emoji
     - fonts-jetbrains-mono
     - alacritty
+
 - shell:
     - command: |
         echo To install Nerd Font
