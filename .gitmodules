@@ -17,3 +17,6 @@
 [submodule "packages/arch/hyprland/Arch-Hyprland"]
 	path = packages/arch/hyprland/Arch-Hyprland
 	url = https://github.com/JaKooLit/Arch-Hyprland.git
+[submodule "meta/plugins/dotbot-apt"]
+	path = meta/plugins/dotbot-apt
+	url = https://github.com/bryant1410/dotbot-apt

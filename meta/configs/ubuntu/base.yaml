@@ -1,0 +1,10 @@
+- apt:
+    - base-devel git python ncurses
+    - zip unzip ncdu xdg-user-dirs
+    - zsh tmux starship
+    - fd ripgrep
+    - zoxide fzf eza bat yazi
+    - neovim lazygit
+
+- shell:
+    - command: xdg-user-dirs-update
