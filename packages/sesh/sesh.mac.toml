@@ -42,3 +42,13 @@ startup_command = "ssh termux"
 name = "deck SSH \U0001F3AE"
 path = "~"
 startup_command = "ssh steamdeck"
+
+[[session]]
+name = "ipad arch utm SSH \U0001F4E6"
+path = "~"
+startup_command = "ssh ipad-arch-utm"
+
+[[session]]
+name = "local utm SSH \U0001F3D7"
+path = "~"
+startup_command = "ssh local-utm"

@@ -42,3 +42,8 @@ startup_command = "ssh myk-laptop"
 name = "termux SSH \U0001F4F1"
 path = "~"
 startup_command = "ssh termux"
+
+[[session]]
+name = "ipad arch utm SSH \U0001F4E6"
+path = "~"
+startup_command = "ssh ipad-arch-utm"
