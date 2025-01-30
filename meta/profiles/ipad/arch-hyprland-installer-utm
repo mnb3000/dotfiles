@@ -1,4 +1,4 @@
-arch/base
+arch/base-sudo
 arch/base-graphical
 arch/utm
 alacritty

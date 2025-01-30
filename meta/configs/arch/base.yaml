@@ -14,4 +14,4 @@
 
 - shell:
     - command: xdg-user-dirs-update
-    - command: sudo -n install -D -m644 packages/arch/locale.conf /etc/locale.conf
+    - command: install -D -m644 packages/arch/locale.conf /etc/locale.conf
