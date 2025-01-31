@@ -19,5 +19,4 @@ WORKDIR /home/${USERNAME}/.dotfiles
 
 RUN bash ./scripts/install.sh
 
-RUN xdg-user-dirs-update
 CMD [ "/usr/bin/bash"]

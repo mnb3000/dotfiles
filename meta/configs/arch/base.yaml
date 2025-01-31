@@ -13,5 +13,5 @@
       path: packages/arch/ssh-agent.zsh
 
 - shell:
-    # - command: xdg-user-dirs-update
+    - command: xdg-user-dirs-update
     - command: install -D -m644 packages/arch/locale.conf /etc/locale.conf
