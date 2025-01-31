@@ -162,7 +162,7 @@ format = '\[[$time]($style)\]'
 
 [username]
 format = '\[[$user]($style)\]'
-disabled = false
+disabled = true
 
 [vagrant]
 format = '\[[$symbol($version)]($style)\]'
