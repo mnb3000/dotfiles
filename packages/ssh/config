@@ -24,6 +24,11 @@ Host ipad-arch-utm
   Port 2222
   User mnb3000
 
+Host ipad-alpine-utm
+  HostName 100.108.215.99
+  Port 2223
+  User mnb3000
+
 Host local-utm
   HostName 127.0.0.1
   Port 2222
