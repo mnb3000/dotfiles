@@ -1,29 +1,8 @@
 #!/usr/bin/env bash
-check-env() {
-  if [[ ! $DOTBOT_PROFILE ]]; then
-    echo "\$DOTBOT_PROFILE must be set"
-    return 1
-  fi
-}
-
-update-pacman-db() {
-  pacman -Sy
-}
-
-install-yay() {
-  echo "Installing yay..."
-  bash ./scripts/install-yay.sh
-  echo "Successfully installed yay!"
-}
-
-preinstall() {
-  update-pacman-db
-  install-yay
-}
 
 install-profile() {
   echo "Starting dotbot profile install..."
-  bash ./install-profile "$1"
+  "$HOME/.dotfiles/install-profile" "$1"
 }
 
 install() {
@@ -32,6 +11,9 @@ install() {
   install-profile "$DOTBOT_PROFILE"
 }
 
+source ./scripts/functions.sh
+
 check-env
+source-distro "${DOTBOT_TARGET}"
 preinstall
 install

@@ -1,6 +1,22 @@
 - apk:
-    - git curl wget openssh gzip unzip grep ncdu
-    - bash # zsh
-    # - fd@community ripgrep@community
-    - build-base libstdc++ coreutils musl-dev openssl-dev linux-headers automake autoconf pkgconf libtool # alpine-sdk
-    - python3-dev=~3.12 uv@community
+    - openrc openssh git shadow alpine-conf
+
+- shell:
+    - command: |
+        rc-update add sshd default && \
+        echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+    - description: Setup hostname
+      command: setup-hostname -n myk-alpine-docker
+
+- apk:
+    - zip unzip gzip ncdu xdg-user-dirs grep curl wget
+    - bash zsh tmux starship
+    - fd ripgrep jq
+    - libstdc++ coreutils musl-dev openssl-dev linux-headers automake autoconf pkgconf libtool # alpine-sdk
+    - python3-dev=~3.12 # uv lua-language-server
+    - zoxide fzf eza bat htop
+    - neovim lazygit github-cli
+
+- link:
+    $HOME/.zsh/custom/locale.zsh:
+      path: packages/arch/locale.zsh

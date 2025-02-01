@@ -1,0 +1,3 @@
+- apk:
+    - qemu-hw-display-virtio-gpu-pci qemu-hw-display-virtio-gpu-pci-gl
+    - pipewire pipewire-alsa pipewire-pulse wireplumber

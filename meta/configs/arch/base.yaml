@@ -1,17 +1,14 @@
 - yay:
-    - base-devel git python uv ncurses
+    - base-devel git python uv ncurses pacman-contrib
     - zip unzip ncdu xdg-user-dirs curl wget
     - zsh tmux starship
-    - fd ripgrep
+    - fd ripgrep jq
     - zoxide fzf eza bat yazi htop
     - neovim lazygit github-cli
 
 - link:
     $HOME/.zsh/custom/locale.zsh:
       path: packages/arch/locale.zsh
-    $HOME/.zsh/custom/ssh-agent.zsh:
-      path: packages/arch/ssh-agent.zsh
 
 - shell:
-    - command: xdg-user-dirs-update
     - command: install -D -m644 packages/arch/locale.conf /etc/locale.conf

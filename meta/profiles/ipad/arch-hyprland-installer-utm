@@ -1,6 +1,7 @@
 arch/base-sudo
 arch/base-graphical
 arch/utm
+arch/qemu
 alacritty
 git
 lesspipe

@@ -1,0 +1,3 @@
+- yay:
+    - qemu-hw-display-virtio-gpu-pci qemu-hw-display-virtio-gpu-pci-gl vulkan-virtio
+    - pipewire pipewire-alsa pipewire-pulse wireplumber
