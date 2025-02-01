@@ -2,3 +2,7 @@
     $HOME/.ssh/authorized_keys: packages/ssh/authorized_keys
     $HOME/.zsh/custom/ssh.zsh: packages/ssh/config.zsh
     $HOME/.ssh/config: packages/ssh/config
+
+    $HOME/.zsh/custom/ssh-agent.zsh:
+      if: '[ "$(cat /etc/hostname)" =~ "arch" ]'
+      path: packages/ssh/ssh-agent.zsh

@@ -1,6 +1,6 @@
 arch/base-sudo
-arch/utm
-arch/extra-dev
+arch/utm-sudo
+arch/clean-pacman-cache
 alacritty
 git
 lesspipe

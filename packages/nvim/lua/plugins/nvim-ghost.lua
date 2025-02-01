@@ -1,3 +1,5 @@
-return {
-  "subnut/nvim-ghost.nvim",
-}
+if vim.fn.has("mac") == 1 then
+  return {
+    "subnut/nvim-ghost.nvim",
+  }
+end

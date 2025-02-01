@@ -1,3 +1,6 @@
 - link:
     $HOME/.config/bat/:
       path: packages/bat
+
+- shell:
+    - command: bat cache --build

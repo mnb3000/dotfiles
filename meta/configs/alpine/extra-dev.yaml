@@ -1,0 +1,5 @@
+- apk:
+    - alpine-sdk
+    - rust cargo
+    - go
+    - nodejs npm

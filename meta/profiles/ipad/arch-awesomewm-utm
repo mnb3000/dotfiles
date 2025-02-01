@@ -1,6 +1,7 @@
 arch/base-sudo
 arch/base-graphical
 arch/utm
+arch/qemu
 arch/xorg-sudo
 arch/awesome
 arch/extra-dev

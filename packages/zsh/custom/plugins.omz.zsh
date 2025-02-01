@@ -1,6 +1,10 @@
 export ZSH="$ZDOTDIR/ohmyzsh"
 export HOST=$(cat /etc/hostname)
 
+if [[ ! -d $ZSH ]]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
 theme_repos=(
   romkatv/powerlevel10k
   # spaceship-prompt/spaceship-prompt
