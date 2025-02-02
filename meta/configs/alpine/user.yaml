@@ -1,0 +1,3 @@
+- shell:
+    - descriprion: Install neovim plugins
+      command: bash ./scripts/install-nvim-plugins.sh
