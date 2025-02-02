@@ -4,3 +4,7 @@
     - rust cargo
     - go lua-language-server
     - nodejs npm github-cli
+
+- shell:
+    - descriprion: Install neovim plugins
+      command: bash ./scripts/install-nvim-plugins.sh
