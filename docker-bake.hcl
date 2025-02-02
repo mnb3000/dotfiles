@@ -28,8 +28,10 @@ target "_common" {
   platforms = ["linux/aarch64"]
 }
 
+target "docker-metadata-action" {}
+
 target "all" {
-  inherits = ["_common"]
+  inherits = ["_common", "docker-metadata-action"]
   name = "${distro}"
   tags = ["${USERNAME}/${APP}:${distro}-${RELEASE}"]
   args = {
