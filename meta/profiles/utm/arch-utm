@@ -15,5 +15,6 @@ starship
 zoxide
 yazi
 nvim
+nvim-plugins
 ssh
 zsh

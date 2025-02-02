@@ -6,6 +6,7 @@ eza
 fzf
 zoxide
 nvim
+nvim-plugins
 sesh
 ssh
 starship

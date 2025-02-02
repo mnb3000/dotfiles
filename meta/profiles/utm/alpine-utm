@@ -1,7 +1,6 @@
 alpine/base-sudo
 alpine/utm-sudo
 alpine/extra-dev-sudo
-alpine/user
 git
 lesspipe
 tmux
@@ -13,5 +12,6 @@ eza
 starship
 zoxide
 nvim
+nvim-plugins
 ssh
 zsh

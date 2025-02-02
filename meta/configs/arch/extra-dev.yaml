@@ -1,7 +1,3 @@
 - yay:
     - rust go
     - nodejs-lts-jod npm
-
-- shell:
-    - descriprion: Install neovim plugins
-      command: bash ./scripts/install-nvim-plugins.sh

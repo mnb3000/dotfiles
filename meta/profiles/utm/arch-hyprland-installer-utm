@@ -17,6 +17,7 @@ starship
 zoxide
 yazi
 nvim
+nvim-plugins
 ssh
 zsh
 arch/hyprland-script
