@@ -1,7 +1,4 @@
 - yay:
-    - spice-vdagent vulkan-virtio
-    - qemu-guest-agent qemu-hw-display-virtio-gpu-pci qemu-hw-display-virtio-gpu-pci-gl
-    - networkmanager
-    - pipewire pipewire-alsa pipewire-pulse wireplumber
+    - qemu-guest-agent spice-vdagent networkmanager
 # - link:
 #     $HOME/.config/fontconfig: packages/arch/fontconfig

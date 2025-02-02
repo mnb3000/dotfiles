@@ -1,7 +1,6 @@
-arch/base-sudo
-arch/utm-sudo
-arch/extra-dev
-arch/clean-pacman-cache
+alpine/base-sudo
+alpine/utm-sudo
+alpine/extra-dev-sudo
 alacritty
 git
 lesspipe
@@ -13,7 +12,6 @@ bat
 eza
 starship
 zoxide
-yazi
 nvim
 ssh
 zsh

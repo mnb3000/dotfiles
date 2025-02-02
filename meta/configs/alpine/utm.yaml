@@ -1,0 +1,7 @@
+- apk:
+    - qemu-guest-agent spice-vdagent networkmanager greetd
+
+- shell:
+    - command: rc-update add greetd default
+# - link:
+#     $HOME/.config/fontconfig: packages/arch/fontconfig

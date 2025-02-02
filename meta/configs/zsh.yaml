@@ -1,27 +1,3 @@
-- shell:
-    - description: Install ohmyzsh if running on ish
-      command: |
-        if [[ ! -d $ZDOTDIR/ohmyzsh ]] && [[ "$(cat /etc/hostname | grep 'myk-ipad-ish')" ]]; then
-          sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-        fi
-
-    - description: Clone zsh plugin repos if running on ish
-      command: |
-        if [[ "$(cat /etc/hostname | grep 'myk-ipad-ish')" ]]; then
-          repos=(
-            aloxaf/fzf-tab
-            zsh-users/zsh-completions
-            zdharma-continuum/fast-syntax-highlighting
-            zsh-users/zsh-autosuggestions
-          )
-          for repo in $repos; do
-            if [[ ! -d $ZDOTDIR/ohmyzsh/plugins/${repo:t} ]]; then
-              git clone https://github.com/${repo} $ZDOTDIR/ohmyzsh/plugins/${repo:t}
-            fi
-          done
-          unset repo{s,}
-        fi
-
 - link:
     $HOME/.zsh/.zshrc: packages/zsh/zshrc
     $HOME/.zsh/.zprofile: packages/zsh/zprofile
@@ -37,3 +13,6 @@
     $HOME/.zsh/completions:
       path: packages/zsh/completions
 
+- shell:
+    - description: Initialise plugins
+      command: zsh -i -c exit
