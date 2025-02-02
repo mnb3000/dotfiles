@@ -15,7 +15,7 @@ variable "ARCH_BASE_IMAGE" {
 }
 
 variable "ALPINE_BASE_IMAGE" {
-  default = "bash:devel-alpine3.20"
+  default = "bash:devel-alpine3.21"
 }
 
 # target "docker-metadata-action" {}
