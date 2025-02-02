@@ -1,0 +1,3 @@
+- apk:
+    - tmux jq starship
+    - neovim lazygit

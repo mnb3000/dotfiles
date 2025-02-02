@@ -1,5 +1,4 @@
-alpine/base-sudo
-alpine/extra-shell-sudo
+ubuntu/base
 git
 lesspipe
 tmux
