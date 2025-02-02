@@ -15,8 +15,7 @@
     - coreutils musl openssl
     - python3-dev=~3.12 uv
     - zoxide fzf eza bat htop
-    - neovim lazygit github-cli
-
+    - neovim lazygit
 - link:
     $HOME/.zsh/custom/locale.zsh:
       path: packages/arch/locale.zsh

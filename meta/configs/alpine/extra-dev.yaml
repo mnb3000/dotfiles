@@ -3,4 +3,4 @@
     - libstdc++ musl-dev openssl-dev linux-headers automake autoconf pkgconf libtool
     - rust cargo
     - go lua-language-server
-    - nodejs npm
+    - nodejs npm github-cli
