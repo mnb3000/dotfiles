@@ -1,0 +1,16 @@
+alpine/base-sudo
+alpine/extra-dev-sudo
+git
+lesspipe
+tmux
+sesh
+lazygit
+fzf
+bat
+eza
+starship
+zoxide
+nvim
+nvim-plugins
+ssh
+zsh

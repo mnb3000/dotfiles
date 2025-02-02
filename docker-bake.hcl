@@ -25,13 +25,16 @@ target "_common" {
     USERNAME = "${USERNAME}"
   }
   dockerfile = "Dockerfile"
+}
+
+target "_common-arm" {
   platforms = ["linux/aarch64"]
 }
 
 target "docker-metadata-action" {}
 
-target "all" {
-  inherits = ["_common", "docker-metadata-action"]
+target "all-arm" {
+  inherits = ["_common", "_common-arm", "docker-metadata-action"]
   name = "${distro}"
   tags = ["${USERNAME}/${APP}:${distro}-${RELEASE}"]
   args = {
@@ -43,8 +46,21 @@ target "all" {
   }
 }
 
+target "all-x86" {
+  inherits = ["_common", "docker-metadata-action"]
+  name = "${distro}"
+  tags = ["${USERNAME}/${APP}:${distro}-${RELEASE}"]
+  args = {
+    DOTBOT_TARGET = distro
+    BASE_IMAGE = distro == "alpine" ? ALPINE_BASE_IMAGE : ARCH_BASE_IMAGE
+  }
+  matrix = {
+    distro = ["alpine-webvm"]
+  }
+}
+
 target "arch" {
-  inherits = ["_common"]
+  inherits = ["_common", "_common-arm", "docker-metadata-action"]
   args = {
     DOTBOT_TARGET = "arch"
     DOTBOT_PROFILE = "utm/arch-utm"
@@ -53,7 +69,7 @@ target "arch" {
 }
 
 target "alpine" {
-  inherits = ["_common"]
+  inherits = ["_common", "_common-arm", "docker-metadata-action"]
   args = {
     DOTBOT_TARGET = "alpine"
     DOTBOT_PROFILE = "utm/alpine-utm"
@@ -62,10 +78,21 @@ target "alpine" {
 }
 
 target "alpine-minimal" {
-  inherits = ["_common"]
+  inherits = ["_common", "_common-arm", "docker-metadata-action"]
   args = {
     DOTBOT_TARGET = "alpine"
     DOTBOT_PROFILE = "minimal/alpine"
     BASE_IMAGE = ALPINE_BASE_IMAGE
   }
+}
+
+target "alpine-webvm" {
+  inherits = ["_common", "docker-metadata-action"]
+  args = {
+    DOTBOT_TARGET = "alpine"
+    DOTBOT_PROFILE = "extra-dev/alpine"
+    BASE_IMAGE = ALPINE_BASE_IMAGE
+  }
+
+  platforms = ["linux/386"]
 }

@@ -1,4 +1,4 @@
-name: Docker publish images
+name: Docker publish x86 images
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04-arm
+    runs-on: ubuntu-24.04
     steps:
       - name: Maximize build space
         uses: jlumbroso/free-disk-space@main
@@ -49,7 +49,7 @@ jobs:
           files: |
             ./docker-bake.hcl
             ${{ steps.meta.outputs.bake-file }}
-          targets: all
+          targets: all-x86
           push: true
         env:
           RELEASE: ${{ steps.extract_branch.outputs.branch }}
