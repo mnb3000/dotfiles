@@ -23,4 +23,6 @@ RUN mkdir -p ../.config
 
 RUN bash ./scripts/install.sh
 
+WORKDIR /home/${USERNAME}
+
 CMD [ "/bin/zsh" ]

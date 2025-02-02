@@ -1,7 +1,9 @@
 arch/base-sudo
 arch/base-graphical
-arch/utm
+arch/utm-sudo
 arch/qemu
+arch/extra-dev
+arch/clean-pacman-cache
 alacritty
 git
 lesspipe

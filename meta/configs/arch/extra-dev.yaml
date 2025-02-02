@@ -1,4 +1,3 @@
 - yay:
-    - bash # TODO: Remove, temporary
-    # - rust go
-    # - nodejs-lts-jod npm
+    - rust go
+    - nodejs-lts-jod npm
