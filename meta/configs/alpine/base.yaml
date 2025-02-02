@@ -12,7 +12,7 @@
     - zip unzip gzip ncdu xdg-user-dirs grep curl wget
     - bash zsh
     - fd ripgrep
-    - coreutils build-base openssl
+    - coreutils openssl
     - python3-dev=~3.12 uv
     - zoxide fzf eza bat htop
 - link:

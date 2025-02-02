@@ -88,7 +88,7 @@ target "alpine-webvm" {
   inherits = ["_common", "docker-metadata-action"]
   args = {
     DOTBOT_TARGET = "alpine"
-    DOTBOT_PROFILE = "minimal/alpine"
+    DOTBOT_PROFILE = "webvm/alpine"
     BASE_IMAGE = ALPINE_BASE_IMAGE
   }
 
