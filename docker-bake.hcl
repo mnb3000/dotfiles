@@ -60,3 +60,12 @@ target "alpine" {
     BASE_IMAGE = ALPINE_BASE_IMAGE
   }
 }
+
+target "alpine-minimal" {
+  inherits = ["_common"]
+  args = {
+    DOTBOT_TARGET = "alpine"
+    DOTBOT_PROFILE = "minimal/alpine"
+    BASE_IMAGE = ALPINE_BASE_IMAGE
+  }
+}
