@@ -12,8 +12,8 @@
     - zip unzip gzip ncdu xdg-user-dirs grep curl wget
     - bash zsh tmux starship
     - fd ripgrep jq
-    - libstdc++ coreutils musl-dev openssl-dev linux-headers automake autoconf pkgconf libtool # alpine-sdk
-    - python3-dev=~3.12 # uv lua-language-server
+    - coreutils musl openssl
+    - python3-dev=~3.12 uv
     - zoxide fzf eza bat htop
     - neovim lazygit github-cli
 

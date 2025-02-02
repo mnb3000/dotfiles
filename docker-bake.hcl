@@ -39,26 +39,24 @@ target "all" {
     BASE_IMAGE = distro == "alpine" ? ALPINE_BASE_IMAGE : ARCH_BASE_IMAGE
   }
   matrix = {
-    distro = ["arch", "alpine"]
+    distro = ["arch", "alpine", "alpine-minimal"]
   }
 }
 
 target "arch" {
-  # inherits = ["docker-metadata-action"]
   inherits = ["_common"]
   args = {
     DOTBOT_TARGET = "arch"
-    DOTBOT_PROFILE = "ipad/arch-utm"
+    DOTBOT_PROFILE = "utm/arch-utm"
     BASE_IMAGE = ARCH_BASE_IMAGE
   }
 }
 
 target "alpine" {
-  # inherits = ["docker-metadata-action"]
   inherits = ["_common"]
   args = {
     DOTBOT_TARGET = "alpine"
-    DOTBOT_PROFILE = "ipad/alpine-utm"
+    DOTBOT_PROFILE = "utm/alpine-utm"
     BASE_IMAGE = ALPINE_BASE_IMAGE
   }
 }

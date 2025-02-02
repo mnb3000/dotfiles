@@ -2,7 +2,7 @@ ARG BASE_IMAGE=bash:devel-alpine3.21
 
 FROM ${BASE_IMAGE}
 
-ARG DOTBOT_PROFILE=ipad/alpine-utm
+ARG DOTBOT_PROFILE=utm/alpine-utm
 ARG DOTBOT_TARGET=alpine
 ARG USERNAME=mnb3000
 

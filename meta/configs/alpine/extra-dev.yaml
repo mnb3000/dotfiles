@@ -1,5 +1,6 @@
 - apk:
     - alpine-sdk
+    - libstdc++ musl-dev openssl-dev linux-headers automake autoconf pkgconf libtool
     - rust cargo
-    - go
+    - go lua-language-server
     - nodejs npm
