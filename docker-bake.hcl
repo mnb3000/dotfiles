@@ -39,7 +39,6 @@ target "all-arm" {
   tags = ["${USERNAME}/${APP}:${distro}-${RELEASE}"]
   args = {
     DOTBOT_TARGET = distro
-    BASE_IMAGE = contains(distro, "alpine") ? ALPINE_BASE_IMAGE : ARCH_BASE_IMAGE
   }
   matrix = {
     distro = ["arch", "alpine", "alpine-minimal"]
@@ -52,7 +51,6 @@ target "all-x86" {
   tags = ["${USERNAME}/${APP}:${distro}-${RELEASE}"]
   args = {
     DOTBOT_TARGET = distro
-    BASE_IMAGE = contains(distro, "alpine") ? ALPINE_BASE_IMAGE : ARCH_BASE_IMAGE
   }
   matrix = {
     distro = ["alpine-webvm"]
