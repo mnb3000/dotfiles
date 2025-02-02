@@ -1,19 +1,12 @@
 - shell:
-    - description: Clone p10k repo if running on ish
+    - description: Clone p10k repo
       command: |
-        if [[ "$(cat /etc/hostname | grep 'myk-ipad-ish')" ]]; then
-          theme_repos=(
-            romkatv/powerlevel10k
-          )
-
-          for repo in $theme_repos; do
-            if [[ ! -d $ZSH/custom/themes/${repo:t} ]]; then
-              git clone https://github.com/${repo} $ZSH/custom/themes/${repo:t}
-            fi
-          done
-          unset repo
-          unset theme_repos
+        repo=romkatv/powerlevel10k
+        if [[ ! -d $ZSH/custom/themes/${repo:t} ]]; then
+          git clone https://github.com/${repo} $ZSH/custom/themes/${repo:t}
         fi
+        unset repo
+        unset theme_repos
 
 - link:
     $HOME/.zsh/.p10k.zsh: packages/p10k/.p10k.zsh
