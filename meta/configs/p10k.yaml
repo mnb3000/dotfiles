@@ -1,12 +1,9 @@
 - shell:
     - description: Clone p10k repo
       command: |
-        repo=romkatv/powerlevel10k
-        if [[ ! -d $ZSH/custom/themes/${repo:t} ]]; then
-          git clone https://github.com/${repo} $ZSH/custom/themes/${repo:t}
+        if [[ ! -d $ZSH/custom/themes/powerlevel10k ]]; then
+          git clone https://github.com/romkatv/powerlevel10k $ZSH/custom/themes/powerlevel10k
         fi
-        unset repo
-        unset theme_repos
 
 - link:
     $HOME/.zsh/.p10k.zsh: packages/p10k/.p10k.zsh
