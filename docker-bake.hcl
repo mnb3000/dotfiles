@@ -57,7 +57,7 @@ target "all-x86" {
     DOTBOT_TARGET = distro
   }
   matrix = {
-    distro = ["alpine-webvm"]
+    distro = ["alpine-webvm", "debian-webvm"]
   }
 }
 
@@ -106,4 +106,13 @@ target "alpine-webvm" {
   }
 
   platforms = ["linux/386"]
+}
+
+target "debian-webvm" {
+  inherits = ["_common", "docker-metadata-action"]
+  args = {
+    DOTBOT_TARGET = "debian"
+    DOTBOT_PROFILE = "webvm/debian"
+    BASE_IMAGE = "i368/${DEBIAN_BASE_IMAGE}"
+  }
 }

@@ -1,4 +1,6 @@
 debian/base-sudo
+debian/extra-shell-sudo
+debian/user
 git
 lesspipe
 tmux
@@ -7,7 +9,7 @@ lazygit
 fzf
 bat
 eza
-p10k
+starship
 zoxide
 nvim
 ssh
