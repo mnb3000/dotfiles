@@ -12,3 +12,7 @@
 
 - link:
     $HOME/.zsh/.p10k.zsh: packages/p10k/.p10k.zsh
+
+- shell:
+    - description: Initialise plugins
+      command: zsh -i -c exit

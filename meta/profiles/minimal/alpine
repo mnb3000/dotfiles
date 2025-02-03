@@ -3,7 +3,6 @@ alpine/extra-shell-sudo
 git
 lesspipe
 tmux
-sesh
 lazygit
 fzf
 bat

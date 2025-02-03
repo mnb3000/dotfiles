@@ -1,4 +1,3 @@
-sta
 ## --------------------------------
 ##               __
 ##   ____  _____/ /_
@@ -95,7 +94,7 @@ src-if-installed $ZDOTDIR/custom/lazygit.zsh lazygit
 src-if-installed $ZDOTDIR/custom/go.zsh go
 
 # p10k shell if installed
-[[ ! -f $ZDOTDIR/.p10k.zsh ]] || src $ZDOTDIR/.p10k.zsh
+[[ -f $ZDOTDIR/.p10k.zsh ]] && src $ZDOTDIR/.p10k.zsh
 
 # startup time profiling
 if [[ -n "$ZSH_DEBUGRC" ]]; then
