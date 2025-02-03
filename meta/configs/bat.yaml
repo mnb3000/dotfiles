@@ -3,4 +3,9 @@
       path: packages/bat
 
 - shell:
-    - command: bat cache --build
+    - command: |
+        if [ -x "$(command -v bat)" ]; then
+          bat cache --build
+        else
+          batcat cache --build
+        fi
