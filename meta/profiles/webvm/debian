@@ -1,4 +1,4 @@
-debian/base
+debian/base-sudo
 git
 lesspipe
 tmux

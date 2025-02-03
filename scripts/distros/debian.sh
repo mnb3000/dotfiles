@@ -1,4 +1,5 @@
 update-apt-db() {
+  apt-get clean
   apt-get update
 }
 
@@ -9,22 +10,21 @@ upgrade-system() {
 }
 
 setup-login-user() {
-  setup-user -a "${USERNAME}"
+  useradd -G sudo -m "${USERNAME}"
   sudo -u "${USERNAME}" xdg-user-dirs-update
-  echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" >>/etc/sudoers
+  echo "%sudo ALL=(ALL:ALL) NOPASSWD: ALL" >>/etc/sudoers
 }
 
 prebuild() {
   update-apt-db
 
-  apt-get install bash shadow sudo git xdg-user-dirs
+  apt-get install -y sudo git xdg-user-dirs
   setup-login-user
 }
 
 preinstall() {
   upgrade-system
-  bash
+  sudo apt update
 
-  sudo apt-get install git python3 python-is-python3
-
+  sudo apt-get install -y python3 python-is-python3
 }

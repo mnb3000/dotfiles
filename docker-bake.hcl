@@ -18,6 +18,10 @@ variable "ALPINE_BASE_IMAGE" {
   default = "bash:devel-alpine3.21"
 }
 
+variable "DEBIAN_BASE_IMAGE" {
+  default = "debian:testing-slim"
+}
+
 # target "docker-metadata-action" {}
 
 target "_common" {
@@ -41,7 +45,7 @@ target "all-arm" {
     DOTBOT_TARGET = distro
   }
   matrix = {
-    distro = ["arch", "alpine", "alpine-minimal"]
+    distro = ["arch", "alpine", "alpine-minimal", "debian-minimal"]
   }
 }
 
@@ -81,6 +85,15 @@ target "alpine-minimal" {
     DOTBOT_TARGET = "alpine"
     DOTBOT_PROFILE = "minimal/alpine"
     BASE_IMAGE = ALPINE_BASE_IMAGE
+  }
+}
+
+target "debian-minimal" {
+  inherits = ["_common", "_common-arm", "docker-metadata-action"]
+  args = {
+    DOTBOT_TARGET = "debian"
+    DOTBOT_PROFILE = "minimal/debian"
+    BASE_IMAGE = DEBIAN_BASE_IMAGE
   }
 }
 

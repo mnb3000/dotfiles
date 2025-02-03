@@ -1,5 +1,5 @@
-debian/base
-debian/extra-shell
+debian/base-sudo
+debian/extra-shell-sudo
 git
 lesspipe
 tmux
