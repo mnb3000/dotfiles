@@ -1,7 +1,7 @@
 - shell:
     - description: Clone p10k repo
       command: |
-        if [[ "$(cat /etc/hostname) =~ myk-ipad-ish" ]]; then
+        if [ "$(uname -m)" = "i686" ]; then
           if [[ ! -d $HOME/.zsh/custom/themes/powerlevel10k ]]; then
             echo $ZDOTDIR/custom/themes/
             git clone https://github.com/romkatv/powerlevel10k $HOME/.zsh/custom/themes/powerlevel10k
