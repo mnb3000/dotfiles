@@ -3,8 +3,7 @@
       command: |
         if [ "$(uname -m)" = "i686" ]; then
           if [[ ! -d $HOME/.zsh/custom/themes/powerlevel10k ]]; then
-            echo $ZDOTDIR/custom/themes/
-            git clone https://github.com/romkatv/powerlevel10k $HOME/.zsh/custom/themes/powerlevel10k
+            git clone --depth=1 https://github.com/romkatv/powerlevel10k $HOME/.zsh/custom/themes/powerlevel10k
           fi
         else
           echo romkatv/powerlevel10k >> ~/.zsh/.zplugins
