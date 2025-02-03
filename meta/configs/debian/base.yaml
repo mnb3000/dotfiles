@@ -1,0 +1,35 @@
+- apt-get:
+    - apt-utils
+    - fakeroot
+    - build-essential
+    - apt-transport-https
+    - software-properties-common
+    - git
+    - gcc
+    - make
+    - curl
+    - wget
+    - less
+    - dbus
+    - file
+    - patch
+    - python3
+    - python3-pip
+    - python-is-python3
+    - libncurses-dev
+    - zip
+    - unzip
+    - ncdu
+    - xdg-user-dirs
+    - zsh
+    - fd-find
+    - ripgrep
+    - zoxide
+    - fzf
+    - eza
+    - bat
+    - htop
+    - vim
+
+- shell:
+    - command: xdg-user-dirs-update
