@@ -2,6 +2,8 @@ export ZSH="$ZDOTDIR/ohmyzsh"
 export HOST=$(cat /etc/hostname)
 
 if [[ ! -d $ZSH ]]; then
+  export CHSH=no
+  export KEEP_ZSHRC=yes
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
@@ -56,4 +58,3 @@ zsh-defer src $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plu
 zsh-defer src $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 src $ZSH/oh-my-zsh.sh
-[[ ! -f $ZDOTDIR/.p10k.zsh ]] || src $ZDOTDIR/.p10k.zsh

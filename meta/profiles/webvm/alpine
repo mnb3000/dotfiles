@@ -2,12 +2,10 @@ alpine/base-sudo
 git
 lesspipe
 tmux
-lazygit
 fzf
 bat
 eza
 zoxide
-nvim
 ssh
 zsh
 p10k

@@ -1,4 +1,3 @@
 - apk:
-    - jq starship
-    - neovim lazygit
+    - jq starship lazygit
     - build-base
