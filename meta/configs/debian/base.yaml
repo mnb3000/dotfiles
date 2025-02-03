@@ -3,7 +3,6 @@
     - fakeroot
     - build-essential
     - apt-transport-https
-    - software-properties-common
     - git
     - gcc
     - make
