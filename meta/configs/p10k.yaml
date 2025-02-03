@@ -1,8 +1,13 @@
 - shell:
     - description: Clone p10k repo
       command: |
-        if [[ ! -d $ZSH/custom/themes/powerlevel10k ]]; then
-          git clone https://github.com/romkatv/powerlevel10k $ZSH/custom/themes/powerlevel10k
+        if [[ "$(cat /etc/hostname) =~ myk-ipad-ish" ]]; then
+          if [[ ! -d $HOME/.zsh/custom/themes/powerlevel10k ]]; then
+            echo $ZDOTDIR/custom/themes/
+            git clone https://github.com/romkatv/powerlevel10k $HOME/.zsh/custom/themes/powerlevel10k
+          fi
+        else
+          echo romkatv/powerlevel10k >> ~/.zsh/.zplugins
         fi
 
 - link:
