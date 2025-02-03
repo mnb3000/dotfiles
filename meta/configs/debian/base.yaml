@@ -1,7 +1,6 @@
 - apt:
     - apt-utils
     - fakeroot
-    - build-essential
     - apt-transport-https
     - git
     - gcc
@@ -31,6 +30,7 @@
     - jq
     - htop
     - vim
+    - neovim
 
 - shell:
     - command: xdg-user-dirs-update
