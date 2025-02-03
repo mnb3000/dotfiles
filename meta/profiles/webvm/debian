@@ -6,7 +6,7 @@ tmux
 fzf
 bat
 eza
-p10k
+starship
 zoxide
 nvim
 ssh
