@@ -11,6 +11,6 @@ if is-deck; then
   [ -f $ZDOTDIR/custom/aliases.deck.zsh ] && source $ZDOTDIR/custom/aliases.deck.zsh
 fi
 
-if is-ubuntu; then
-  [ -f $ZDOTDIR/custom/aliases.ubuntu.zsh ] && source $ZDOTDIR/custom/aliases.ubuntu.zsh
+if is-debian || is-ubuntu; then
+  [ -f $ZDOTDIR/custom/aliases.ubuntu.zsh ] && source $ZDOTDIR/custom/aliases.debian.zsh
 fi

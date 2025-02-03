@@ -1,12 +1,4 @@
-function is-macos {
-  [[ "$OSTYPE" == darwin* ]] || return 1
-}
-
-function is-linux {
-  [ "$(uname -s)" = "Linux" ] || return 1
-}
-
-function is-ubuntu {
+function set-os-env-var {
   if [ -f /etc/os-release ]; then
     # freedesktop.org and systemd
     . /etc/os-release
@@ -17,8 +9,24 @@ function is-ubuntu {
   else
     OS="Unknown"
   fi
+}
 
+function is-macos {
+  [[ "$OSTYPE" == darwin* ]] || return 1
+}
+
+function is-linux {
+  [ "$(uname -s)" = "Linux" ] || return 1
+}
+
+function is-ubuntu {
+  set-os-env-var
   [[ $OS =~ "Ubuntu" ]] || return 1
+}
+
+function is-debian {
+  set-os-env-var
+  [[ $OS =~ "Debian" ]] || return 1
 }
 
 function is-termux {

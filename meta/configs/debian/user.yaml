@@ -1,2 +1,2 @@
 - shell:
-    - command: echo "alias bat=batcat" >> ~/.bash_profile
+    - command: echo "alias bat=batcat" >> ~/.profile

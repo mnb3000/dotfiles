@@ -21,6 +21,7 @@ RUN chown -R ${USERNAME} ../
 USER ${USERNAME}
 RUN mkdir -p ../.config
 
+ENV ENV=~/.profile
 RUN bash ./scripts/install.sh
 
 WORKDIR /home/${USERNAME}
