@@ -14,3 +14,4 @@ zoxide
 nvim
 ssh
 zsh
+debian/clean-apt-cache-sudo
