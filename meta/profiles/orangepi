@@ -1,4 +1,5 @@
 ubuntu/base-sudo
+ubuntu/extra-shell
 ubuntu/base-graphical
 ubuntu/awesome
 git

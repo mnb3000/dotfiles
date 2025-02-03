@@ -1,0 +1,14 @@
+ubuntu/base
+git
+lesspipe
+tmux
+sesh
+lazygit
+fzf
+bat
+eza
+p10k
+zoxide
+nvim
+ssh
+zsh
