@@ -11,7 +11,7 @@
 - apk:
     - zip unzip gzip ncdu xdg-user-dirs grep curl wget
     - bash zsh tmux
-    - fd ripgrep neovim
+    - fd ripgrep neovim lazygit
     - coreutils openssl
     - python3-dev=~3.12
     - zoxide fzf eza bat htop
