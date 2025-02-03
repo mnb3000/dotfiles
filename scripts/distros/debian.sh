@@ -24,7 +24,6 @@ prebuild() {
 
 preinstall() {
   upgrade-system
-  sudo apt update
 
   sudo apt-get install -y python3 python-is-python3
 }
