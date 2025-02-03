@@ -1,5 +1,4 @@
 alpine/base-sudo
-alpine/extra-shell-sudo
 git
 lesspipe
 tmux
@@ -7,8 +6,8 @@ lazygit
 fzf
 bat
 eza
-starship
 zoxide
 nvim
 ssh
 zsh
+p10k

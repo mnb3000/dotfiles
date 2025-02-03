@@ -1,7 +1,7 @@
 # Antidote plugin loading
 local zplugins=${ZDOTDIR:-$HOME/.zsh}/.zplugins
 
-if is-ish
+if is-i686
 then
   src $ZDOTDIR/custom/plugins.omz.zsh
 else

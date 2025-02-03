@@ -1,4 +1,4 @@
 - apk:
-    - tmux jq starship
+    - jq starship
     - neovim lazygit
     - build-base

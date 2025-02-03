@@ -10,7 +10,7 @@
 
 - apk:
     - zip unzip gzip ncdu xdg-user-dirs grep curl wget
-    - bash zsh
+    - bash zsh tmux
     - fd ripgrep
     - coreutils openssl
     - python3-dev=~3.12 uv

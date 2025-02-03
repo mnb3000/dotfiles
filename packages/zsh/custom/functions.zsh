@@ -19,6 +19,10 @@ function is-linux {
   [ "$(uname -s)" = "Linux" ] || return 1
 }
 
+function is-i686 {
+  [ "$(uname -m)" = "i686" ] || return 1
+}
+
 function is-ubuntu {
   set-os-env-var
   [[ $OS =~ "Ubuntu" ]] || return 1

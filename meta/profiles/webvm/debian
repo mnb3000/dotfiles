@@ -10,4 +10,5 @@ zoxide
 nvim
 ssh
 zsh
+p10k
 debian/clean-apt-cache-sudo
