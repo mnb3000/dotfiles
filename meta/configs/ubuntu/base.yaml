@@ -30,6 +30,7 @@
     - bat
     - htop
     - vim
+    - neovim
 
 - shell:
     - command: xdg-user-dirs-update

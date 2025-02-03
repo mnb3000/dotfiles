@@ -1,8 +1,6 @@
-- apt:
-    - tmux
+- apt-get:
     - ffmpeg
     - 7zip
-    - jq
     - poppler-utils
     - imagemagick
 
@@ -13,7 +11,7 @@
     - description: Install lazygit
       command: |
         LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
-        curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+        curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_$([[ $(uname -m) = "arm64" ]] && echo -n "arm64" || [[ $(uname -m = "i686") ]] && echo -n "32-bit" || echo -n "x86_64" ).tar.gz"
         tar xf lazygit.tar.gz lazygit
         install lazygit -D -t /usr/local/bin/
         rm -rf lazygit*

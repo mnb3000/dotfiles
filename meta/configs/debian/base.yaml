@@ -1,4 +1,4 @@
-- apt-get:
+- apt:
     - apt-utils
     - fakeroot
     - build-essential
@@ -22,12 +22,14 @@
     - ncdu
     - xdg-user-dirs
     - zsh
+    - tmux
     - fd-find
     - ripgrep
     - zoxide
     - fzf
     - eza
     - bat
+    - jq
     - htop
     - vim
 
