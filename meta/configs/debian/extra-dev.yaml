@@ -1,2 +1,11 @@
 - apt:
     - build-essential
+    - fakeroot
+    - gcc
+    - make
+    - less
+    - dbus
+    - file
+    - patch
+    - libncurses-dev
+    - jq

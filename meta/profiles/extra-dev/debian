@@ -1,9 +1,11 @@
 debian/base-sudo
 debian/extra-shell-sudo
+debian/extra-dev-sudo
 debian/user
 git
 lesspipe
 tmux
+sesh
 lazygit
 fzf
 bat
@@ -12,6 +14,7 @@ starship
 zoxide
 yazi
 nvim
+nvim-plugins
 ssh
 zsh
 debian/clean-apt-cache-sudo
