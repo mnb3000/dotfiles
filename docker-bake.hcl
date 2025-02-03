@@ -113,6 +113,8 @@ target "debian-webvm" {
   args = {
     DOTBOT_TARGET = "debian"
     DOTBOT_PROFILE = "webvm/debian"
-    BASE_IMAGE = "i368/${DEBIAN_BASE_IMAGE}"
+    BASE_IMAGE = "i386/${DEBIAN_BASE_IMAGE}"
   }
+
+  platforms = ["linux/386"]
 }
