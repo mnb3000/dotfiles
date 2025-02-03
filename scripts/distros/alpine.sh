@@ -22,7 +22,7 @@ prebuild() {
 
 preinstall() {
   upgrade-system
-  bash
 
-  sudo apk --no-cache add git python3
+  sudo apk --no-cache add git python3 openssh
+  sudo setup-sshd -c openssh
 }
