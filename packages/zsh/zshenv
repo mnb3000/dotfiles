@@ -35,3 +35,4 @@ export VI_MODE_SET_CURSOR=true
 
 export TERMINFO_DIRS=$TERMINFO_DIRS:$HOME/.local/share/terminfo
 
+[[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
