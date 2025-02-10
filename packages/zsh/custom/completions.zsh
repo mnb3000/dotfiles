@@ -29,8 +29,9 @@ zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview \
 	esac'
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
-
 if is-macos; then
   zstyle ':fzf-tab:complete:brew-(install|uninstall|search|info):*-argument-rest' fzf-preview 'brew info $word'
 fi
+
+fpath+=${ZDOTDIR:-~/.zsh}/completions
 
