@@ -1,9 +1,8 @@
-ubuntu/base
-ubuntu/extra-shell
+ubuntu/base-sudo
+ubuntu/extra-shell-sudo
 git
 lesspipe
 tmux
-sesh
 lazygit
 fzf
 bat
