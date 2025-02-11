@@ -66,14 +66,10 @@ function src {
   [[ -n $_SHELL_DEBUG ]] && echo -e "[$(($timeend - $timestart / 1000000))ms] src ${1}"
 }
 
-function eval-if-installed {
-  if [[ "$(command -v "$2")" ]]; then
-    eval "$1"
-  fi
-}
-
 function src-if-installed {
-  eval-if-installed "src $1" "$2"
+  if [[ "$(command -v "$2")" ]]; then
+    src $1
+  fi
 }
 
 # Find all matching processes
