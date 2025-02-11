@@ -2,6 +2,7 @@ ubuntu/base-sudo
 ubuntu/extra-shell-sudo
 ubuntu/base-graphical-sudo
 ubuntu/awesomewm-sudo
+user-dirs
 git
 lesspipe
 tmux

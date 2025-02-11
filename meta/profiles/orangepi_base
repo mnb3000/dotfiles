@@ -1,4 +1,5 @@
 ubuntu/base-sudo
+user-dirs
 git
 lesspipe
 tmux

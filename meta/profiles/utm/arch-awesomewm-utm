@@ -6,6 +6,7 @@ arch/xorg-sudo
 arch/awesome
 arch/extra-dev
 arch/clean-pacman-cache
+user-dirs
 alacritty
 git
 lesspipe

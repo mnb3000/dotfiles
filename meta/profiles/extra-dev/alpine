@@ -1,6 +1,7 @@
 alpine/base-sudo
 alpine/extra-shell-sudo
 alpine/extra-dev-sudo
+user-dirs
 git
 lesspipe
 tmux

@@ -1,5 +1,6 @@
 ubuntu/base-sudo
 ubuntu/extra-shell-sudo
+user-dirs
 git
 lesspipe
 tmux

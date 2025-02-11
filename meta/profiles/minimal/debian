@@ -1,6 +1,7 @@
 debian/base-sudo
 debian/extra-shell-sudo
 debian/user
+user-dirs
 git
 lesspipe
 tmux

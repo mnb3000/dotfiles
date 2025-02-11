@@ -1,0 +1,3 @@
+- shell:
+    - description: Ensure XDG user directories are created
+      command: xdg-user-dirs-update

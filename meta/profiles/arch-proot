@@ -1,5 +1,6 @@
 arch/base-sudo
 arch/clean-pacman-cache
+user-dirs
 alacritty
 git
 lesspipe

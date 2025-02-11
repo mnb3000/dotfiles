@@ -2,6 +2,7 @@ arch/base-sudo
 arch/utm-sudo
 arch/extra-dev
 arch/clean-pacman-cache
+user-dirs
 alacritty
 git
 lesspipe

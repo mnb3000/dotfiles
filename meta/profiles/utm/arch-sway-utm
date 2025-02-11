@@ -4,6 +4,7 @@ arch/utm-sudo
 arch/qemu
 arch/extra-dev
 arch/clean-pacman-cache
+user-dirs
 alacritty
 git
 lesspipe
