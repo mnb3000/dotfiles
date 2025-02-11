@@ -3,6 +3,7 @@
     - 7zip
     - poppler-utils
     - imagemagick
+    - jq
     - vim
 
 - shell:

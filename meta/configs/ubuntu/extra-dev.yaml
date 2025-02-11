@@ -9,10 +9,7 @@
 
 - shell:
     - description: Install rustup
-      command: curl https://sh.rustup.rs -sSf | sh
-
-    - description: Install rust
-      command: rustup default stable
+      command: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
     - description: Add node 22.x repos
       command: sudo curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -

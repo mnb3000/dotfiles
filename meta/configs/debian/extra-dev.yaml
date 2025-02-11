@@ -1,15 +1,21 @@
 - apt:
     - build-essential
     - fakeroot
-    - gcc
-    - make
-    - less
     - dbus
     - file
     - patch
     - libncurses-dev
-    - jq
+    - rustup
 
 - shell:
-    - description: Install sesh
-      command: go install github.com/joshmedeski/sesh@latest
+    - description: Install golang
+      command: |
+        export GO_TMP_DIR=$(mktemp)
+        git clone https://github.com/udhos/update-golang $GO_TMP_DIR
+        bash $GO_TMP_DIR/update-golang.sh
+
+    - description: Install rust
+      command: rustup default stable
+
+    # - description: Install sesh
+    #   command: go install github.com/joshmedeski/sesh@latest

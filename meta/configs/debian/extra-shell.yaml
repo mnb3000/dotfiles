@@ -3,6 +3,7 @@
     - 7zip
     - poppler-utils
     - imagemagick
+    - jq
 
 - shell:
     - description: Install starship shell (yes curl|sh bc y not)
