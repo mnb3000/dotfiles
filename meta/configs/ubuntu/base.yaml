@@ -17,7 +17,6 @@
     - zsh
     - fd-find
     - ripgrep
-    - zoxide
     - fzf
     - bat
     - htop
@@ -25,6 +24,9 @@
     - neovim
 
 - shell:
+    - description: Install zoxide
+      command: curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+
     - description: Add eza repo to apk
       command: |
         mkdir -p /etc/apt/keyrings

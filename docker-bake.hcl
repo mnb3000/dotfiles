@@ -23,7 +23,7 @@ variable "DEBIAN_BASE_IMAGE" {
 }
 
 variable "UBUNTU_BASE_IMAGE" {
-  default = "ubuntu:22.04"
+  default = "ubuntu:24.04"
 }
 
 # target "docker-metadata-action" {}
