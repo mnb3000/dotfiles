@@ -49,7 +49,7 @@ target "all-arm" {
     DOTBOT_TARGET = distro
   }
   matrix = {
-    distro = ["arch", "alpine", "alpine-minimal", "debian-minimal"]
+    distro = ["arch", "alpine", "ubuntu", "alpine-minimal", "debian-minimal"]
   }
 }
 
@@ -80,6 +80,15 @@ target "alpine" {
     DOTBOT_TARGET = "alpine"
     DOTBOT_PROFILE = "utm/alpine-utm"
     BASE_IMAGE = ALPINE_BASE_IMAGE
+  }
+}
+
+target "ubuntu" {
+  inherits = ["_common", "_common-arm", "docker-metadata-action"]
+  args = {
+    DOTBOT_TARGET = "ubuntu"
+    DOTBOT_PROFILE = "extra-dev/ubuntu"
+    BASE_IMAGE = UBUNTU_BASE_IMAGE
   }
 }
 
