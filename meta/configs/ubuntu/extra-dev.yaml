@@ -1,5 +1,10 @@
 - apt:
     - build-essential
+    - fakeroot
+    - dbus
+    - file
+    - patch
+    - libncurses-dev
     - rustup
     - golang-go
 

@@ -11,5 +11,7 @@ eza
 starship
 zoxide
 nvim
+nvim-plugins
 ssh
 zsh
+ubuntu/clean-apt-cache-sudo

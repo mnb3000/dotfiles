@@ -1,7 +1,7 @@
-debian/base-sudo
-debian/extra-shell-sudo
-debian/extra-dev-sudo
-debian/clean-apt-cache-sudo
+ubuntu/base-sudo
+ubuntu/extra-shell-sudo
+ubuntu/extra-dev-sudo
+ubuntu/clean-apt-cache-sudo
 user-dirs
 git
 lesspipe

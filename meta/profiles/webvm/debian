@@ -1,5 +1,4 @@
 debian/base-sudo
-debian/user
 user-dirs
 git
 lesspipe

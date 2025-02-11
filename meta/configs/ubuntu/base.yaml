@@ -1,8 +1,6 @@
 - apt:
     - apt-utils
-    - fakeroot
     - apt-transport-https
-    - software-properties-common
     - git
     - gpg
     - libc6-dev
@@ -11,13 +9,9 @@
     - curl
     - wget
     - less
-    - dbus
-    - file
-    - patch
     - python3
     - python3-pip
     - python-is-python3
-    - libncurses-dev
     - zip
     - unzip
     - ncdu
@@ -41,7 +35,6 @@
       ]
     - echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
     - chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
-    - apt update
 
 - apt:
     - eza
