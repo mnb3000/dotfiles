@@ -5,10 +5,12 @@
     - file
     - patch
     - libncurses-dev
-    - rustup
     - golang-go
 
 - shell:
+    - description: Install rustup
+      command: curl https://sh.rustup.rs -sSf | sh
+
     - description: Install rust
       command: rustup default stable
 
