@@ -22,6 +22,10 @@ variable "DEBIAN_BASE_IMAGE" {
   default = "debian:testing-slim"
 }
 
+variable "UBUNTU_BASE_IMAGE" {
+  default = "ubuntu:22.04"
+}
+
 # target "docker-metadata-action" {}
 
 target "_common" {
@@ -57,7 +61,7 @@ target "all-x86" {
     DOTBOT_TARGET = distro
   }
   matrix = {
-    distro = ["alpine-webvm", "debian-webvm"]
+    distro = ["ubuntu-minimal", "alpine-webvm", "debian-webvm"]
   }
 }
 
@@ -95,6 +99,16 @@ target "debian-minimal" {
     DOTBOT_PROFILE = "minimal/debian"
     BASE_IMAGE = DEBIAN_BASE_IMAGE
   }
+}
+
+target "ubuntu-minimal" {
+  inherits = ["_common", "docker-metadata-action"]
+  args = {
+    DOTBOT_TARGET = "ubuntu"
+    DOTBOT_PROFILE = "minimal/ubuntu"
+    BASE_IMAGE = UBUNTU_BASE_IMAGE
+  }
+  platforms = ["linux/amd64"]
 }
 
 target "alpine-webvm" {
