@@ -4,6 +4,7 @@
     - apt-transport-https
     - software-properties-common
     - git
+    - gpg
     - libc6-dev
     - gcc
     - make
@@ -27,11 +28,20 @@
     - jq
     - zoxide
     - fzf
-    - eza
     - bat
     - htop
     - tmux
     - neovim
 
 - shell:
-    - command: xdg-user-dirs-update
+    - mkdir -p /etc/apt/keyrings
+    - [
+        wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | gpg --dearmor -o /etc/apt/keyrings/gierens.gpg,
+        Loading eza repo keys,
+      ]
+    - echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+    - chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
+    - apt update
+
+- apt:
+    - eza
