@@ -1,4 +1,5 @@
 - apt:
+    - dialog
     - apt-utils
     - apt-transport-https
     - git
