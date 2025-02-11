@@ -1,10 +1,10 @@
 - apt:
     - apt-utils
     - fakeroot
-    - build-essential
     - apt-transport-https
     - software-properties-common
     - git
+    - libc6-dev
     - gcc
     - make
     - curl
@@ -24,12 +24,13 @@
     - zsh
     - fd-find
     - ripgrep
+    - jq
     - zoxide
     - fzf
     - eza
     - bat
     - htop
-    - vim
+    - tmux
     - neovim
 
 - shell:

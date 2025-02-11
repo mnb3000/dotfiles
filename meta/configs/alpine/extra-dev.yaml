@@ -4,3 +4,7 @@
     - rust cargo
     - go lua-language-server uv
     - nodejs npm github-cli
+
+- shell:
+    - description: Install sesh
+      command: go install github.com/joshmedeski/sesh@latest

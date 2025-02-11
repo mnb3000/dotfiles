@@ -2,7 +2,7 @@
     - base-devel git python uv ncurses pacman-contrib
     - zip unzip ncdu xdg-user-dirs curl wget
     - zsh tmux starship
-    - fd ripgrep jq
+    - fd ripgrep jq sesh-bin
     - zoxide fzf eza bat yazi htop
     - neovim lazygit github-cli
 

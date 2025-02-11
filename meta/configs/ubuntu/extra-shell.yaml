@@ -1,10 +1,9 @@
 - apt:
-    - tmux
     - ffmpeg
     - 7zip
-    - jq
     - poppler-utils
     - imagemagick
+    - vim
 
 - shell:
     - description: Install starship shell (yes curl|sh bc y not)

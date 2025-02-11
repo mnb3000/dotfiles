@@ -9,3 +9,7 @@
     - patch
     - libncurses-dev
     - jq
+
+- shell:
+    - description: Install sesh
+      command: go install github.com/joshmedeski/sesh@latest
