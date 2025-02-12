@@ -66,3 +66,5 @@ credentials.*
 repos
 
 meta/configs/test.yaml
+
+webtop-data/

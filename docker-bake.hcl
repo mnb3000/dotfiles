@@ -18,6 +18,10 @@ variable "ALPINE_BASE_IMAGE" {
   default = "bash:devel-alpine3.21"
 }
 
+variable "ALPINE_WEBTOP_XFCE_BASE_IMAGE" {
+  default = "linuxserver/webtop:latest"
+}
+
 variable "DEBIAN_BASE_IMAGE" {
   default = "debian:testing-slim"
 }
@@ -49,7 +53,7 @@ target "all-arm" {
     DOTBOT_TARGET = distro
   }
   matrix = {
-    distro = ["arch", "alpine", "ubuntu", "alpine-minimal", "debian-minimal"]
+    distro = ["arch", "alpine", "alpine-minimal", "alpine-webtop", "ubuntu", "debian-minimal"]
   }
 }
 
@@ -83,12 +87,14 @@ target "alpine" {
   }
 }
 
-target "ubuntu" {
+target "alpine-webtop" {
   inherits = ["_common", "_common-arm", "docker-metadata-action"]
   args = {
-    DOTBOT_TARGET = "ubuntu"
-    DOTBOT_PROFILE = "extra-dev/ubuntu"
-    BASE_IMAGE = UBUNTU_BASE_IMAGE
+    DOTBOT_TARGET = "alpine"
+    DOTBOT_PROFILE = "extra-dev/alpine"
+    BASE_IMAGE = ALPINE_WEBTOP_XFCE_BASE_IMAGE
+    USERNAME = "abc"
+    HOMEDIR = "/config"
   }
 }
 
@@ -101,12 +107,23 @@ target "alpine-minimal" {
   }
 }
 
-target "debian-minimal" {
+target "alpine-webvm" {
+  inherits = ["_common", "docker-metadata-action"]
+  args = {
+    DOTBOT_TARGET = "alpine"
+    DOTBOT_PROFILE = "webvm/alpine"
+    BASE_IMAGE = ALPINE_BASE_IMAGE
+  }
+
+  platforms = ["linux/386"]
+}
+
+target "ubuntu" {
   inherits = ["_common", "_common-arm", "docker-metadata-action"]
   args = {
-    DOTBOT_TARGET = "debian"
-    DOTBOT_PROFILE = "minimal/debian"
-    BASE_IMAGE = DEBIAN_BASE_IMAGE
+    DOTBOT_TARGET = "ubuntu"
+    DOTBOT_PROFILE = "extra-dev/ubuntu"
+    BASE_IMAGE = UBUNTU_BASE_IMAGE
   }
 }
 
@@ -120,15 +137,13 @@ target "ubuntu-minimal" {
   platforms = ["linux/amd64"]
 }
 
-target "alpine-webvm" {
-  inherits = ["_common", "docker-metadata-action"]
+target "debian-minimal" {
+  inherits = ["_common", "_common-arm", "docker-metadata-action"]
   args = {
-    DOTBOT_TARGET = "alpine"
-    DOTBOT_PROFILE = "webvm/alpine"
-    BASE_IMAGE = ALPINE_BASE_IMAGE
+    DOTBOT_TARGET = "debian"
+    DOTBOT_PROFILE = "minimal/debian"
+    BASE_IMAGE = DEBIAN_BASE_IMAGE
   }
-
-  platforms = ["linux/386"]
 }
 
 target "debian-webvm" {

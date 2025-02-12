@@ -5,13 +5,14 @@ FROM ${BASE_IMAGE}
 ARG DOTBOT_PROFILE=utm/alpine-utm
 ARG DOTBOT_TARGET=alpine
 ARG USERNAME=mnb3000
+ARG HOMEDIR=/home/${USERNAME}
 
-WORKDIR /home/${USERNAME}
+WORKDIR ${HOMEDIR}
 
 # RUN git clone --recursive https://github.com/mnb3000/dotfiles.git ./.dotfiles
 COPY . ./.dotfiles
 
-WORKDIR /home/${USERNAME}/.dotfiles
+WORKDIR ${HOMEDIR}/.dotfiles
 
 RUN bash ./scripts/prebuild.sh
 
@@ -24,6 +25,6 @@ RUN mkdir -p ../.config
 ENV ENV=~/.profile
 RUN bash ./scripts/install.sh
 
-WORKDIR /home/${USERNAME}
+WORKDIR ${HOMEDIR}
 
 CMD [ "/bin/zsh" ]
