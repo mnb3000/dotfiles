@@ -96,6 +96,7 @@ target "alpine-webtop" {
     USERNAME = "abc"
     HOMEDIR = "/config"
   }
+  tags = ["${USERNAME}/${APP}:alpine-webtop-${RELEASE}"]
 }
 
 target "alpine-minimal" {
