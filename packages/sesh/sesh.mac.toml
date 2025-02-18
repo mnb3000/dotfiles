@@ -1,37 +1,48 @@
+[default_session]
+startup_command = "nvim -c ':FzfLua files'"
+preview_command = "eza --all --git --icons --group-directories-first --color=always {}"
+
 [[session]]
 name = "home \U0001F3E1"
 path = "~"
 startup_command = "la"
+preview_command = "eza --all --git --icons --group-directories-first --color=always {}"
 
 [[session]]
 name = "downloads \U0001F4E5"
 path = "~/Downloads"
 startup_command = "y"
+preview_command = "eza --all --git --icons --group-directories-first --color=always {}"
 
 [[session]]
 name = "documents \U0001F4CB"
 path = "~/Documents"
 startup_command = "y"
+preview_command = "eza --all --git --icons --group-directories-first --color=always {}"
 
 [[session]]
 name = "_dotfiles \U0001F4C1"
 path = "~/.dotfiles"
-startup_command = "nvim -c ':Neotree' -c ':FzfLua oldfiles'"
+startup_command = "nvim -c ':Neotree' -c ':FzfLua files'"
+preview_command = "eza --all --git --icons --group-directories-first --color=always {}"
 
 [[session]]
 name = "zsh config \U00002699\U0000FE0F"
 path = "~/.dotfiles/packages/zsh"
 startup_command = "nvim zshrc zprofile zshenv zplugins"
+preview_command = "bat --color=always ~/.dotfiles/packages/zsh/zshrc"
 
 [[session]]
 name = "tmux config \U0001F4DF"
 path = "~/.dotfiles/packages/tmux"
 startup_command = "nvim tmux.conf"
+preview_command = "bat --color=always ~/.dotfiles/packages/tmux/tmux.conf"
 
 [[session]]
 name = "nvim config \U0001F4BE"
 path = "~/.dotfiles/packages"
-startup_command = "nvim -c ':FzfLua oldfiles cwd=nvim'"
+startup_command = "nvim -c ':FzfLua files cwd=nvim'"
+preview_command = "eza -T --level=3 --all --git --icons --group-directories-first --color=always {}"
 
 [[session]]
 name = "termux SSH \U0001F4F1"
