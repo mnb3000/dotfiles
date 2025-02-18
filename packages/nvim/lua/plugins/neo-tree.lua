@@ -7,7 +7,7 @@ end
 local do_grep = function(state)
   local prev_dir = vim.fn.getcwd()
   local grep_dir = state.tree:get_node().path
-  require("telescope.builtin").live_grep({ cwd = grep_dir })
+  require("fzf-lua").live_grep({ cwd = grep_dir })
   vim.fn.chdir(prev_dir)
 end
 
@@ -28,7 +28,7 @@ return {
         --"*.meta",
       },
       always_show = { -- remains visible even if other settings would normally hide it
-        --".gitignore",
+        ".gitignore",
       },
       never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
         ".DS_Store",
