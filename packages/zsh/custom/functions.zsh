@@ -63,7 +63,7 @@ function src {
     fi
   fi
   [[ -n $_SHELL_DEBUG ]] && timeend=$($_date +%s%N)
-  [[ -n $_SHELL_DEBUG ]] && echo -e "[$(($timeend - $timestart / 1000000))ms] src ${1}"
+  [[ -n $_SHELL_DEBUG ]] && echo -e "[$(( ($timeend - $timestart) / 1000000 ))ms] src ${1}"
 }
 
 function src-if-installed {
