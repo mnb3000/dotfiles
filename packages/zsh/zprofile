@@ -39,11 +39,17 @@ fi
 path=(
   $HOME/{,s}bin(N)
   $HOME/.local/bin
-  $HOME/.cargo/bin
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
   $path
 )
+
+if [[ -e $HOME/.cargo/bin ]]; then
+  path=(
+    $HOME/.cargo/bin
+    $path
+  )
+fi
 
 # Ensure path arrays do not contain duplicates.
 typeset -gU path fpath cdpath mailpath
