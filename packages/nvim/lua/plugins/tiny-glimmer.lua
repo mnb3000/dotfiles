@@ -55,7 +55,7 @@ return {
         undo_mapping = "u",
       },
       redo = {
-        enabled = false,
+        enabled = true,
 
         default_animation = {
           name = "fade",
