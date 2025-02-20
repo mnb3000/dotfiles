@@ -9,6 +9,12 @@ startup_command = "la"
 preview_command = "eza --all --git --icons --group-directories-first --color=always {}"
 
 [[session]]
+name = "dotfiles \U0001F4C1"
+path = "~/.dotfiles"
+startup_command = "nvim -c ':FzfLua files'"
+preview_command = "eza -T --level=2 --all --git-ignore --icons --group-directories-first --color=always {}"
+
+[[session]]
 name = "downloads \U0001F4E5"
 path = "~/Downloads"
 startup_command = "y"
@@ -18,12 +24,6 @@ preview_command = "eza --all --git --icons --group-directories-first --color=alw
 name = "documents \U0001F4CB"
 path = "~/Documents"
 startup_command = "y"
-preview_command = "eza --all --git --icons --group-directories-first --color=always {}"
-
-[[session]]
-name = "_dotfiles \U0001F4C1"
-path = "~/.dotfiles"
-startup_command = "nvim -c ':Neotree' -c ':FzfLua files'"
 preview_command = "eza --all --git --icons --group-directories-first --color=always {}"
 
 [[session]]
