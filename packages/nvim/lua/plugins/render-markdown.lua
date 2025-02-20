@@ -1,5 +1,6 @@
 return {
   "MeanderingProgrammer/render-markdown.nvim",
+  event = "VeryLazy",
   opts = {
     code = {
       sign = true,
