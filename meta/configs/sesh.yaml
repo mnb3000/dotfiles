@@ -11,11 +11,12 @@
 # linux (android)
 - link:
     $HOME/.config/sesh/sesh.toml:
-      if: '[ "$(uname -s)" = "Linux" ] && [ "$(uname -m)" = "aarch64" ]'
+      if: '[ "$(uname -s)" = "Linux" ] && [ "$(uname -m)" = "aarch64" ] && [ ! -f /etc/hostname ]'
       path: packages/sesh/sesh.termux.toml
 
+- link:
     $HOME/.config/sesh/sesh.toml:
-      if: '[ "$(uname -s)" = "Linux" ] && [ "$(uname -m)" = "aarch64" ] && [ "$(cat /etc/hostname)" = "myk-ipad-utm" ]'
+      if: '[ "$(uname -s)" = "Linux" ] && [ "$(uname -m)" = "aarch64" ] && [[ "$(cat /etc/hostname)" =~ "arch" ]]'
       path: packages/sesh/sesh.arch.toml
 
 # linux (steamos)
@@ -23,4 +24,3 @@
     $HOME/.config/sesh/sesh.toml:
       if: '[ "$(uname -s)" = "Linux" ] && [ "$(uname -m)" = "x86_64" ]'
       path: packages/sesh/sesh.deck.toml
-
