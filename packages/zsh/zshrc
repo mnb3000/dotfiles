@@ -90,9 +90,6 @@ src-if-installed $ZDOTDIR/custom/gitui.zsh gitui
 # lazygit alias
 src-if-installed $ZDOTDIR/custom/lazygit.zsh lazygit
 
-# go path
-src-if-installed $ZDOTDIR/custom/go.zsh go
-
 # p10k shell if installed
 [[ -f $ZDOTDIR/.p10k.zsh ]] && src $ZDOTDIR/.p10k.zsh
 
