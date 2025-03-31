@@ -11,3 +11,5 @@ vim.keymap.set("n", "N", "Nzvzz")
 
 vim.keymap.del("n", "<leader>-")
 vim.keymap.set("n", "<leader>\\", "<C-W>s", { desc = "Split Window Below", remap = true })
+
+vim.keymap.set("n", "<leader>su", "<cmd>UndotreeToggle<cr>", { desc = "Undo Tree", remap = true })
