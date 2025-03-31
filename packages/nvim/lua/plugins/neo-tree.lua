@@ -14,27 +14,6 @@ end
 return {
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
-    filtered_items = {
-      hide_dotfiles = false,
-      hide_gitignored = true,
-      -- hide_hidden = true, -- only works on Windows for hidden files/directories
-      hide_by_name = {
-        ".DS_Store",
-        "thumbs.db",
-        "node_modules",
-        ".git",
-      },
-      hide_by_pattern = {
-        --"*.meta",
-      },
-      always_show = { -- remains visible even if other settings would normally hide it
-        ".gitignore",
-      },
-      never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
-        ".DS_Store",
-        "thumbs.db",
-      },
-    },
     commands = {
       setcd = function(state)
         do_setcd(state)
@@ -54,7 +33,32 @@ return {
     },
     filesystem = {
       hijack_netrw_behavior = "disabled",
-      bind_to_cwd = true,
+      bind_to_cwd = false,
+      follow_current_file = { enabled = true },
+      use_libuv_file_watcher = true,
+
+      filtered_items = {
+        visible = true,
+        hide_dotfiles = true,
+        hide_gitignored = true,
+        -- hide_hidden = true, -- only works on Windows for hidden files/directories
+        hide_by_name = {
+          ".DS_Store",
+          "thumbs.db",
+          "node_modules",
+          ".git",
+        },
+        hide_by_pattern = {
+          --"*.meta",
+        },
+        always_show = { -- remains visible even if other settings would normally hide it
+          ".gitignore",
+        },
+        never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
+          ".DS_Store",
+          "thumbs.db",
+        },
+      },
     },
   },
 }
