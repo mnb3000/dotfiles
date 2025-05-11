@@ -1,0 +1,3 @@
+- link:
+    $HOME/.config/vifm/.vifmrc:
+      path: packages/vifm/vifmrc
