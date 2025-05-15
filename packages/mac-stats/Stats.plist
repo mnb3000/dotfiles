@@ -245,7 +245,7 @@
 	<key>GPU_updateInterval</key>
 	<integer>2</integer>
 	<key>GPU_widget</key>
-	<string>mini,line_chart,bar_chart,tachometer</string>
+	<string>mini,line_chart,bar_chart</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/.dotfiles/packages/mac-stats</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
@@ -253,47 +253,49 @@
 	<key>NSNavPanelExpandedStateForSaveMode</key>
 	<true/>
 	<key>NSStatusItem Preferred Position Battery</key>
-	<real>178</real>
+	<real>205</real>
 	<key>NSStatusItem Preferred Position CPU_bar_chart</key>
-	<real>483</real>
+	<real>542</real>
 	<key>NSStatusItem Preferred Position CPU_line_chart</key>
-	<real>6364</real>
+	<real>6379</real>
 	<key>NSStatusItem Preferred Position CPU_mini</key>
-	<real>6402</real>
+	<real>6417</real>
 	<key>NSStatusItem Preferred Position CPU_pie_chart</key>
-	<real>6340</real>
+	<real>6355</real>
 	<key>NSStatusItem Preferred Position Disk_bar_chart</key>
-	<real>408</real>
+	<real>467</real>
 	<key>NSStatusItem Preferred Position Disk_memory</key>
-	<real>5980</real>
+	<real>6019</real>
 	<key>NSStatusItem Preferred Position Disk_mini</key>
-	<real>6072</real>
+	<real>6111</real>
 	<key>NSStatusItem Preferred Position Disk_network_chart</key>
-	<real>5883</real>
+	<real>5922</real>
 	<key>NSStatusItem Preferred Position Disk_pie_chart</key>
-	<real>6048</real>
+	<real>6087</real>
 	<key>NSStatusItem Preferred Position Disk_speed</key>
-	<real>5919</real>
+	<real>5958</real>
 	<key>NSStatusItem Preferred Position GPU_bar_chart</key>
-	<real>433</real>
+	<real>492</real>
 	<key>NSStatusItem Preferred Position GPU_line_chart</key>
-	<integer>6144</integer>
+	<real>6159</real>
 	<key>NSStatusItem Preferred Position GPU_mini</key>
-	<integer>6182</integer>
-	<key>NSStatusItem Preferred Position GPU_tachometer</key>
-	<integer>6120</integer>
+	<real>6197</real>
 	<key>NSStatusItem Preferred Position Network</key>
-	<real>526</real>
+	<real>344</real>
 	<key>NSStatusItem Preferred Position RAM_bar_chart</key>
-	<real>458</real>
+	<real>517</real>
 	<key>NSStatusItem Preferred Position RAM_line_chart</key>
-	<real>6254</real>
+	<real>6269</real>
 	<key>NSStatusItem Preferred Position RAM_mini</key>
-	<real>6292</real>
+	<real>6307</real>
 	<key>NSStatusItem Preferred Position RAM_pie_chart</key>
-	<real>6230</real>
-	<key>NSStatusItem Preferred Position Sensors</key>
-	<integer>307</integer>
+	<real>6245</real>
+	<key>NSStatusItem Preferred Position Sensors_label</key>
+	<real>5910</real>
+	<key>NSStatusItem Preferred Position Sensors_mini</key>
+	<real>268</real>
+	<key>NSStatusItem Preferred Position Sensors_sensors</key>
+	<real>5847</real>
 	<key>NSStatusItem Restore Position Battery_bar_chart</key>
 	<integer>335</integer>
 	<key>NSStatusItem Restore Position Battery_battery</key>
@@ -320,6 +322,8 @@
 	<integer>5913</integer>
 	<key>NSStatusItem Restore Position GPU</key>
 	<integer>616</integer>
+	<key>NSStatusItem Restore Position GPU_tachometer</key>
+	<integer>6178</integer>
 	<key>NSStatusItem Restore Position Network_label</key>
 	<integer>543</integer>
 	<key>NSStatusItem Restore Position Network_network_chart</key>
@@ -334,14 +338,10 @@
 	<integer>6191</integer>
 	<key>NSStatusItem Restore Position RAM_memory</key>
 	<integer>295</integer>
+	<key>NSStatusItem Restore Position Sensors</key>
+	<integer>576</integer>
 	<key>NSStatusItem Restore Position Sensors_bar_chart</key>
 	<integer>579</integer>
-	<key>NSStatusItem Restore Position Sensors_label</key>
-	<integer>415</integer>
-	<key>NSStatusItem Restore Position Sensors_mini</key>
-	<integer>608</integer>
-	<key>NSStatusItem Restore Position Sensors_sensors</key>
-	<integer>546</integer>
 	<key>NSToolbar Configuration eu.exelban.Stats.Settings.Toolbar</key>
 	<dict>
 		<key>TB Display Mode</key>
@@ -356,7 +356,7 @@
 	<key>NSWindow Frame GoToSheet</key>
 	<string>526 434 460 208 0 0 1512 944 </string>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>356 373 800 448 0 0 1512 944 </string>
+	<string>356 376 800 448 0 0 1512 944 </string>
 	<key>Network_VPNMode</key>
 	<false/>
 	<key>Network_label_position</key>
@@ -486,13 +486,13 @@
 	<key>SSD_network_chart_label</key>
 	<false/>
 	<key>Sensor_mini_alignment</key>
-	<string>left</string>
+	<string>right</string>
 	<key>Sensor_mini_color</key>
 	<string>utilization</string>
 	<key>Sensor_mini_label</key>
-	<true/>
+	<false/>
 	<key>Sensors_barChart_position</key>
-	<integer>2</integer>
+	<integer>3</integer>
 	<key>Sensors_fanControl</key>
 	<true/>
 	<key>Sensors_fanValue</key>
@@ -500,17 +500,17 @@
 	<key>Sensors_hid</key>
 	<true/>
 	<key>Sensors_label_position</key>
-	<integer>3</integer>
+	<integer>0</integer>
 	<key>Sensors_mini_position</key>
-	<integer>1</integer>
+	<integer>2</integer>
 	<key>Sensors_oneView</key>
-	<true/>
+	<false/>
 	<key>Sensors_position</key>
 	<integer>4</integer>
 	<key>Sensors_sensor</key>
 	<string>PSTR</string>
 	<key>Sensors_sensors_alignment</key>
-	<string>right</string>
+	<string>left</string>
 	<key>Sensors_sensors_mode</key>
 	<string>automatic</string>
 	<key>Sensors_sensors_monospacedFont</key>
@@ -518,7 +518,7 @@
 	<key>Sensors_sensors_size</key>
 	<false/>
 	<key>Sensors_stack_position</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>Sensors_state</key>
 	<true/>
 	<key>Sensors_unknown</key>
@@ -526,7 +526,7 @@
 	<key>Sensors_updateInterval</key>
 	<integer>3</integer>
 	<key>Sensors_widget</key>
-	<string>sensors,mini</string>
+	<string>sensors,mini,label</string>
 	<key>ble_d0-8a-b6-77-8a-9a</key>
 	<true/>
 	<key>ble_dc-2c-26-da-ab-d5</key>
@@ -594,7 +594,7 @@
 	<key>telemetry_id</key>
 	<string>8ED053F4-875D-4859-B3ED-6509F9953B4E</string>
 	<key>updater_check_ts</key>
-	<integer>1746833527</integer>
+	<integer>1747259706</integer>
 	<key>version</key>
 	<string>2.11.42</string>
 </dict>
