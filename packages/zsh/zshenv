@@ -24,7 +24,7 @@ export LANG="${LANG:-en_US.UTF-8}"
 
 export ZDOTDIR=${ZDOTDIR:-$HOME/.zsh}
 
-if [[ "$OSTYPE" == darwin* && -e /opt/homebrew/bin/brew ]] then
+if [[ "$OSTYPE" == darwin* && -e $HOMEBREW_PREFIX/bin/brew ]] then
   export LESSOPEN="|/$HOMEBREW_PREFIX/bin/lesspipe.sh %s"
 else
   export LESSOPEN="|$HOME/lesspipe.sh %s"

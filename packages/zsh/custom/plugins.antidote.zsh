@@ -1,4 +1,4 @@
-if [[ -e /opt/homebrew/bin/brew && -e $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh ]]; then
+if [[ -e $HOMEBREW_PREFIX/bin/brew && -e $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh ]]; then
   export ANTIDOTE_HOME=$HOMEBREW_PREFIX/opt/antidote/
 else
   export ANTIDOTE_HOME=${XDG_DATA_HOME:-~/.local/share}/antidote
