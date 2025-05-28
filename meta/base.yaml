@@ -6,6 +6,9 @@
     shell:
       stdout: true
       stderr: true
+    brewfile:
+      stdout: true
+      stderr: true
 
 - create:
     - $HOME/.config
