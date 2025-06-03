@@ -1,5 +1,5 @@
 # mac
 - link:
-    $HOME/.config/karabiner/karabiner.json:
+    $HOME/.config/karabiner:
       if: '[ "$(uname -s)" = "Darwin" ]'
-      path: packages/macos/karabiner/karabiner.json
+      path: packages/macos/karabiner
