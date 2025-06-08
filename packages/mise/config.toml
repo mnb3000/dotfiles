@@ -2,3 +2,5 @@
 node = "22"
 yarn = "1.22.22"
 python = "3.13"
+npm = "11.4.1"
+"npm:typescript" = "5.8.3"
