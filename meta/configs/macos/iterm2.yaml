@@ -2,7 +2,7 @@
 - link:
     $HOME/.iterm2:
       if: '[ "$(uname -s)" = "Darwin" ]'
-      path: packages/iterm2
+      path: packages/macos/iterm2
 
 - shell:
     - description: Set iTerm2 preferences folder
