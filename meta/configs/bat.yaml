@@ -1,5 +1,5 @@
 - link:
-    $HOME/.config/bat/:
+    $HOME/.config/bat:
       path: packages/bat
 
 - shell:

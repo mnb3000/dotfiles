@@ -1,5 +1,5 @@
 - link:
-    $HOME/.config/yazi/:
+    $HOME/.config/yazi:
       path: packages/yazi
     $HOME/.zsh/custom/yazi.zsh:
       path: packages/yazi/config.zsh
