@@ -1868,7 +1868,7 @@ New Tab with Current Profile</string>
 	<key>HideFromDockAndAppSwitcher</key>
 	<false/>
 	<key>HideMenuBarInFullscreen</key>
-	<false/>
+	<true/>
 	<key>Hotkey</key>
 	<false/>
 	<key>HotkeyChar</key>
@@ -4292,6 +4292,8 @@ New Tab with Current Profile</string>
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
+	<key>ReportRightClick</key>
+	<true/>
 	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>SoundForEsc</key>
