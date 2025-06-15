@@ -94,3 +94,7 @@ function ka {
   p "$1"
   echo -e "\n"
 }
+
+function gclm {
+  git clone git@github.com:$(git config --get user.name)/$1
+}
