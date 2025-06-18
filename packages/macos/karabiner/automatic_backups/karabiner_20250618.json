@@ -18,61 +18,6 @@
                 },
                 "rules": [
                     {
-                        "description": "Hyper+S/s switch (Hyper+s - Soundsource, Hyper+S - Homerow",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "right_command",
-                                            "right_option",
-                                            "right_control",
-                                            "right_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "s",
-                                        "modifiers": [
-                                            "right_command",
-                                            "right_option",
-                                            "right_control",
-                                            "right_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_command",
-                                            "right_option",
-                                            "right_control",
-                                            "right_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "s",
-                                        "modifiers": [
-                                            "right_command",
-                                            "right_control",
-                                            "right_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Shift-Delete to Delete-Forward (deletes next character, use both shift keys to bypass)",
                         "manipulators": [
                             {
