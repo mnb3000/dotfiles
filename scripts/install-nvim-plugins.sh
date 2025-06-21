@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-nvim --headless "+Lazy! install" +qa
+echo "Installing Neovim plugins.."
+nvim --headless "+Lazy! install" +qa >/dev/null 2>&1
+echo "Neovim plugins installed!"
