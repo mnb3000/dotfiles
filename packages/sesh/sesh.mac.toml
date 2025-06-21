@@ -3,63 +3,68 @@ startup_command = "nvim -c ':FzfLua files'"
 preview_command = "eza --all --git --icons --group-directories-first --color=always {}"
 
 [[session]]
-name = "home \U0001F3E1"
+name = "\U0001F3E1 home"
 path = "~"
 startup_command = "la"
 preview_command = "eza --all --git --icons --group-directories-first --color=always {}"
 
 [[session]]
-name = "dotfiles \U0001F4C1"
+name = "\U00002601\U0000FE0F cloudflared tunnel"
+path = "~"
+startup_command = "cloudflared tunnel run --token ${CLOUDFLARED_TUNNEL_TOKEN}"
+
+[[session]]
+name = "\U0001F4C1 dotfiles"
 path = "~/.dotfiles"
 startup_command = "nvim -c ':FzfLua files'"
 preview_command = "eza -T --level=2 --all --git-ignore --icons --group-directories-first --color=always {}"
 
 [[session]]
-name = "downloads \U0001F4E5"
+name = "\U0001F4E5 downloads"
 path = "~/Downloads"
-startup_command = "y"
+startup_command = "la"
 preview_command = "eza --all --git --icons --group-directories-first --color=always {}"
 
 [[session]]
-name = "documents \U0001F4CB"
+name = "\U0001F4CB documents"
 path = "~/Documents"
-startup_command = "y"
+startup_command = "la"
 preview_command = "eza --all --git --icons --group-directories-first --color=always {}"
 
 [[session]]
-name = "zsh config \U00002699\U0000FE0F"
+name = "\U00002699\U0000FE0F zsh config"
 path = "~/.dotfiles/packages/zsh"
 startup_command = "nvim zshrc zprofile zshenv zplugins"
 preview_command = "bat --color=always ~/.dotfiles/packages/zsh/zshrc"
 
 [[session]]
-name = "tmux config \U0001F4DF"
+name = "\U0001F4DF tmux config"
 path = "~/.dotfiles/packages/tmux"
 startup_command = "nvim tmux.conf"
 preview_command = "bat --color=always ~/.dotfiles/packages/tmux/tmux.conf"
 
 [[session]]
-name = "nvim config \U0001F4BE"
+name = "\U0001F4BE nvim config"
 path = "~/.dotfiles/packages"
 startup_command = "nvim -c ':FzfLua files cwd=nvim'"
 preview_command = "eza -T --level=3 --all --git --icons --group-directories-first --color=always {}"
 
 [[session]]
-name = "termux SSH \U0001F4F1"
+name = "\U0001F4F1 termux SSH"
 path = "~"
 startup_command = "ssh termux"
 
 [[session]]
-name = "deck SSH \U0001F3AE"
+name = "\U0001F3AE deck SSH"
 path = "~"
 startup_command = "ssh steamdeck"
 
 [[session]]
-name = "ipad arch utm SSH \U0001F4E6"
+name = "\U0001F4E6 ipad arch utm SSH"
 path = "~"
 startup_command = "ssh ipad-arch-utm"
 
 [[session]]
-name = "local utm SSH \U0001F3D7"
+name = "\U0001F3D7 local utm SSH"
 path = "~"
 startup_command = "ssh local-utm"
