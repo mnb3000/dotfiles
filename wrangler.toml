@@ -1,0 +1,7 @@
+name = "install-dotfiles"
+compatibility_date = "2025-06-15"
+
+routes = [{ pattern = "dot.myk.rocks", custom_domain = true }]
+
+[assets]
+directory = "./scripts/page/"
