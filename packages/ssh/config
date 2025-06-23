@@ -33,3 +33,9 @@ Host local-utm
   HostName 127.0.0.1
   Port 2222
   User mnb3000
+
+Host myk-rpi3
+  HostName 100.81.170.68
+  Port 22
+  User myk
+  IdentityFile ~/.ssh/id_ed25519
