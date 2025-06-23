@@ -10,7 +10,7 @@
 - shell:
     - description: Install golang
       command: |
-        export GO_TMP_DIR=$(mktemp)
+        export GO_TMP_DIR=$(mktemp -d)
         git clone https://github.com/udhos/update-golang $GO_TMP_DIR
         bash $GO_TMP_DIR/update-golang.sh
 
