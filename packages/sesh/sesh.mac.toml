@@ -68,3 +68,8 @@ startup_command = "ssh ipad-arch-utm"
 name = "\U0001F3D7 local utm SSH"
 path = "~"
 startup_command = "ssh local-utm"
+
+[[session]]
+name = "\U00002328\U0000FE0F\U0000FE0F  raspberry pi 3"
+path = "~"
+startup_command = "ssh myk-rpi3"
