@@ -4,12 +4,16 @@ Dotfile management using [Dotbot](https://github.com/anishathalye/dotbot).
 
 ## Installation
 
+### Recursively clone the repository
+
 ```bash
 ~$ git clone --recursive https://github.com/mnb3000/dotfiles.git ~/.dotfiles
 ~$ cd ~/.dotfiles
 ```
 
-### For installing a predefined profile
+### Install your preferred profile
+
+- Install a predefined profile
 
 ```bash
 ~/.dotfiles$ ./install-profile <profile> [<configs...>]
@@ -17,7 +21,7 @@ Dotfile management using [Dotbot](https://github.com/anishathalye/dotbot).
 
 See [meta/profiles/](./meta/profiles) for available profiles
 
-### For installing single configurations
+- Install a single configuration
 
 ```bash
 ~/.dotfiles$ ./install-standalone <configs...>
@@ -25,33 +29,38 @@ See [meta/profiles/](./meta/profiles) for available profiles
 
 See [meta/configs/](./meta/configs) for available configurations
 
-## Contents
-
-### Profiles
+## Profiles
 
 <pre>
-meta/profiles
-├── <a href="./meta/profiles/deck" title="deck">📄 deck</a>
-├── <a href="./meta/profiles/macbook" title="macbook">📄 macbook</a>
-├── <a href="./meta/profiles/ish" title="ish">📄 ish</a>
-├── <a href="./meta/profiles/orangepi" title="orangepi">📄 orangepi</a>
-├── <a href="./meta/profiles/orangepi_base" title="orangepi_base">📄 orangepi_base</a>
-├── <a href="./meta/profiles/termux" title="termux">📄 termux</a>
-├── <a href="./meta/profiles/extra-dev/" title="extra-dev">📂 extra-dev</a>
-├────── <a href="./meta/profiles/extra-dev/alpine" title="extra-dev-alpine">📄 alpine</a>
-├────── <a href="./meta/profiles/extra-dev/arch" title="extra-dev-arch">📄 arch</a>
-├────── <a href="./meta/profiles/extra-dev/debian" title="extra-dev-debian">📄 debian</a>
-├────── <a href="./meta/profiles/extra-dev/ubuntu" title="extra-dev-ubuntu">📄 ubuntu</a>
-├── <a href="./meta/profiles/minimal/" title="minimal">📂 minimal</a>
-├────── <a href="./meta/profiles/minimal/alpine" title="minimal-alpine">📄 alpine</a>
-├────── <a href="./meta/profiles/minimal/debian" title="minimal-debian">📄 debian</a>
-├────── <a href="./meta/profiles/minimal/ubuntu" title="minimal-ubuntu">📄 ubuntu</a>
-├── <a href="./meta/profiles/utm/" title="utm">📂 utm</a>
-├────── <a href="./meta/profiles/minimal/alpine" title="alpine-utm">📄 alpine-utm</a>
-├────── <a href="./meta/profiles/minimal/arch-utm" title="arch-utm">📄 arch-utm</a>
-├────── <a href="./meta/profiles/minimal/arch-awesomewm-utm" title="arch-awesomewm-utm">📄 arch-awesomewm-utm</a>
-├────── <a href="./meta/profiles/minimal/arch-sway-utm" title="arch-sway-utm">📄 arch-sway-utm</a>
-├── <a href="./meta/profiles/webvm/" title="webvm">📂 webvm</a>
-├────── <a href="./meta/profiles/webvm/alpine" title="webvm-alpine">📄 alpine</a>
-└────── <a href="./meta/profiles/webvm/debian" title="webvm-debian">📄 debian</a>
+├── <a href="./meta/profiles/devices/" title="devices">📂 devices</a>
+├────── <a href="./meta/profiles/devices/arch-proot" title="arch-proot">📄 arch-proot</a>
+├────── <a href="./meta/profiles/devices/deck" title="deck">📄 deck</a>
+├────── <a href="./meta/profiles/devices/macbook" title="macbook">📄 macbook</a>
+├────── <a href="./meta/profiles/devices/orangepi" title="orangepi">📄 orangepi</a>
+├────── <a href="./meta/profiles/devices/orangepi_base" title="orangepi_base">📄 orangepi_base</a>
+├────── <a href="./meta/profiles/devices/studio-mini" title="studio-mini">📄 studio-mini</a>
+├── <a href="./meta/profiles/distros/" title="distros">📂 distros</a>
+├────── <a href="./meta/profiles/distros/alpine" title="alpine">📂 alpine</a>
+├────────── <a href="./meta/profiles/distros/alpine/extra-dev" title="extra-dev">📄 extra-dev</a>
+├────────── <a href="./meta/profiles/distros/alpine/minimal" title="minimal">📄 minimal</a>
+├────────── <a href="./meta/profiles/distros/alpine/utm" title="utm">📄 utm</a>
+├────────── <a href="./meta/profiles/distros/alpine/webvm" title="webvm">📄 webvm</a>
+├────── <a href="./meta/profiles/distros/arch" title="arch">📂 arch</a>
+├────────── <a href="./meta/profiles/distros/arch/utm" title="utm">📂 utm</a>
+├────────────── <a href="./meta/profiles/distros/arch/utm/awesomewm" title="awesomewm">📄 awesomewm</a>
+├────────────── <a href="./meta/profiles/distros/arch/utm/extra-dev" title="extra-dev">📄 extra-dev</a>
+├────────────── <a href="./meta/profiles/distros/arch/utm/hyprland-installer" title="hyprland-installer">📄 hyprland-installer</a>
+├────────────── <a href="./meta/profiles/distros/arch/utm/sway" title="sway">📄 sway</a>
+├────────── <a href="./meta/profiles/distros/arch/extra-dev" title="extra-dev">📄 extra-dev</a>
+├────── <a href="./meta/profiles/distros/debian" title="debian">📂 debian</a>
+├────────── <a href="./meta/profiles/distros/debian/extra-dev" title="extra-dev">📄 extra-dev</a>
+├────────── <a href="./meta/profiles/distros/debian/minimal" title="minimal">📄 minimal</a>
+├────────── <a href="./meta/profiles/distros/debian/webvm" title="webvm">📄 webvm</a>
+├────── <a href="./meta/profiles/distros/macos" title="macos">📂 macos</a>
+├────────── <a href="./meta/profiles/distros/macos/base" title="base">📄 base</a>
+├────── <a href="./meta/profiles/distros/ubuntu/" title="ubuntu">📂 ubuntu</a>
+├────────── <a href="./meta/profiles/devices/extra-dev" title="extra-dev">📄 extra-dev</a>
+├────────── <a href="./meta/profiles/devices/minimal" title="minimal">📄 minimal</a>
+├────── <a href="./meta/profiles/devices/ish" title="ish">📄 ish</a>
+└─────── <a href="./meta/profiles/devices/termux" title="termux">📄 termux</a>
 </pre>
