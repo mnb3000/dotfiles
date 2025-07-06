@@ -1,4 +1,5 @@
 debian/base-sudo
+debian/zoxide
 debian/extra-shell-sudo
 user-dirs
 git

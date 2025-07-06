@@ -30,7 +30,3 @@
     - htop
     - tmux
     - neovim
-
-- shell:
-    - description: Install up to date zoxide
-      command: curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh

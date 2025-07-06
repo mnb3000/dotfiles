@@ -1,4 +1,5 @@
 debian/base-sudo
+debian/zoxide
 debian/extra-shell-sudo
 debian/extra-dev-sudo
 debian/clean-apt-cache-sudo

@@ -1,4 +1,5 @@
 debian/base-sudo
+debian/zoxide
 user-dirs
 git
 lesspipe
