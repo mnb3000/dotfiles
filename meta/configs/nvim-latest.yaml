@@ -1,0 +1,3 @@
+- shell:
+    - descriprion: Install latest neovim release
+      command: bash $HOME/.dotfiles/scripts/install-nvim.sh

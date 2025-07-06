@@ -1,5 +1,6 @@
 debian/base-sudo
-debian/zoxide
+debian/base-user
+nvim-latest
 debian/extra-shell-sudo
 user-dirs
 git
@@ -13,6 +14,7 @@ starship
 zoxide
 yazi
 nvim
+nvim-plugins
 ssh
 zsh
 debian/clean-apt-cache-sudo
