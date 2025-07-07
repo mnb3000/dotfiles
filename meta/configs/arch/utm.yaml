@@ -1,4 +1,4 @@
 - yay:
-    - qemu-guest-agent spice-vdagent networkmanager
+    - qemu-guest-agent spice-vdagent
 # - link:
 #     $HOME/.config/fontconfig: packages/arch/fontconfig

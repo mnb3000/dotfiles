@@ -1,5 +1,5 @@
 - yay:
-    - base-devel git python uv ncurses pacman-contrib
+    - base-devel git python uv ncurses pacman-contrib networkmanager
     - zip unzip ncdu xdg-user-dirs curl wget
     - zsh tmux starship
     - fd ripgrep jq sesh-bin
