@@ -1,8 +1,8 @@
 debian/base-sudo
-debian/zoxide
+debian/base-user
+nvim-latest
 debian/extra-shell-sudo
 debian/extra-dev-sudo
-debian/clean-apt-cache-sudo
 user-dirs
 git
 lesspipe
@@ -19,3 +19,4 @@ nvim
 nvim-plugins
 ssh
 zsh
+debian/clean-apt-cache-sudo
