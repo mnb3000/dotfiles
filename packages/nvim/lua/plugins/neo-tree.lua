@@ -26,7 +26,7 @@ return {
       width = 32,
       mappings = {
         ["/"] = "grep",
-        ["<c-/>"] = "fuzzy_finder",
+        -- ["<c-/>"] = "fuzzy_finder",
         ["g"] = "setcd",
         ["<space>"] = "none",
       },
