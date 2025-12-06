@@ -43,3 +43,11 @@ Host myk-rpi3
   Port 22
   User myk
   IdentityFile ~/.ssh/id_ed25519
+
+Host myk-rpi2-dietpi
+  HostName myk-rpi2-dietpi.local
+  Port 22
+  User myk
+  IdentityFile ~/.ssh/id_ed25519
+
+Include /Users/Misha/.remoteit/ssh_config
