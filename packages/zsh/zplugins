@@ -12,11 +12,11 @@ ohmyzsh/ohmyzsh path:plugins/tmux
 ohmyzsh/ohmyzsh path:plugins/brew conditional:is-macos
 ohmyzsh/ohmyzsh path:plugins/macos conditional:is-macos
 
+zsh-users/zsh-completions path:src kind:fpath
+
 ohmyzsh/ohmyzsh path:plugins/fzf kind:defer
 Aloxaf/fzf-tab kind:defer
 djui/alias-tips kind:defer
-
-zsh-users/zsh-completions path:src kind:fpath
 
 zdharma-continuum/fast-syntax-highlighting kind:defer
 zsh-users/zsh-autosuggestions kind:defer
