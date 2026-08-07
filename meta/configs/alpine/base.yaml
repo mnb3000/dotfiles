@@ -13,8 +13,8 @@
     - bash zsh tmux
     - fd ripgrep neovim lazygit
     - coreutils openssl
-    - python3-dev=~3.12
-    - zoxide fzf eza bat htop
+    - python3-dev
+    - zoxide fzf eza bat htop fastfetch
 - link:
     $HOME/.zsh/custom/locale.zsh:
       path: packages/arch/locale.zsh
