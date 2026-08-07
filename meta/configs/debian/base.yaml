@@ -9,7 +9,10 @@
 - apt:
     - apt-utils
     - apt-transport-https
+    - build-essential
     - git
+    - file
+    - patch
     - curl
     - wget
     - less
@@ -30,3 +33,5 @@
     - htop
     - tmux
     - neovim
+    - vim
+    - jq
